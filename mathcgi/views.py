@@ -1,13 +1,15 @@
-from datetime import date
+import datetime
+import random
+
+from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render, get_object_or_404, reverse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.forms import formset_factory
-import random
+
 from brain.models import StudentRoster, CurrentClass
 from .models import CGIResult, CGI
-from .forms import CGIResultsForm
-from django.http import HttpResponseRedirect, HttpResponse
+from .forms import CGIResultsForm, CGIForm
 
 
 # Create your views here.
@@ -103,11 +105,10 @@ def get_student_and_cgi_list(student_list):
     function will not include their name or any CGI for them.
     Gets all CGIs where the date has passed.
      Gets CGI's in numerical Order.
-
     """
+
     student_and_cgi_list = []
-    todays_date = date.today()
-    previous_cgis = CGI.objects.filter(date_assigned__lte=todays_date)
+    previous_cgis = CGI.objects.filter(date_assigned__lte=datetime.date.today())
 
     for student in student_list:
         for cgi in previous_cgis:
@@ -134,62 +135,23 @@ def get_student_and_cgi_list(student_list):
     return student_and_cgi_list
 
 
+"""
+Check to see if student has solved a CGI today
+If not, button is visible
+solve_cgi() gives student a CGI problem
+student puts in the answer and hits submit
+"""
 
 
-    # Old Code from Codementors:
-    # if request.method == 'POST':
-    #     InputCGIFormSet = formset_factory(CGIResultsForm, extra=0)
-    #     formset = InputCGIFormSet(request.POST)
-    #     has_errors = False
-    #     for form in formset:
-    #         # Seems like it should be possible to have the form know the instance it was created from, and update
-    #         # that rather than go through this manual process
-    #         if form.is_valid():
-    #             form.save()
-    #         else:
-    #             existing_results = CGIResult.objects.filter(student=form.instance.student,
-    #                                                         cgi=form.instance.cgi,
-    #                                                         progress=form.instance.progress)
-    #             if form.instance.progress and existing_results.count():
-    #                 instance = existing_results.first()
-    #                 instance.progress = form.instance.progress
-    #                 instance.save()
-    #             else:
-    #                 has_errors = True
-    #                 print(form.errors)
-    #     messages.add_message(request, messages.SUCCESS, "CGI Results Updated!")
-    #     if not has_errors:
-    #         url = reverse('mathcgi:inputcgi', kwargs={'grade': grade, 'classroom': classroom})
-    #         return HttpResponseRedirect(url)
-    # else:
-    #
-    #     student_list = StudentRoster.objects.filter(current_class__grade=grade) \
-    #         .filter(current_class__year="17-18").filter(current_class__classroom__last_name=classroom).order_by('last_name')
-    #     cgi_list = CGI.objects.all().order_by('cgi_number')
-    #
-    #     cgi_student_list = []
-    #     for student in student_list:
-    #         cgiholder = []
-    #         for cgi in cgi_list:
-    #             obj, created = CGIResult.objects.get_or_create(
-    #                 student=student,
-    #                 cgi=cgi,
-    #                 defaults={'progress': '-'}, )
-    #             cgiholder.append(obj)
-    #         j = (student, cgiholder)
-    #         cgi_student_list.append(j)
-    #
-    #     if request.method == 'POST':
-    #         # create a form instance and populate it with data from the request:
-    #         form = CGIResultsForm(request.POST)
-    #         # check whether it's valid:
-    #         if form.is_valid():
-    #             # process the data in form.cleaned_data as required
-    #             # ...
-    #             # redirect to a new URL:
-    #             return HttpResponseRedirect('/thanks/')
-    #
-    #             # if a GET (or any other method) we'll create a blank form
-    #
-    # return render(request, 'mathcgi/input_cgi.html', {'student_list': student_list, 'cgi_list': cgi_list,
-    #                                                   'cgi_student_list': cgi_student_list})
+def solve_cgi(request, student):
+    student = get_object_or_404(StudentRoster, pk=student)
+    student_and_cgi_list = get_student_and_cgi_list([student, ])
+    if request.method == "POST":
+
+        if CGIResult.objects.filter(student=student, date_taken=datetime.date.today()).exists():
+            pass
+        else:
+            form = CGIForm(request.POST)
+            if form.is_valid():
+                pass
+                # Don't count the results
