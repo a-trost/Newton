@@ -1,0 +1,99 @@
+{% extends "brain/portal_layout.html" %}
+{% load brain_extras %}
+{% load static %}
+{% block title %}{{ classroom }}'s Morning Message{% endblock title %}
+{% block css %}
+    <link href="https://fonts.googleapis.com/css?family=Pangolin" rel="stylesheet">
+{% endblock %}
+{% block heading %}
+{% endblock heading %}
+{% block content %}
+    <div class="grid-container" style="max-width:95%;">
+
+    <div class="grid-x grid-margin-x">
+        <div class="large-8 cell">
+            <div style="background-color: #fff" class="callout">
+                <p style="font-size: 2.2em;font-family: 'Pangolin', 'sans-serif'; color: #1c2f64">{{ all_morning_message_settings.greeting }}<br>
+                    Today is {{ todays_date }}. {{ message.message }} {% if specials %}Our specials today are
+                        {{ specials }}.{% endif %} {{ ending_comment }}</p>
+                <p style="text-align: right; font-size: 2.2em; font-family: 'Pangolin', 'sans-serif';color: #1c2f64">{{ all_morning_message_settings.signoffword }}<br>
+                    {{ all_morning_message_settings.signoffteacher }}</p></div>
+        </div>
+        <div class="large-4 cell">
+            {% if box1 %}
+                <div style="color: crimson" class="callout secondary">
+                    <h5 style="text-align: center">{{ all_morning_message_settings.box1heading }}</h5>
+                    <h5>{{ box1 }}</h5></div>
+            {% endif %}
+        {% if grade == "2nd" %}
+            <div class="callout success"><h5 style="text-align: center;color: forestgreen">IXL Challenge Progress</h5>
+                <table>
+                    {% for challenge,total_complete, total_questions in challenge_list %}
+                        <tr>
+                             {% if total_complete == total_questions %}
+                                <td style="color: #339900; font-weight: bold; padding: 1px;">{{ challenge.student_id.first_name }} {{ challenge.student_id.last_name.0 }}.</td>
+                            {% elif total_complete == 1 %}
+                                <td style="color: #FF0033; font-weight: bold; padding: 1px;">{{ challenge.student_id.first_name }} {{ challenge.student_id.last_name.0 }}.</td>
+                            {% elif total_complete == 2 %}
+                                <td style="color: #AD3D1F; font-weight: bold; padding: 1px;">{{ challenge.student_id.first_name }} {{ challenge.student_id.last_name.0 }}.</td>
+                            {% elif total_complete == 3 %}
+                                <td style="color: #bf9500; font-weight: bold; padding: 1px;">{{ challenge.student_id.first_name }} {{ challenge.student_id.last_name.0 }}.</td>
+                            {% elif total_complete == 4 %}
+                                <td style="color: #5C7A0A; font-weight: bold; padding: 1px;">{{ challenge.student_id.first_name }} {{ challenge.student_id.last_name.0 }}.</td>
+                                 {% elif total_complete == 0 %}
+                                <td style="color: #f90003; font-weight: bold; padding: 1px;">{{ challenge.student_id.first_name }} {{ challenge.student_id.last_name.0 }}.</td>
+                            {% else %}
+                                <td style="color: #000000; font-weight: bold; padding: 1px;">{{ challenge.student_id.first_name }} {{ challenge.student_id.last_name.0 }}.</td>
+                            {% endif %}
+                            {% if total_complete == total_questions %}
+                                <td style="color: #339900; font-weight: bold; padding: 1px;">COMPLETE!</td>
+                            {% elif total_complete == 1 %}
+                                <td style="color: #FF0033; font-weight: bold; padding: 1px;">{{ total_complete }}
+                                    / {{ total_questions }}</td>
+                            {% elif total_complete == 2 %}
+                                <td style="color: #AD3D1F; font-weight: bold; padding: 1px;">{{ total_complete }}
+                                    / {{ total_questions }}</td>
+                            {% elif total_complete == 3 %}
+                                <td style="color: #bf9500; font-weight: bold; padding: 1px;">{{ total_complete }}
+                                    / {{ total_questions }}</td>
+                            {% elif total_complete == 4 %}
+                                <td style="color: #5C7A0A; font-weight: bold; padding: 1px;">{{ total_complete }}
+                                    / {{ total_questions }}</td>
+                                 {% elif total_complete == 0 %}
+                                <td style="color: #f90003; font-weight: bold; padding: 1px;">{{ total_complete }}
+                                    / {{ total_questions }}</td>
+                            {% else %}
+                                <td style="color: #000000; font-weight: bold; padding: 1px;">{{ total_complete }}
+                                    / {{ total_questions }}</td>
+                            {% endif %}
+
+                        </tr>
+                    {% endfor %}
+                </table>
+
+            </div>
+        {% endif %}
+              {% if all_morning_message_settings.moodmeter %}
+              <div class="callout success"><h4 style="text-align: center;color: forestgreen">Plot Your Mood!</h4>
+                  <img style="width: 125px; display: block;margin-left: auto;margin-right: auto" src="/static/images/moodmeter.jpeg"> </div>{% endif %}
+            {% if all_morning_message_settings.weather %}
+                <a href="http://www.accuweather.com/en/us/new-haven-ct/06511/weather-forecast/2460_pc"
+                   class="aw-widget-legal">
+                </a>
+                <div id="awcc1477268842998" class="aw-widget-current" data-locationkey="2460_PC" data-unit="f"
+                     data-language="en-us" data-useip="false" data-uid="awcc1477268842998"></div>
+                <script type="text/javascript" src="http://oap.accuweather.com/launch.js"></script>
+            {% endif %}
+
+
+        </div>
+    </div>
+    <a href="http://newtonthinks.com/admin/brain/morningmessage/add/">Add Message</a>
+
+    </div>
+
+
+
+
+
+{% endblock content %}

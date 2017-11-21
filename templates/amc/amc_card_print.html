@@ -1,0 +1,74 @@
+{% extends "amc/print_layout.html" %}
+{% load brain_extras %}
+{% load mathfilters %}
+{% block title %}AMC Flash Cards{% endblock title %}
+{% block content %}
+    {% for student in student_and_test_list %}
+        <div class="row" style="width: 218mm;height: 279mm">
+            {% with student.0 as first_name %}
+                {% with student.1 as last_name %}
+                    {% with student.2 as challenge_name %}
+                        {% with student.3 as list_type %}
+                            {% with student.4 as combinations %}
+{#      {{ first_name }} {{ last_name.0 }}                          #}
+{#                                <img src="/static/images/amc-bnw.png" style="width: 120px; float: left; padding: 10px">#}
+                                {% for page in combinations %}
+                                    {% for combo in page %}
+                                    <div style="padding:0px; width: 49%; height:20%; float: left;font-size: 1.1em; border-style: solid; border-width: 1px; border-color: #7d7d7d">
+                                        {% if combo != 'None' %}
+                                        {% if forloop.counter <= 10 %}
+
+                                        {% if list_type == "ADD" %}
+                                            {% if combo.0 == combo.1 %}
+
+                                                <p class="question"> {{ combo.0 }} + {{ combo.1 }} =</p>
+                                            {% else %}
+
+                                                <p class="question">{{ combo.0 }} + {{ combo.1 }} = </p>
+
+                                                <p class="question">{{ combo.1 }} + {{ combo.0 }} =</p>
+                                            {% endif %}
+                                        {% elif list_type == "SUB" %}
+                                            <p class="question">{{ combo.0 }} - {{ combo.1 }} =</p>
+                                        {% elif list_type == "IMAGE" %}
+                                            <img style="height: 90%; margin:auto; display:block; padding-top: 5px;"  src="/static/images/time/{{ combo.0 }}.png">
+                                        {% endif %}
+                                            {% elif forloop.counter > 10 %}
+<br>
+                                            {% if list_type == "IMAGE" %}
+                                              <p class="answer">{{combo}}</p>
+                                                {% else %}
+                                            <p class="answer">{{combo}}</p>
+                                                {% endif %}
+                                           <p  class="cardinfo">{{ first_name }} {{ last_name.0 }}.</p>
+                                            <p class="cardinfo">{{ challenge_name }} - {% now "SHORT_DATE_FORMAT" %}</p>
+                                        {% endif %}
+                                    {% endif %}
+                                        </div>
+                                        {% if forloop.counter == 10 %}
+{#                                            SEPARATE COMBINATIONS AND ANSWERS         #}
+                                            <table class="page"></table>
+        <table style="page-break-after: always;"></table>
+                                                {% endif %}
+                                        {% endfor %}
+{#                                    SEPARATE THE PAGES AFTER THE ANSWERS   #}
+                                      <table class="page"></table>
+        <table style="page-break-after: always;"></table>
+                                {% endfor %}
+{#                                SEPARATE THE STUDENTS        #}
+{#                                <table class="page"></table>#}
+{#        <table style="page-break-after: always;"></table>#}
+                            {% endwith %}
+                        {% endwith %}
+                    {% endwith %}
+                {% endwith %}
+            {% endwith %}
+        </div>
+
+
+    {% endfor %}
+    {#    <body onload="window.print()">#}
+{% endblock content %}
+
+
+

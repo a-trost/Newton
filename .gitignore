@@ -1,0 +1,55 @@
+.idea
+.idea/*
+
+#newton/settings.py
+*.py[cod]
+
+.DS_Store
+brain/.___init__.py
+newton/.___init__.py
+newton/._wsgi.py
+
+# C extensions
+*.so
+
+# Packages
+
+dist
+build
+
+parts
+var
+sdist
+
+.installed.cfg
+lib
+lib64
+
+# Installer logs
+pip-log.txt
+
+# Unit test / coverage reports
+.coverage
+coverage.*
+.tox
+nosetests.xml
+
+*.sql*
+
+*.csv
+*.xls*
+*.doc*
+
+__pycache__
+
+amc/scripts/amc_challenge_lists.py
+amc/scripts/flashcards/
+newton.log
+static/fonts/
+static/newton/favicon.ico
+
+
+/brain/scripts/csvdownloads/
+/brain/scripts/webscrape.py
+/brain/management/commands/
+variables.py

@@ -1,0 +1,93 @@
+127.0.0.1    localhost
+127.0.1.1    Trost-student-computer-1
+104.16.135.38 ixl.com www.ixl.com
+104.16.136.38 ixl.com www.ixl.com
+104.16.137.38 ixl.com www.ixl.com
+104.16.138.38 ixl.com www.ixl.com
+104.16.139.38 ixl.com www.ixl.com
+52.15.132.242 myon.com www.myon.com
+42.14.90.85 myon.com www.myon.com
+18.220.7.12 myon.com www.myon.com
+52.85.74.203 myon.com www.myon.com
+52.85.74.130 myon.com www.myon.com
+52.85.74.166 myon.com www.myon.com
+52.85.74.121 myon.com www.myon.com
+52.85.74.162 myon.com www.myon.com
+52.85.74.214 myon.com www.myon.com
+52.85.74.174 myon.com www.myon.com
+52.15.118.192 myon.com www.myon.com
+13.59.142.61 myon.com www.myon.com
+18.221.213.120 myon.com www.myon.com
+52.85.74.38 myon.com www.myon.com
+52.85.74.65 myon.com www.myon.com
+52.85.74.47 myon.com www.myon.com
+52.85.74.50 myon.com www.myon.com
+52.85.74.72 myon.com www.myon.com
+52.85.74.166 myon.com www.myon.com
+52.85.74.14 myon.com www.myon.com
+52.85.74.140 myon.com www.myon.com
+52.85.74.113 myon.com www.myon.com
+54.230.86.100 assets.myon.com www.assets.myon.com
+54.230.86.176 assets.myon.com www.assets.myon.com
+54.230.86.86 assets.myon.com www.assets.myon.com
+54.230.86.52 assets.myon.com www.assets.myon.com
+54.230.86.72 assets.myon.com www.assets.myon.com
+54.230.86.95 assets.myon.com www.assets.myon.com
+54.230.86.54 assets.myon.com www.assets.myon.com
+54.230.86.170 assets.myon.com www.assets.myon.com
+54.192.2.102 books.myon.com www.books.myon.com
+54.192.2.154  books.myon.com www.books.myon.com
+54.192.2.89 books.myon.com www.books.myon.com
+54.192.2.234 books.myon.com www.books.myon.com
+54.192.2.67 books.myon.com www.books.myon.com
+54.192.2.97 books.myon.com www.books.myon.com
+54.192.2.218 books.myon.com www.books.myon.com
+54.192.2.44 books.myon.com www.books.myon.com
+
+
+
+192.241.146.127 newtonthinks.com www.newtonthinks.com
+216.58.204.8 googletagmanager.com www.googletagmanager.com
+
+# SavingUS Whitelist Updated July 4th, 2017.
+# (First 14 uncommented lines are examples)
+# E Mail Children at Saving US Dot Org with
+# submissions, ommissions, or corrections.
+# Warning: Google Chrome bypasses /etc/hosts
+# allowing *unrestricted* Internet access.
+192.168.1.1 router-or-switch-1
+192.168.1.2 router-or-switch-2
+192.168.1.3 router-or-switch-3
+192.168.1.4 other-device-1
+192.168.1.5 other-device-2
+192.168.1.6 other-device-3
+192.168.1.103 family-member-1
+192.168.1.104 family-member-2
+192.168.1.105 family-member-3
+192.168.1.106 printer-1
+192.168.1.107 printer-2
+192.168.1.108 printer-3
+208.67.222.222 Open-DNS-1
+208.67.220.220 Open-DNS-2
+
+# The following lines are desirable for IPv6 capable hosts
+::1 ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+
+
+
+
+
+
+
+
+
+# The following lines are desirable for IPv6 capable hosts
+::1     ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters

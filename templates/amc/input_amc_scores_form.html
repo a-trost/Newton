@@ -1,0 +1,60 @@
+{% extends "brain/layout.html" %}
+{% load brain_extras %}
+
+{% block title %}Input {{ classroom }} AMC Tests{% endblock title %}
+{% block heading %}
+    <h1>Input {{ classroom }} AMC Tests</h1>
+        <a href="{% url 'amc:classlist' grade classroom %}">< Back to {{ classroom}}</a>
+
+{% endblock heading %}
+
+{% block content %}
+    <div class="row">
+
+        <form method="post">
+            {{ formset.management_form }}
+
+            <div class="small-11 small-centered columns">
+
+                <table>
+                    <tr>
+                        <th width="50">Student</th>
+                        <th width="50">Test</th>
+                        <th width="20">Date Taken</th>
+                        <th width="10">Score</th>
+                    </tr>
+
+
+                    {% for form in formset %}
+                        <tr>
+                            <td>
+                                <a style="color: darkred">{{ form.non_field_errors }}</a>
+                                {{ form.student.errors }}
+                                {{ form.student }}
+                            </td>
+
+                            <td>
+                                {{ form.test.errors }}
+                                {{ form.test }}
+                            </td>
+                            <td>
+                                {{ form.date_tested.errors }}
+                                {{ form.date_tested }}
+                            </td>
+                            <td>
+                                {{ form.score.errors }}
+                                {{ form.score }}
+                            </td>
+                        </tr>
+
+                    {% endfor %}
+                </table>
+            </div>
+            <hr>
+            {% csrf_token %}
+            <input type="submit" class="button" value="Save">
+
+        </form>
+    </div>
+
+{% endblock content %}

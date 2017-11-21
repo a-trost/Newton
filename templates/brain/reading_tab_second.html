@@ -1,0 +1,181 @@
+{% load static %}
+<div class="grid-x grid-margin-x">
+    <div class="large-6 cell">
+
+        {% if readingstats.goal_lexile %}
+            <div class="callout reading-callout">
+                <h5 style="text-align: center;line-height:1.5rem;">My Lexile Goal</h5>
+                <div class="grid-x grid-margin-x">
+                    <div class="small-1 cell">
+                        <br>
+                    </div>
+                    <div style="text-align: center" class="small-2 cell">
+
+                        <span class="success badge start">{{ readingstats.starting_lexile }}</span><br>
+                        <a class="goalcaption">START</a>
+
+                    </div>
+                    <div class="small-2 cell goal-gap-arrows-reading">
+                        <i class="fa fa-arrow-right"></i>
+
+                    </div>
+
+
+                    <div style="text-align: center" class="small-2 cell">
+
+                        <span class="success badge now">{{ readingstats.current_lexile }}</span>
+                        <br>
+                        <a class="goalcaption">NOW</a>
+                    </div>
+
+                    <div class="small-2 cell goal-gap-arrows-reading">
+                        <i class="fa fa-arrow-right"></i>
+
+                    </div>
+
+                    <div style="text-align: center" class="small-2 cell">
+                        <span class="success badge goal">{{ readingstats.goal_lexile }}</span><br>
+                        <a class="goalcaption">GOAL</a>
+                    </div>
+                    <div class="small-1 cell">
+                        <br>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+    {% if False == True %}
+        <div class="large-6 cell">
+            <div class="callout reading-callout">
+                <h5 style="text-align: center;line-height:1.5rem;">My DRA Goal</h5>
+                <div class="grid-x grid-margin-x">
+                    <div class="small-1 cell">
+                        <br>
+                    </div>
+                    <div style="text-align: center" class="small-2 cell">
+
+                        <span class="success badge start">{{ readingstats.starting_dra }}</span><br>
+                        <a class="goalcaption">START</a>
+
+                    </div>
+                    <div class="small-2 cell goal-gap-arrows-reading">
+                        <i class="fa fa-arrow-right"></i>
+
+                    </div>
+
+                    <div style="text-align: center" class="small-2 cell">
+
+                        <span class="success badge now">{{ readingstats.current_dra }}</span>
+                        <br>
+                        <a class="goalcaption">NOW</a>
+                    </div>
+
+                    <div class="small-2 cell goal-gap-arrows-reading">
+                        <i class="fa fa-arrow-right"></i>
+
+                    </div>
+
+
+                    <div style="text-align: center" class="small-2 cell">
+                        <span class="success badge goal">{{ readingstats.goal_dra }}</span><br>
+                        <a class="goalcaption">GOAL</a>
+                    </div>
+                    <div class="small-1 cell">
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+</div>
+
+
+<div class="grid-x grid-margin-x">
+    <div class="small-12 medium-6 large-4 cell">
+        <div class="callout reading-callout">
+            {% if False == True %}
+                {% if lexile_countdown > 0 %}
+                    <h6>Lexile Challenge in {{ lexile_countdown }} Day{{ lexile_countdown|pluralize }}! Read
+                        to
+                        GROW!</h6>
+                {% elif lexile_countdown == 0 %}
+                    <h6>Lexile Challenge TODAY! Work Hard!!</h6>
+                {% endif %}
+            {% endif %}
+            <a class="expanded button" style="background-color: #3079AB"
+               href="https://www.myon.com/login/index.html?username={{ accountinfo.myonuser }}"
+               target="_blank"><h3>
+                <img style="width: 15%;" src="/static/images/myon.png"> myON</h3></a>
+
+            {% if accountinfo %}
+
+                <p><strong>School Name:</strong> Booker T Washington<br>
+                    <strong>Username:</strong> {{ accountinfo.myonuser }}<br>
+{#                    <strong>Password:</strong> {{ accountinfo.myonpass }}</p>#}
+
+                {% if student.first_name == "Caleal" %}
+                    <a class="expanded button" style="background-color:#e15258 "
+                       href="https://www.kidsa-z.com/main/Login"
+                       target="_blank"><h3>
+                        <img style="width: 15%;" src="/static/images/kidsaz.png"> Kids A-Z</h3></a>
+
+
+
+                    <p><strong>Teacher Username:</strong> {{ accountinfo.kidsazteacher }}<br>
+                        <strong>Username:</strong> {{ accountinfo.kidsazuser }}<br>
+                        <strong>Password:</strong> <img style="width: 50px"
+                                                        src="/static/images/raz-{{ accountinfo.kidsazpass |lower }}.png">
+                    </p>
+
+
+
+
+                {% endif %}
+            {% endif %}
+        </div>
+        {% if accountinfo.readworkscode %}
+            <div class="callout reading-callout">
+
+                <a class="expanded button" style="background-color: #3079AB"
+                   href="http://digital.readworks.org/student"
+                   target="_blank"><h3>
+                    <img style="width: 15%;" src="/static/images/readworks.png"> Readworks</h3></a>
+
+
+                <p><strong>Class Code:</strong> {{ accountinfo.readworkscode }}<br>
+                    <strong>Password:</strong> 1234</p>
+
+
+                {% if accountinfo.enrichmentreadworkscode %}
+                    <p><strong>Enrichment Class Code:</strong> {{ accountinfo.enrichmentreadworkscode }}<br>
+                        <strong>Password:</strong> 1234</p>
+                {% endif %}
+            </div>
+        {% endif %}
+    </div>
+    <div class="small-12 medium-6 large-8 cell">
+        {% if myon_feedback.0 %}
+            <div class="callout reading-callout grid-x">
+                        <div class="small-6 cell">
+                <h4 >myON Quizzes This Week</h4>
+            <h5 >Tests Taken: <span style="font-size: 1.7rem; color:white;" class="badge primary">{{ myon_feedback.3 }}</span></h5>
+            <h5>Average Score: <span style="font-size: 1.7rem; color:white;" class="badge primary">{{ myon_feedback.2 }}%</span></h5>
+
+                        </div>
+                        <div class="small-6 cell">
+                            <h4>Newton says...</h4>
+
+                            <div class="triangle-border">{{ myon_feedback.0 }}</div>
+
+            <img src="/static/images/{{ myon_feedback.1 }}" style="height:250px;">
+                            </div>
+            </div>
+        {% endif %}
+    </div>
+
+
+    <div class="small-12 medium-6 large-4 cell">
+
+
+    </div>
+</div>

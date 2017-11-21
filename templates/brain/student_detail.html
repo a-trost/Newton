@@ -1,0 +1,135 @@
+{% extends "brain/layout.html" %}
+{% load brain_extras %}
+{% block title %}{{ student }} Details{% endblock title %}
+
+{% block heading %}<h1>{{ student }}</h1>
+<a href="{% url 'brain:classlist' student.current_class.grade student.current_class.classroom.last_name %}">{{ student.current_class }}</a>
+
+{% endblock heading %}
+
+{% block content %}
+    <ul class="tabs" data-tabs id="example-tabs">
+  <li class="tabs-title is-active"><a style="font-size: 1em; font-weight: 700" href="#panel1" aria-selected="true">Recommended</a></li>
+  <li class="tabs-title"><a style="font-size: 1em; font-weight: 700" href="#panel2">NWEA</a></li>
+  <li class="tabs-title"><a style="font-size: 1em; font-weight: 700" href="#panel3">AMC</a></li>
+</ul>
+
+<div class="tabs-content" data-tabs-content="example-tabs">
+  <div class="tabs-panel is-active" id="panel1">
+
+    <h3>Recommended Skills</h3>
+{#  <button class="expanded button" name="pdf" type="submit">Print IXL Recommendation Sheet</button>#}
+    <table>
+    <tr>
+    <th>Skill ID</th>
+    <th>Skill Name</th>
+        <th>RIT Band</th>
+    </tr>
+    {% nwea_recommended_skills_list student "" as skills_list %}
+    {% for id, name, rit, subdomain in skills_list|slice:":10"%}
+        <tr>
+    <td>{{ id }}</td>
+    <td>{{ name }}</td>
+        <td>{{ rit }}</td>
+    </tr>
+    {% endfor %}
+        </table>
+
+
+  </div>
+  <div class="tabs-panel" id="panel2">
+      <h2>NWEA</h2>
+  <h3>Test Scores</h3>
+  <table>
+      <tr><th></th>
+
+
+          <th width="12%" style="font-size: .8em">Represent and Solve Problems</th>
+          <th width="12%" style="font-size: .8em">Analyze Patterns and Relationships</th>
+          <th width="12%" style="font-size: .8em">Understand Place Value, Counting, and Cardinality</th>
+          <th width="12%" style="font-size: .8em">Number and Operations in Base Ten</th>
+          <th width="12%" style="font-size: .8em">Number and Operations - Fractions</th>
+          <th width="12%" style="font-size: .8em">Geometric Measurement and Problem Solving</th>
+          <th width="12%" style="font-size: .8em">Represent and Interpret Data</th>
+          <th width="12%" style="font-size: .8em">Reason with Shapes Attributes, & Coordinate Plane</th>
+
+      </tr>
+      <tr>
+      <td><strong>ACTUAL</strong></td>
+          {% for score in actual_nwea_scores %}
+          <td>{{ score }}</td>
+          {% endfor %}
+      </tr>
+        <tr>
+      <td><strong>ESTIMATE</strong></td>
+          {% for score in estimated_nwea_scores %}
+          <td>{{ score }}</td>
+          {% endfor %}
+      </tr>
+  <tr>
+      <td><strong>PROGRESS TO NEXT RIT</strong></td>
+          {% for x in subdomain_percentage_complete %}
+              <td>
+                  <div class="success progress" role="progressbar" tabindex="0" aria-valuenow="{{ x }}" aria-valuemin="0" aria-valuetext="{{ x }} percent" aria-valuemax="100">
+  <div class="progress-meter" style="width: {{x}}%">
+    <p class="progress-meter-text" style="color: #333333">{{x}}%</p>
+      </div>
+                      </div>
+              </td>
+          {% endfor %}
+      </tr>
+  </table>
+
+
+  </div>
+  <div class="tabs-panel" id="panel3">
+      <h2>American Math Challenge</h2>
+
+{% if amc_tests.count > 0 %}
+{% with student|current_amc_test as curtest %}
+        <h4>Current AMC Test: {{ student|current_amc_test|amc_number_to_text }} </h4>
+<h5>Times taken current test: {{student|amc_number_of_test_attempts:curtest}}</h5>
+<h5>Basic Facts Grade Equivalent: {{student|current_amc_test|amc_grade_equivalent}}</h5>
+{% endwith %}
+
+
+<h5>Last {{ amc_tests.count }} American Math Challenge{{ amc_tests.count|pluralize }}</h5>
+<table>
+<tr>
+<th width="50">Score</th>
+<th width="50">Questions</th>
+<th width="50">Pass?</th>
+<th width="100">Test</th>
+<th width="100">Name</th>
+<th width="100">Date</th>
+</tr>
+
+{% for test in amc_tests %}
+{% with date=test.date_tested %}
+    <tr>
+    <td>{{  test.score }}</td>
+    <td>{{  test.test.total_questions }}</td>
+    <td>{% if test.passing_score %}
+    <b><span style="color: #19a60e">Yes</span></b>
+{% endif %}
+{% if not test.passing_score %}
+    <b><span style="color: #ae0000">No</span></b>
+{% endif %}
+    </td>
+    <td>{{  test.test.topic }}</td>
+    <td>{{  test.test.name }}</td>
+    <td>{{date}}</td>
+  </tr>
+    {% endwith %}
+{% endfor %}
+</table>
+{% else %}
+    Student has no AMC tests recorded.
+{% endif %}
+  </div>
+
+</div>
+    <hr>
+
+{% endblock content %}
+

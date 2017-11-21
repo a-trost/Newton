@@ -1,0 +1,66 @@
+{% extends "amc/print_layout.html" %}
+{% load brain_extras %}
+{% load mathfilters %}
+{% block title %}AMC Challenge Sheets{% endblock title %}
+{% block content %}
+    {% for student in student_and_test_list %}
+        <div class="row" style="width: 750px;">
+            {% with student.0 as first_name %}
+                {% with student.1 as last_name %}
+                    {% with student.2 as challenge_name %}
+                        {% with student.3 as list_type %}
+                            {% with student.4 as combinations %}
+                                <div>
+                                    <img src="/static/images/amc-bnw.png"
+                                         style="width: 120px; float: left; padding: 10px">
+
+                                    <h3 style="position: relative; line-height: 1.1">{{ first_name }} {{ last_name.0 }}, you're doing
+                                        The {{ challenge_name }} Challenge!</h3>
+                                    <div><h6>Make a flashcard for each combination, then practice at home and school to
+                                        get quick!</h6></div>
+                                </div>
+                                {% for combo in combinations %}
+                                    <div style="padding:10px; width: 20%; float: left;padding-top: 15px;padding-bottom:15px;font-size: 1.1em; border-style: solid; border-width: 1px;">
+                                        {% if list_type == "ADD" %}
+                                            {% if combo.0 == combo.1 %}
+                                                <i style="padding-right: 4px" class="fa fa-square-o"
+                                                   aria-hidden="true"></i>
+                                                {{ combo.0 }} + {{ combo.1 }} =
+                                                {{ combo.0 |add:combo.1 }}
+                                            {% else %}
+                                                <i style="padding-right: 4px" class="fa fa-square-o"
+                                                   aria-hidden="true"></i>
+                                                {{ combo.0 }} + {{ combo.1 }} =
+                                                {{ combo.0 |add:combo.1 }}
+                                                </div>
+                                                <div style="padding:10px; width: 20%; float: left;padding-top: 15px;padding-bottom:15px; ;font-size: 1.1em; border-style: solid; border-width: 1px;">
+
+                                                <i style="padding-right: 4px" class="fa fa-square-o"
+                                                   aria-hidden="true"></i>
+                                                {{ combo.1 }} + {{ combo.0 }} =
+                                                {{ combo.1 |add:combo.0 }}
+                                            {% endif %}
+                                        {% elif list_type == "SUB" %}
+                                            <i style="padding-right: 4px" class="fa fa-square-o" aria-hidden="true"></i>
+                                            {{ combo.0 }} - {{ combo.1 }} =
+                                            {{ combo.0 |sub:combo.1 }}
+
+                                        {% elif list_type == "IMAGE" %}
+                                        {% endif %}
+                                        </div>
+                                {% endfor %}
+                            {% endwith %}
+                        {% endwith %}
+                    {% endwith %}
+                {% endwith %}
+            {% endwith %}
+        </div>
+        <table class="page"></table>
+        <table style="page-break-after: always;"></table>
+
+    {% endfor %}
+    {#    <body onload="window.print()">#}
+{% endblock content %}
+
+
+

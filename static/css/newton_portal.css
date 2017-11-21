@@ -1,0 +1,665 @@
+@charset "UTF-8";
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Asap', sans-serif;
+}
+
+.menu-text {
+    font-size: 1.3rem;
+}
+
+h1 {
+    font-size: 3.5rem;
+    color: #1070b1;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+    font-weight: 700;
+    line-height: 4rem;
+}
+
+.reveal{
+width: 75%;
+    height: 85%;
+}
+.rounded-corners{
+    border-radius: 15px;
+}
+
+a.goalcaption{color: #5f5f5f;
+    font-size: 1.2rem;
+    font-family: 'Asap', sans-serif;}
+
+.reading-callout {background-color: #abd9f5;border: 2px solid #3079AB}
+
+
+.goal-gap-arrows-reading{padding-top:0px;text-align: center; font-size: 2.5rem; color: #2e6aab; letter-spacing: -3px; }
+
+.goal-gap-arrows-math{padding-top:0px;text-align: center; font-size: 2.5rem; color: #4ab459; letter-spacing: -3px; }
+
+.success.badge.lexile {
+    font-size: 1.5rem;
+    background-color: #37b32d;
+    font-family: 'Asap', sans-serif;
+}
+
+.success.badge.start {
+    font-size: 1.5rem;
+    background-color: #bb2e2a;
+    font-family: 'Asap', sans-serif;
+}
+
+.success.badge.now {
+    font-size: 1.5rem;
+    background-color: #dbc31f;
+    font-family: 'Asap', sans-serif;
+}
+
+.success.badge.goal {
+    font-size: 1.5rem;
+    background-color: #37b32d;
+    font-family: 'Asap', sans-serif;
+}
+
+
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2.5rem;
+}
+
+h4 {
+    font-size: 2rem;
+}
+
+h5 {
+    font-size: 1.6rem;
+}
+
+h6 {
+    font-size: 1.2rem;
+}
+
+th {
+    background-color: #318f30;
+    color: white;
+    text-align: left;
+}
+
+td {
+    font-size: .9rem;
+}
+
+.button {
+    border-radius: 7px;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+}
+
+.footer {
+    background-color: #d8dadf;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 2rem;
+
+}
+
+.footer p.slogan {
+    font-family: 'Asap', sans-serif;
+    color: #545557;
+    font-size: 2rem;
+    margin: 0 0 1rem;
+}
+
+.footer p.copyright {
+    color: #464749;
+    font-size: 0.875rem;
+    margin: 0;
+}
+
+.footer p.quote {
+    color: #47494b;
+    font-size: 0.875rem;
+    margin: 0;
+}
+
+.footer .links a {
+    list-style: none;
+    font-weight: bold;
+    color: #353535;
+    padding: 1rem 0 1rem;
+    margin: 0;
+}
+
+.footer .links a::after {
+    content: "•";
+    padding: 0 0.4rem 0 0.8rem;
+}
+
+.footer .links a:last-child::after {
+    content: "";
+    padding: 0 0.4rem 0 0.8rem;
+}
+
+table.inputtable {
+    padding: 0.4rem 0.1rem 0;
+}
+
+.tabs {
+    border: none;
+}
+
+.tabs-title > a {
+    padding-top: .8rem;
+    padding-bottom: .5rem;
+}
+
+.tabs-title.math-nav > a[aria-selected=false] {
+    color: #4ab459;
+}
+
+.tabs-title.reading-nav > a[aria-selected=false] {
+    color: #2e6aab;
+}
+
+.tabs-title.badge-nav > a[aria-selected=false] {
+    color: orange;
+}
+
+.tabs-title.video-nav > a[aria-selected=false] {
+    color: #b4241f;
+}
+
+#math-panel {
+    border: 3px solid #4ab459;
+}
+
+#reading-panel {
+    border: 3px solid #2e6aab;
+}
+
+#badge-panel {
+    border: 3px solid orange;
+}
+
+#video-panel {
+    border: 3px solid #b4241f;
+}
+
+.tabs-title.math-nav > a:focus, .tabs-title.math-nav > a[aria-selected=true] {
+    border-radius: 15px 15px 0 0;
+    -moz-border-radius: 15px 15px 0 0;
+    -webkit-border-radius: 15px 15px 0 0;
+    background-color: #4ab459;
+
+    color: white;
+}
+
+.tabs-title.reading-nav > a:focus, .tabs-title.reading-nav > a[aria-selected=true] {
+    border-radius: 15px 15px 0 0;
+    -moz-border-radius: 15px 15px 0 0;
+    -webkit-border-radius: 15px 15px 0 0;
+    background-color: #2e6aab;
+    color: white;
+
+}
+
+.tabs-title {
+    border-radius: 15px 15px 0 0;
+    -moz-border-radius: 15px 15px 0 0;
+    -webkit-border-radius: 15px 15px 0 0;
+    background-color: #dddddd;
+
+}
+
+.tabs-title.badge-nav > a:focus, .tabs-title.badge-nav > a[aria-selected=true] {
+    border-radius: 15px 15px 0 0;
+    -moz-border-radius: 15px 15px 0 0;
+    -webkit-border-radius: 15px 15px 0 0;
+    background-color: orange;
+    color: white;
+}
+
+.tabs-title.video-nav > a:focus, .tabs-title.video-nav > a[aria-selected=true] {
+    border-radius: 15px 15px 0 0;
+    -moz-border-radius: 15px 15px 0 0;
+    -webkit-border-radius: 15px 15px 0 0;
+    background-color: #b4241f;
+    color: white;
+}
+
+
+.tabs-title.badge-nav > a:hover {
+    border-radius: 15px 15px 0 0;
+    -moz-border-radius: 15px 15px 0 0;
+    -webkit-border-radius: 15px 15px 0 0;
+    background-color: orange;
+    color: white;
+}
+
+.tabs-title.reading-nav > a:hover {
+    border-radius: 15px 15px 0 0;
+    -moz-border-radius: 15px 15px 0 0;
+    -webkit-border-radius: 15px 15px 0 0;
+    background-color: #2e6aab;
+    color: white;
+}
+
+.tabs-title.math-nav > a:hover {
+    border-radius: 15px 15px 0 0;
+    -moz-border-radius: 15px 15px 0 0;
+    -webkit-border-radius: 15px 15px 0 0;
+    background-color: #4ab459;
+    color: white;
+}
+
+.tabs-title.video-nav > a:hover {
+    border-radius: 15px 15px 0 0;
+    -moz-border-radius: 15px 15px 0 0;
+    -webkit-border-radius: 15px 15px 0 0;
+    background-color: #b4241f;
+    color: white;
+}
+
+
+
+
+/*Progress Bar*/
+
+.skillbar {
+    font-family: 'Asap', 'sans-serif';
+    position: relative;
+    display: block;
+    margin-bottom: 15px;
+    width: 100%;
+    background: #eee;
+    height: 35px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -webkit-transition: 0.4s linear;
+    -moz-transition: 0.4s linear;
+    -o-transition: 0.4s linear;
+    transition: 0.4s linear;
+    -webkit-transition-property: width, background-color;
+    -moz-transition-property: width, background-color;
+    -o-transition-property: width, background-color;
+    transition-property: width, background-color;
+}
+
+.skillbar-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-weight: bold;
+    font-size: 13px;
+    color: #fff;
+    background: #6adcfa;
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-bottom-left-radius: 4px;
+    -moz-border-radius-topleft: 3px;
+    -moz-border-radius-bottomleft: 3px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.skillbar-title span {
+    display: block;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 0 20px;
+    height: 35px;
+    line-height: 35px;
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    -moz-border-radius-topleft: 3px;
+    -moz-border-radius-bottomleft: 3px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.badge-display {padding: 9px;
+    float: left;
+    overflow: auto;
+    #margin:2px;
+        text-align: center;
+    /*border: solid black 1px ;*/
+
+}
+
+.badge-title {
+
+    color: #202020;
+}
+
+.badge-description {
+    font-size: 10pt;
+    color: #5e5e5e;
+    font-family: 'Asap', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 9pt;
+
+}
+
+
+.skillbar-bar {
+    height: 35px;
+    width: 0;
+    background: #6adcfa;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+.skill-bar-percent {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    font-size: 11px;
+    height: 35px;
+    line-height: 35px;
+    color: #444;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+/*END PROGRESS BAD*/
+
+/* ============================================================================================================================
+== BUBBLE WITH A BORDER AND TRIANGLE
+** ============================================================================================================================ */
+
+/* THE SPEECH BUBBLE
+------------------------------------------------------------------------------------------------------------------------------- */
+
+.triangle-border {
+    position: relative;
+    padding: 15px;
+    margin: 0 0 0;
+    border: 5px solid #000000;
+    color: #333;
+    background: #fbffe7;
+    /* css3 */
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    font-size:1.5rem;
+}
+
+/* Variant : for left positioned triangle
+------------------------------------------ */
+
+.triangle-border.left {
+    margin-left: 30px;
+}
+
+/* Variant : for right positioned triangle
+------------------------------------------ */
+
+.triangle-border.right {
+    margin-right: 30px;
+}
+
+/* THE TRIANGLE
+------------------------------------------------------------------------------------------------------------------------------- */
+
+.triangle-border:before {
+    content: "";
+    position: absolute;
+    bottom: -20px; /* value = - border-top-width - border-bottom-width */
+    left: 30px; /* controls horizontal position */
+    border-width: 20px 20px 0;
+    border-style: solid;
+    border-color: #000000 transparent;
+    /* reduce the damage in FF3.0 */
+    display: block;
+    width: 0;
+}
+
+/* creates the smaller  triangle */
+.triangle-border:after {
+    content: "";
+    position: absolute;
+    bottom: -13px; /* value = - border-top-width - border-bottom-width */
+    left: 37px; /* value = (:before left) + (:before border-left) - (:after border-left) */
+    border-width: 13px 13px 0;
+    border-style: solid;
+    border-color: #fcffd9 transparent;
+    /* reduce the damage in FF3.0 */
+    display: block;
+    width: 0;
+}
+
+/* Variant : top
+------------------------------------------ */
+
+/* creates the larger triangle */
+.triangle-border.top:before {
+    top: -20px; /* value = - border-top-width - border-bottom-width */
+    bottom: auto;
+    left: auto;
+    right: 40px; /* controls horizontal position */
+    border-width: 0 20px 20px;
+}
+
+/* creates the smaller  triangle */
+.triangle-border.top:after {
+    top: -13px; /* value = - border-top-width - border-bottom-width */
+    bottom: auto;
+    left: auto;
+    right: 47px; /* value = (:before right) + (:before border-right) - (:after border-right) */
+    border-width: 0 13px 13px;
+}
+
+/* Variant : left
+------------------------------------------ */
+
+/* creates the larger triangle */
+.triangle-border.left:before {
+    top: 10px; /* controls vertical position */
+    bottom: auto;
+    left: -30px; /* value = - border-left-width - border-right-width */
+    border-width: 15px 30px 15px 0;
+    border-color: transparent #000000;
+}
+
+/* creates the smaller  triangle */
+.triangle-border.left:after {
+    top: 16px; /* value = (:before top) + (:before border-top) - (:after border-top) */
+    bottom: auto;
+    left: -21px; /* value = - border-left-width - border-right-width */
+    border-width: 9px 21px 9px 0;
+    border-color: transparent #fff;
+}
+
+/* Variant : right
+------------------------------------------ */
+
+/* creates the larger triangle */
+.triangle-border.right:before {
+    top: 10px; /* controls vertical position */
+    bottom: auto;
+    left: auto;
+    right: -30px; /* value = - border-left-width - border-right-width */
+    border-width: 15px 0 15px 30px;
+    border-color: transparent #000000;
+}
+
+/* creates the smaller  triangle */
+.triangle-border.right:after {
+    top: 16px; /* value = (:before top) + (:before border-top) - (:after border-top) */
+    bottom: auto;
+    left: auto;
+    right: -21px; /* value = - border-left-width - border-right-width */
+    border-width: 9px 0 9px 21px;
+    border-color: transparent #bee4ef;
+}
+
+tr.border_bottom td {
+    border-bottom: 1pt solid black;
+}
+
+
+p.question {
+    font-size:2.5rem;
+    font-family: 'Asap', sans-serif;
+    text-align: center;
+}
+
+p.answer {
+    font-size:2.5rem;
+    font-family: 'Asap', sans-serif;
+    text-align: center;
+    color: #c8c8c8;
+    /*background: repeating-linear-gradient(*/
+  /*45deg,*/
+  /*#a9a9a9,*/
+  /*#a9a9a9 5px,*/
+  /*#4b4b4b 5px,*/
+  /*#4b4b4b 10px*/
+/*);*/
+}
+
+p.cardinfo {
+    text-align: center;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 8pt;
+    color: #9e9e9e;
+
+bottom: 0;
+
+}
+
+/*SECOND GRADE NEW BUTTONS*/
+
+.portal-button{
+  font-family: 'Asap', sans-serif;
+  font-size:20pt;
+  color:white;
+  text-align:center;
+  /*width:calc(25% - 1.875rem);*/
+  margin:14px 0 14px 0;
+  position:relative;
+  display:block;
+  float:left;
+    text-shadow: 1px 1px #444444;
+
+}
+
+.inside-button{
+  width:90%;
+    float: right;
+  padding: 5px 0 0 10px;
+  border-radius: 12px;
+      color:white;
+}
+.portal-button-name{
+  line-height:30pt;
+  margin:0;
+  spacing:0;
+
+}
+.button-avatar{
+  height:78px;
+  z-index:3;
+  position:absolute;
+ left: 0;
+    top: auto;
+
+}
+
+
+.portal-button-bottom-holder{
+ width:100%;
+  float:right;
+
+}
+.portal-button-bottom{
+    border-width: 1px;
+  border-color: white;
+  width: 32%;
+  position:relative;
+  float:right;
+  font-size:13pt;
+   padding:2px 0 2px 0;
+}
+
+.button-bottom-third{
+  border-style:solid none none solid;
+}
+.button-bottom-second{
+  border-style:solid none none solid;
+}
+.button-bottom-first{
+  border-style:solid none none none;
+}
+
+.portal-class-time-spent{
+    font-size: 1.5rem;
+    font-family: 'Asap', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #585758;
+    text-align: right;
+}
+.portal-class-time-spent.ixl{
+    color:#5cb860;
+        font-size: 1.3rem;
+
+}
+.portal-class-time-spent.myon{
+    color:#3079AB;
+            font-size: 1.3rem;
+
+}
+
+/*<img src="https://www.ixl.com/screenshot/c7a733e34db8f156d84352bd4a5ab8303ad0606a.png">*/
+
+
+
+
+/* DivTable.com */
+.divTable{
+	display: table;
+	width: 100%;
+  text-align:center;
+    align-content: center;
+    font-family: 'Asap', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 11pt;
+    /*background: rgba(142, 68, 173, 0.16);*/
+    color:#8E44AD;
+        vertical-align: middle;
+
+
+}
+.divTableRow {
+	display: table-row;
+    vertical-align: middle;
+}
+.divTableHeading {
+	background-color: #EEE;
+	display: table-header-group;
+}
+.divTableCell, .divTableHead {
+	border: 1px solid #8E44AD;
+	display: table-cell;
+	padding: 2px;
+    vertical-align: middle;
+}
+.divTableHeading {
+	background-color: #EEE;
+	display: table-header-group;
+	font-weight: bold;
+}
+.divTableFoot {
+	background-color: #EEE;
+	display: table-footer-group;
+	font-weight: bold;
+}
+.divTableBody {
+	display: table-row-group;
+}
+
+  .ldBar-label {
+    display: none!important;
+  }
+
+  .reward_star{
+      height:30px;width:30px;
+  }

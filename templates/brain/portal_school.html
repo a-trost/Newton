@@ -1,0 +1,55 @@
+{% extends "brain/portal_layout.html" %}
+{% load brain_extras %}
+{% block title %}BTWA Portal {% endblock title %}
+{% block heading %}
+       <div class="grid-container" style="max-width:90%; padding-top: 15px;">
+
+    <img style="width: 75px;float: left;" src="/static/images/btwalogo.jpeg">
+    <h1 style="position:relative;left: 15px;margin-bottom: -0.5rem">Booker T. Washington Academy</h1>
+    <br>
+      </div>
+{% endblock heading %}
+{% block content %}
+         <div class="grid-container" style="max-width:95%;">
+
+    <div class="callout success">
+        <h5 style="text-align: center">Click on your teacher's name.</h5>
+    </div>
+    <div class="grid-x grid-margin-x">
+        {% for class in class_list %}
+            <div class="medium-4 large-3 cell">
+                <a class="expanded button" style="background-color: {{ color_list|index:forloop.counter0 }}"
+                   href="{% url 'brain:portalclass' class.grade class.classroom.last_name %}"><h4><i
+                        class="fa {{ icon_list|index:forloop.counter0 }}"></i>
+                    {{ class.classroom.last_name }} </h4></a>
+            </div>
+        {% endfor %}
+    </div>
+{#<hr>#}
+{##}
+{#    <h3 style="color: #0c4d78;text-align: center"><i class="fa fa-star"></i> School Leaderboards <i class="fa fa-star"></i></h3>#}
+{##}
+{#    <div class="grid-x grid-margin-x">#}
+{#        <div class="cell small-4 callout warning">#}
+{#    <h4 style="text-align: center; color: #e15258"><i class="fa fa-clock-o"></i> IXL Time Spent <i class="fa fa-clock-o"></i></h4>#}
+{#    {% for student in school_ixl_time_spent %}#}
+{#    <h5 style="color: {{ color_list|index:forloop.counter0 }}">{{ forloop.counter }}. {{ student.student.first_name }} {{ student.student.last_name.0 }}: {{ student.time_spent }} mins</h5>#}
+{#    {% endfor %}#}
+{#    </div>#}
+{##}
+{#            <div class="cell small-4 callout warning">#}
+{#    <h4 style="text-align: center; color: #51b72f"><i class="fa fa-clock-o"></i> myON Time Spent <i class="fa fa-clock-o"></i></h4>#}
+{#    {% for student in school_myon_time_spent %}#}
+{#    <h5 style="color: {{ color_list|index:forloop.counter0 }}">{{ forloop.counter }}. {{ student.student.first_name }} {{ student.student.last_name.0 }}: {{ student.myon_time_spent }} mins</h5>#}
+{#    {% endfor %}#}
+{#    </div>#}
+{#        <div class="cell small-4 callout warning">#}
+{#    <h4 style="text-align: center; color: #2556a1"><i class="fa fa-arrow-circle-up"></i> Lexile Growth <i class="fa fa-arrow-circle-up"></i></h4>#}
+{#    {% for student in school_myon_lexile_progress %}#}
+{#    <h5 style="color: {{ color_list|index:forloop.counter0 }}">{{ forloop.counter }}. {{ student.student.first_name }} {{ student.student.last_name.0 }}.</h5>#}
+{#    {% endfor %}#}
+{#    </div>#}
+    </div>
+        </div>
+         </div>
+{% endblock content %}

@@ -1,0 +1,55 @@
+{% extends "brain/layout.html" %}
+{% load brain_extras %}
+{% block title %}{{ classroom }}'s Class{% endblock title %}
+{% block heading %}
+    <h1 style="margin-bottom: -0.5rem">{{ classroom_object.title }} {{ classroom }}'s Class</h1>
+    <h4 style="margin-top:-1rem; margin-bottom: 0rem">
+        <small>{{ grade|upper }} GRADE</small>
+    </h4>
+{% endblock heading %}
+{% block content %}
+    <div class="grid-x grid-margin-x">
+        <div class="small-12 cell">
+            <ul class="tabs" data-tabs id="class-tabs">
+                <li class="tabs-title is-active"><a style="font-size: 1em; font-weight: 700" href="#reading"
+                                                    aria-selected="true">Reading Stats</a></li>
+                <li class="tabs-title"><a style="font-size: 1em; font-weight: 700" href="#amc">AMC</a></li>
+                <li class="tabs-title"><a style="font-size: 1em; font-weight: 700" href="#ixl">IXL</a></li>
+                <li class="tabs-title"><a style="font-size: 1em; font-weight: 700" href="#cba">CBA Grid</a></li>
+                <li class="tabs-title"><a style="font-size: 1em; font-weight: 700" href="#computer">Computer
+                    Priority</a></li>
+                <li class="tabs-title"><a style="font-size: 1em; font-weight: 700" href="#other">Other Stuff</a></li>
+            </ul>
+            <div class="tabs-content" data-tabs-content="class-tabs">
+
+                <div class="tabs-panel is-active" id="reading">
+                    {% include "brain/class_details/reading.html" %}
+                </div>
+
+                <div class="tabs-panel" id="amc">
+
+                    {% include "brain/class_details/amc.html" %}
+                </div>
+
+                <div class="tabs-panel" id="ixl">
+                    {% include "brain/class_details/ixl.html" %}
+                </div>
+
+                <div class="tabs-panel" id="cba">
+                    {% include "brain/class_details/cba.html" %}
+                </div>
+
+                <div class="tabs-panel" id="computer">
+                    {% include "brain/class_details/computer.html" %}
+                </div>
+
+                <div class="tabs-panel" id="other">
+                    {% include "brain/class_details/other.html" %}
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <p style="color: dimgray; size:.7em; font-style: oblique">Last Data Update: {{ last_updated }}</p>
+
+{% endblock content %}

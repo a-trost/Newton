@@ -1,0 +1,65 @@
+<!doctype html>
+{% load static from staticfiles %}
+{% load brain_extras %}
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %} | Newton</title>
+    <link rel="stylesheet" href="{% static 'css/foundation.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Asap:700, 400," rel="stylesheet">
+    <link rel="shortcut icon" href="{% static 'favicon/favicon.ico' %}">
+<link rel="stylesheet" href="{% static 'css/newton.css' %}">
+    {% block css %}{% endblock %}
+</head>
+<body>
+
+{% include "brain/header_bar.html" %}
+
+
+    {% if messages %}
+        <div class="grid-x grid-padding-x">
+            <div class="small-6 small-centered cell">
+                {% for message in messages %}
+                    <div data-alert class="alert-box {{ message.tags }} radius">
+                        {{ message }}
+                        <a href="#" class="close">&times;</a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    {% endif %}
+        {% block categorybar %}{% endblock %}
+
+    <div class="grid-x grid-padding-x">
+        <div class="large-12 cell">
+            {% block breadcrumbs %}{% endblock %}
+            {% block heading %}{% endblock %}
+            <hr>
+            <br>
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="grid-x grid-padding-x">
+            <div class="small-12 cell">
+                  <p class="quote">"Apples hurt more than you'd think."</p>
+<cite>Isaac Newton</cite>
+                <p class="copyright">Copyright © 2016-18</p>
+            </div>
+        </div>
+    </footer>
+    <script src={% static 'js/vendor/jquery.js' %}></script>
+<script src={% static 'js/vendor/what-input.js' %}></script>
+{#    <script src={% static 'js/vendor/foundation.js' %}></script>#}
+<script src={% static 'js/vendor/foundation.min.js' %}></script>
+<script src={% static 'js/app.js' %}></script>
+    <script src="https://use.fontawesome.com/b215f0aabc.js"></script>
+{% block javascript %}{% endblock %}
+<script>
+    $(document).foundation();
+</script>
+
+</body>
+</html>

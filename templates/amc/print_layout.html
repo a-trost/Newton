@@ -1,0 +1,44 @@
+<!doctype html>
+{% load static from staticfiles %}
+{% load mathfilters %}
+{% load brain_extras %}
+<html class="no-js" lang="en">
+    <head>
+        <meta http-equiv="content-type"  charset="utf-8">
+{#        <meta name="viewport" content="width=device-width, initial-scale=1.0">#}
+        <title>{% block title %}{% endblock %} | Newton</title>
+{#        <link rel="stylesheet" href="{% static 'css/foundation.css' %}" media="screen">#}
+        <link href="https://fonts.googleapis.com/css?family=Asap:700,300,500" rel="stylesheet">
+    <script src="https://use.fontawesome.com/b215f0aabc.js"></script>
+    <link rel="shortcut icon" href="{% static 'favicon/favicon.ico' %}">
+
+        {% block css %}{% endblock %}
+        <script src="{% static 'js/vendor/modernizr.js' %}"></script>
+        <meta class="foundation-mq">
+    {% block extrahead %}{% endblock %}
+            <link rel="stylesheet" href="{% static 'css/newton_portal.css' %}" media="all">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/print.css' %}" media="print" />
+
+
+    </head>
+    <body>
+
+
+        <div class="row">
+        <div class="large-12 columns">
+        {% block breadcrumbs %}{% endblock %}
+            {% block heading %}{% endblock %}
+{#            <hr><br>#}
+        {% block content %}{% endblock %}
+        </div>
+        </div>
+
+        <script src="{% static 'js/vendor/jquery.js' %}"></script>
+        <script src="{% static 'js/vendor/what-input.min.js' %}"></script>
+        <script src="{% static 'js/foundation.js' %}"></script>
+        {% block javascript %}{% endblock %}
+        <script>
+    $(document).foundation();
+  </script>
+    </body>
+</html>

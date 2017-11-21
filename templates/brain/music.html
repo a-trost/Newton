@@ -1,0 +1,136 @@
+<!---
+Making https://dribbble.com/shots/2756727-Mp3-Player real.
+-->
+{% extends "brain/portal_layout.html" %}
+{% load static from staticfiles %}
+{% load brain_extras %}
+{% block title %}Music Player{% endblock title %}
+{% block css %}
+
+{% endblock %}
+{% block heading %}
+
+
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Asap:400,100,300,500,700,900'>
+<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+
+      <link rel="stylesheet" href="{% static 'css/musiccss.css' %}">
+
+
+{% endblock heading %}
+{% block content %}
+<h1 style="font-weight: 900; text-align: center; color: white; text-shadow: #222222; font-size: 4em;">Focus & Recess Music</h1>
+  <div class="mhn-player">
+<div class="album-art"></div>
+<div class="play-list">
+	<a href="#" class="play"
+		data-id="1"
+		data-album=" "
+		data-artist=" "
+		data-title="Calm 1"
+		data-albumart="{% static 'images/calm_1.png' %}"
+		data-url="{% static 'music/calm_1.mp3' %}"></a>
+
+	<a href="#" class="play"
+		data-id="2"
+		data-album=" "
+		data-artist=" "
+		data-title="Calm 2"
+		data-albumart="{% static 'images/calm_2.png' %}"
+		data-url="{% static 'music/calm_2.mp3' %}"></a>
+
+	<a href="#" class="play"
+		data-id="3"
+		data-album=" "
+		data-artist=" "
+		data-title="Calm 3"
+		data-albumart="{% static 'images/calm_3.png' %}"
+		data-url="{% static 'music/calm_3.mp3' %}"></a>
+
+	<a href="#" class="play"
+		data-id="4"
+		data-album=" "
+		data-artist=" "
+		data-title="Calm 4"
+		data-albumart="{% static 'images/calm_4.png' %}"
+		data-url="{% static 'music/calm_4.mp3' %}"></a>
+
+	<a href="#" class="play"
+		data-id="5"
+		data-album=" "
+		data-artist=" "
+		data-title="Calm 5"
+		data-albumart="{% static 'images/calm_5.png' %}"
+		data-url="{% static 'music/calm_5.mp3' %}"></a>
+
+    	<a href="#" class="play"
+		data-id="6"
+		data-album=" "
+		data-artist=" "
+		data-title="Upbeat 1"
+		data-albumart="{% static 'images/calm_5.png' %}"
+		data-url="{% static 'music/upbeat_1.mp3' %}"></a>
+
+    	<a href="#" class="play"
+		data-id="7"
+		data-album=" "
+		data-artist=" "
+		data-title="Upbeat 2"
+		data-albumart="{% static 'images/calm_5.png' %}"
+		data-url="{% static 'music/upbeat_2.mp3' %}"></a>
+
+        	<a href="#" class="play"
+		data-id="8"
+		data-album=" "
+		data-artist=" "
+		data-title="Upbeat 3"
+		data-albumart="{% static 'images/calm_5.png' %}"
+		data-url="{% static 'music/upbeat_3.mp3' %}"></a>
+
+        	<a href="#" class="play"
+		data-id="9"
+		data-album=" "
+		data-artist=" "
+		data-title="Upbeat 4"
+		data-albumart="{% static 'images/calm_5.png' %}"
+		data-url="{% static 'music/upbeat_4.mp3' %}"></a>
+
+        	<a href="#" class="play"
+		data-id="10"
+		data-album=" "
+		data-artist=" "
+		data-title="Upbeat 5"
+		data-albumart="{% static 'images/calm_5.png' %}"
+		data-url="{% static 'music/upbeat_5.mp3' %}"></a>
+
+</div>
+<div class="audio"></div>
+<div class="current-info">
+	<div class="song-artist"></div>
+	<div class="song-album"></div>
+	<div class="song-title"></div>
+</div>
+<div class="controls">
+<a href="#" class="toggle-play-list"><i class="fa fa-list-ul"></i></a>
+<div class="duration clearfix">
+	<span class="pull-left play-position"></span>
+	<span class="pull-right"><span class="play-current-time">00:00</span> / <span class="play-total-time">00:00</span></span>
+</div>
+<div class="progress"><div class="bar"></div></div>
+<div class="action-button">
+	<a href="#" class="prev"><i class="fa fa-step-backward"></i></a>
+	<a href="#" class="play-pause"><i class="fa fa-pp"></i></a>
+	<a href="#" class="stop"><i class="fa fa-stop"></i></a>
+	<a href="#" class="next"><i class="fa fa-step-forward"></i></a>
+	<input type="range" class="volume" min="0" max="1" step="0.1" value="0.5" data-css="0.5">
+</div>
+
+</div>
+</div>
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
+<script src='http://enscrollplugin.com/releases/enscroll-0.6.1.min.js'></script>
+
+    <script  src="{% static 'js/vendor/musicplayer.js' %}"></script>
+
+
+        {% endblock content %}

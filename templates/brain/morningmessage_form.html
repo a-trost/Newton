@@ -1,0 +1,16 @@
+{% extends "brain/portal_layout.html" %}
+{% load brain_extras %}
+{% block title %}{{ classroom }} | BTWA Portal {% endblock title %}
+{% block heading %}
+         <div class="grid-container" style="max-width:94%;">
+     <div class="grid-x">
+    <div class="small-7 cell">
+    <h1 style="margin-bottom: -0.5rem">{{ classroom.title }} {{ classroom.last_name }} Add Morning Message</h1>
+    </div>
+     </div>
+{% endblock heading %}
+{% block content %}
+<form action="" method="post">
+{% csrf_token %}{{ form }}<input type="submit">  </form>
+    </div>
+{% endblock content %}

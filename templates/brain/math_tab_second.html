@@ -1,0 +1,189 @@
+{#{% if False == True %}#}
+{#                    <div class="grid-x grid-margin-x">#}
+{#                        <div class="large-6 cell">#}
+{#                            <div style="background-color: #c0f0c0; border: 2px solid #5cb860" class="callout secondary">#}
+{#                                <h5 style="text-align: center;line-height:1.5rem;">My NWEA Math Goal</h5>#}
+{#                                <div class="row">#}
+{#                                    <div class="small-1 cell">#}
+{#                                        <br>#}
+{#                                    </div>#}
+{##}
+{#                                    <div style="text-align: center" class="small-2 cell">#}
+{##}
+{#                                        <span class="success badge start">173</span><br>#}
+{#                                        <a class="goalcaption">START</a>#}
+{##}
+{#                                    </div>#}
+{#                                    <div class="small-2 cell goal-gap-arrows-math">#}
+{#                                        <i class="fa fa-arrow-circle-right"></i>#}
+{##}
+{#                                    </div>#}
+{##}
+{#                                    <div style="text-align: center" class="small-2 cell">#}
+{##}
+{#                                        <span class="success badge now">186</span>#}
+{#                                        <br>#}
+{#                                        <a class="goalcaption">NOW</a>#}
+{#                                    </div>#}
+{#                                    <div class="small-2 cell goal-gap-arrows-math">#}
+{#                                        <i class="fa fa-arrow-circle-right"></i>#}
+{##}
+{#                                    </div>#}
+{##}
+{#                                    <div style="text-align: center" class="small-2 cell">#}
+{#                                        <span class="success badge goal">195</span><br>#}
+{#                                        <a class="goalcaption">GOAL</a>#}
+{#                                    </div>#}
+{#                                    <div class="small-1 cell"><br></div>#}
+{##}
+{#                                </div>#}
+{##}
+{##}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="large-6 cell"><!-- ... --></div>#}
+{#                    </div>#}
+{#                {% endif %}#}
+                {#IXL BUTTON AND LOGIN INFO#}
+                <div class="grid-x grid-margin-x">
+                    <div class="small-12 medium-4 large-4 cell">
+
+                        <div style="background-color: #c0f0c0; border: 2px solid #5cb860" class="callout secondary">
+
+                            <a class="expanded button" style="background-color: #5cb860; "
+                               href="https://www.ixl.com/signin/btwa?username={{ accountinfo.ixluser }}"
+                               target="_blank"><h4>
+                                <img style="width: 13%; " src="/static/images/ixl.png"> IXL</h4></a>
+
+                            {% if accountinfo %}
+                                <p><strong>Username:</strong> {{ accountinfo.ixluser }}</p>
+{#                                <p><strong>Password:</strong> {{ accountinfo.ixlpass }}</p>#}
+
+                            {% endif %}
+</div>
+
+                    </div>
+                    <div class="small-12 medium-8 large-8 cell">
+                        {% if current_ixl_challenge %}
+                            {% if total_complete == total_questions %}
+                                <img style="width: 95%; padding-bottom: 5px; "
+                                     src="/static/images/challengecomplete.svg">
+                            {% else %}
+                                <h5 style="text-align: center; color: #318f30"></i> {{ current_ixl_challenge.title }}</h5>
+                            {% endif %}
+                            <table class="challenge" style="width:100%">
+                                <tr>
+                                    <th><i class="fa fa-check-square-o"></i></th>
+                                    <th>Level</th>
+                                    <th>ID</th>
+                                    <th>Category</th>
+                                    <th>Score</th>
+                                    <th>Score Needed</th>
+                                </tr>
+                                {% for exercise in challenge_exercise_list %}
+                                    {% with exercise.0 as exercise_id %}
+                                        {% with exercise.1 as exercise_description %}
+                                            {% with exercise.2 as exercise_score %}
+                                                {% with exercise.3 as required_score %}
+                                                    {% if required_score == 100 %}
+                                                        {#                                                    If this is the bonus question...#}
+                                                        <tr style="background-color: #fff573">
+                                                            {#                                                Make the background red#}
+                                                            <td><strong>{% if exercise_score == 100 %}
+                                                                {#                                                        If the score has been met...#}
+                                                                <i style="color: #318f30; font-size: 1.1em;"
+                                                                   class="fa fa-check-square-o"></i>
+                                                                {#                                                        Check the box#}
+                                                            {% else %}
+                                                                {#                                                        Otherwise, Don't check the box.#}
+                                                                <i style="font-size: 1.1em;" class="fa fa-square-o"></i>
+                                                            {% endif %}
+                                                                {% else %}
+                                                        <tr>
+                                                        <td><strong>{% if exercise_score >= required_score %}
+                                                        <i style="color: #318f30; font-size: 1.1em;"
+                                                           class="fa fa-check-square-o"></i>
+
+                                                    {% else %}
+                                                        <i style="font-size: 1.1em;" class="fa fa-square-o"></i>
+                                                    {% endif %}
+                                                    {% endif %}
+                                                </strong></td>
+                                                <td><strong
+                                                        style="font-size: 1.1em;">{{ exercise_id.0 }}</strong></td>
+                                                <td><strong
+                                                        style="font-size: 1.1em;">{{ exercise_id |slice:"2:" }}</strong>
+                                                </td>
+                                                <td>{{ exercise_description.category }}</td>
+                                                <td>{{ exercise_score }}</td>
+                                                <td>{{ required_score }}</td>
+
+                                                </tr>
+                                                {% endwith %}
+                                            {% endwith %}
+                                        {% endwith %}
+                                    {% endwith %}
+                                {% endfor %}
+                            </table>
+                                <h5 style="text-align: center; color: #318f30"></i>Bonus Exercises</h5>
+                                <table class="challenge" style="width:100%">
+                                    <tr>
+                                        <th><i class="fa fa-check-square-o"></i></th>
+                                        <th>Level</th>
+                                        <th>ID</th>
+                                        <th>Category</th>
+                                        <th>Score</th>
+                                        <th>Score Needed</th>
+
+                                    </tr>
+                                    {% for exercise in bonus_exercise_list %}
+                                    {% with exercise.0 as exercise_id %}
+                                        {% with exercise.1 as exercise_description %}
+                                            {% with exercise.2 as exercise_score %}
+                                                {% with exercise.3 as required_score %}
+                                                    {% if required_score == 100 %}
+                                                        {#                                                    If this is the bonus question...#}
+                                                        <tr style="background-color: #fff573">
+                                                            {#                                                Make the background red#}
+                                                            <td><strong>{% if exercise_score == 100 %}
+                                                                {#                                                        If the score has been met...#}
+                                                                <i style="color: #318f30; font-size: 1.1em;"
+                                                                   class="fa fa-check-square-o"></i>
+                                                                {#                                                        Check the box#}
+                                                            {% else %}
+                                                                {#                                                        Otherwise, Don't check the box.#}
+                                                                <i style="font-size: 1.1em;" class="fa fa-square-o"></i>
+                                                            {% endif %}
+                                                                {% else %}
+                                                        <tr>
+                                                        <td><strong>{% if exercise_score >= 80 %}
+                                                        <i style="color: #318f30; font-size: 1.1em;"
+                                                           class="fa fa-check-square-o"></i>
+
+                                                    {% else %}
+                                                        <i style="font-size: 1.1em;" class="fa fa-square-o"></i>
+                                                    {% endif %}
+                                                    {% endif %}
+                                                </strong></td>
+                                                <td><strong
+                                                        style="font-size: 1.1em;">{{ exercise_id.0 }}</strong></td>
+                                                <td><strong
+                                                        style="font-size: 1.1em;">{{ exercise_id |slice:"2:" }}</strong>
+                                                </td>
+                                                <td>{{ exercise_description.category }}</td>
+                                                <td>{{ exercise_score }}</td>
+                                                <td>{{ required_score }}</td>
+                                                </tr>
+                                                {% endwith %}
+                                            {% endwith %}
+                                        {% endwith %}
+                                    {% endwith %}
+
+
+                                {% endfor %}
+                                </table>
+
+                        {% endif %}
+
+                    </div>
+                </div>

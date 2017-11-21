@@ -1,0 +1,31 @@
+{% extends "brain/layout.html" %}
+{% load brain_extras %}
+
+{% block title %}
+    {% if classroom %}
+    {{ classroom }}'s AMC Tests
+    {% elif grade %}
+  {{ grade }} Grade AMC Tests
+
+    {% endif %}
+{% endblock title %}
+
+{% block heading %}
+    <h1>American Math Challenge</h1>
+{% endblock heading %}
+
+{% block content %}
+            <div style="float:right;" class="large-6 columns">
+        <a class="button" style="float:right;font-weight: bold; background-color: #da3116" href="{% url 'amc:testsheetsgrade'  '2nd' %}">Print Tests</a>
+        <a class="button" style="float:right; background-color: #37b32d;font-weight: bold " href="{% url 'amc:challengesheetsgrade'  '2nd'  %}">Print Challenges</a>
+        </div>
+
+    <div class="row">
+    <h4>Select a class to view.</h4>
+{% for classroom in classroom_list %}
+    <p><a class="large button" href="{% url 'amc:classlist' classroom.grade classroom.classroom.last_name %}">{{ classroom.classroom }}</a>
+   </p>
+{% endfor %}
+    </div>
+
+{% endblock content %}

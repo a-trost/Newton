@@ -1,0 +1,38 @@
+{% load brain_extras %}
+
+<div class="callout">
+                        <a class="button" style="float:right;font-weight: bold "
+                           href="{% url 'amc:inputamcscores' grade classroom %}">Input Scores</a>
+                        <a class="button" style="float:right;font-weight: bold; background-color: #da3116"
+                           href="{% url 'amc:testsheetsclass' grade classroom %}">Print Tests</a>
+                        <a class="button" style="float:right; background-color: #37b32d;font-weight: bold "
+                           href="{% url 'amc:challengesheetsclass' grade classroom %}">Print Challenges</a>
+                        <a class="button" style="float:right; background-color: #b33dad;font-weight: bold "
+                           href="{% url 'parentletter:parentletters' classroom %}">Parent Letters</a>
+                        <h4>American Math Challenge</h4>
+                        <p>Class Badges Earned: <span style="font-size: 1em"
+                                                      class="success badge">{{ student_list|amc_classroom_badges_earned }}</span>
+                        </p>
+                        <p>Average Grade Equivalent: {{ student_list|amc_average_grade_equivalent }}</p>
+                        <table>
+                            <tr>
+                                <th width="150">Student</th>
+                                <th width="150">Current Test</th>
+                                <th width="50">Times Taken</th>
+                                <th width="150">Grade Equivalent</th>
+                                <th width="50">Badges Earned</th>
+                            </tr>
+                            {% for student in student_list %}{% with student|current_amc_test as curtest %}
+                                <tr>
+                                    <td>
+                                        <a href="{% url 'brain:studentdetail' student.student_id %}">{{ student.first_name }} {{ student.last_name.0 }}.</a>
+                                    </td>
+                                    <td>{{ student|current_amc_test|amc_number_to_text }}</td>
+                                    <td>{{ student|amc_number_of_test_attempts:curtest }}</td>
+                                    <td>{{ student|current_amc_test|amc_grade_equivalent }}</td>
+                                    <td>{{ student|amc_badges_earned }}</td>
+                                </tr>         {% endwith %}
+
+                            {% endfor %}
+                        </table>
+                    </div>

@@ -1,0 +1,30 @@
+ <div class="callout large-6 columns">
+                        <h4>myON</h4>
+                        <table>
+                            <tr>
+                                <th width="150">Student</th>
+                                <th width="150">Time Spent (All Year)</th>
+                            </tr>
+                            {% for student in myon_priority %}
+                                <tr>
+                                    <td>{{ student.student.first_name }} {{ student.student.last_name.0 }}.</td>
+                                    <td>{{ student.myon_time_spent }}</td>
+                                </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                    <div class="callout large-6 columns">
+                        <h4>IXL</h4>
+                        <table>
+                            <tr>
+                                <th width="150">Student</th>
+                                <th width="150">Time Spent (Last Month)</th>
+                            </tr>
+                            {% for student in ixl_priority %}
+                                <tr>
+                                    <td>{{ student.student.first_name }} {{ student.student.last_name.0 }}.</td>
+                                    <td>{{ student.time_spent }}</td>
+                                </tr>
+                            {% endfor %}
+                        </table>
+                    </div>

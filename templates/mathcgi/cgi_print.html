@@ -1,0 +1,35 @@
+{% extends "amc/print_layout.html" %}
+{% load brain_extras %}
+{% load mathfilters %}
+{% block title %}Print CGI Sheets{% endblock title %}
+{% block content %}
+    {% for item in student_and_cgi_list %}
+        <div class="row" style="width: 750px;">
+            {% with item.0 as student %}
+                {% with item.1 as cgi %}
+                    {% with item.2 as problem %}
+
+                                <div>
+                                    <h5 style="position: relative; line-height: 1.1">Name: {{ student.first_name }} {{ student.last_name }} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CGI {{ cgi.cgi_number }} - The {{ cgi.name }} Problem! {% now "SHORT_DATE_FORMAT" %}</h5>
+
+                                    <h4>{{ problem }}</h4>
+
+                                    <div style="outline: 1px solid #000000;
+"><h6 style="text-align: center">Remember!&nbsp;&nbsp; Show your work with Pictures, Numbers and Words!</h6>
+                                    </div>
+                                </div>
+
+                    {% endwith %}
+                {% endwith %}
+            {% endwith %}
+
+        </div>
+        <table class="page"></table>
+        <table style="page-break-after: always;"></table>
+
+    {% endfor %}
+    {#    <body onload="window.print()">#}
+{% endblock content %}
+
+
+

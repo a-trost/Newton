@@ -1,0 +1,3 @@
+{% for classroom in classrooms %}
+    <li><a href="{% url 'amc:classlist' '17-18' '2nd' classroom.last_name %}">{{ classroom.last_name }}</a></li>
+{% endfor %}

@@ -1,0 +1,34 @@
+{% extends "brain/portal_layout.html" %}
+{% load brain_extras %}
+{% block title %}{{ student.first_name }} {{ student.last_name.0 }}'s Score It! | BTWA Portal {% endblock title %}
+{% block heading %}
+    <h1 style="margin-bottom: -0.5rem; text-align: center;">{{ student.first_name }} {{ student.last_name.0 }}'s Score It! </h1>
+  <h5 style="text-align: center;"><a href="{% url 'brain:portalstudent' grade classroom.last_name student.student_id  %}"><i class="fa fa-arrow-circle-left"></i>  Back to my page</a></h5>
+
+{% endblock heading %}
+{% block content %}
+<br>
+ <div class="row">
+            <div class="large-4 small-0 columns"> <br></div>
+            <div class="large-4 small-12 columns">
+            <table>
+{% for item in classesandstyles %}
+    {% with item.0 as subject %}
+        {% with item.1 as icon %}
+            {% with item.2 as color %}
+<tr>
+    <td style="padding: 0"> <a style="background-color: {{ color }}" href="{% url 'scoreit:logsubject' student.student_id subject %}" class="expanded button">
+        <h6 style="margin: 0; font-size: 1.5em;"><i class="fa fa-{{ icon }}"></i>  {{ subject }}</h6></a></td>
+<td >
+    <h6>= {% add_subject_score student.student_id date subject %}</h6></td>
+</tr>
+            {% endwith %}    {% endwith %}
+    {% endwith %}
+    {% endfor %}
+            </table>
+      </div>
+            <div class="large-4 small-0 columns"> <br></div>
+             </div>
+    <h3 style="text-align: center">Total Score: {% add_total_score student.student_id date %}</h3>
+
+{% endblock content %}

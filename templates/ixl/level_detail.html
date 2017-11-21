@@ -1,0 +1,50 @@
+{% extends "brain/layout.html" %}
+{% load brain_extras %}
+
+{% block title %}IXL Level {{ level }} Exercise List{% endblock title %}
+
+{% block heading %}
+<h1>IXL Level {{ level }} List</h1>
+{% endblock heading %}
+
+
+{% block content %}
+{% if skill_list.count > 0 %}
+        <div class="row">
+            <div class="small-11 small-centered columns">
+
+
+  <div class="large-8 columns">
+  </div>
+
+        <div class="large-4 columns">
+        </div>
+
+                <div class="column row">
+
+    <table>
+<tr>
+<th width="50">Skill ID</th>
+<th width="150">Category</th>
+<th width="50">Description</th>
+<th width="100">IXL Link</th>
+
+</tr>
+{% for skill in skill_list %}
+    <tr>
+    <td>{{skill.skill_id }}</td>
+    <td>{{skill.category|title}}</td>
+    <td><a href="{% url 'ixl:skilldetail' skill.skill_id %}">{{skill.skill_description|title}}</td>
+    <td><a href="{{skill.skill_id|get_ixl_url}}">View on IXL</a></td>
+  </tr>
+
+{% endfor %}
+</table></div></div>
+    {% else %}
+    No skills to show.
+{% endif %}
+</div></div>
+{% endblock content %}
+
+
+

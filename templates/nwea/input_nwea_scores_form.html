@@ -1,0 +1,94 @@
+{% extends "brain/layout.html" %}
+{% load brain_extras %}
+
+{% block title %}Input {{ classroom }} NWEA Tests{% endblock title %}
+{% block heading %}
+    <h1>Input {{ classroom }} NWEA Tests</h1>
+    <a href="{% url 'brain:classlist' grade classroom %}">< Back to {{ classroom }}</a>
+
+{% endblock heading %}
+
+{% block content %}
+    <h5>Enter student NWEA Math Scores below.</h5>
+    <h6>Note: All scores should have a 1 in the ones place. e.g. 141, 151, 161, 171</h6>
+    <div class="row">
+
+        <form method="post">
+            {{ formset.management_form }}
+
+            <div class="small-11 small-centered columns">
+
+                <table class="inputtable">
+                    <tr>
+                        <th width="100">Student</th>
+                        <th width="30">Season</th>
+                        <th width="40">Year</th>
+                        <th width="8">1</th>
+                        <th width="8">2</th>
+                        <th width="8">3</th>
+                        <th width="8">4</th>
+                        <th width="8">5</th>
+                        <th width="8">6</th>
+                        <th width="8">7</th>
+                        <th width="8">8</th>
+
+                    </tr>
+
+
+                    {% for form in formset %}
+                        <tr>
+                            <td>
+                                <a style="color: darkred">{{ form.non_field_errors }}</a>
+                                {{ form.student.errors }}
+                                {{ form.student }}
+                            </td>
+
+                            <td>
+                                {{ form.season.errors }}
+                                {{ form.season }}
+                            </td>
+                            <td>
+                                {{ form.subdomain1.errors }}
+                                {{ form.subdomain1 }}
+                            </td>
+                          <td>
+                                {{ form.subdomain2.errors }}
+                                {{ form.subdomain2 }}
+                            </td>
+                          <td>
+                                {{ form.subdomain3.errors }}
+                                {{ form.subdomain3 }}
+                            </td>
+                          <td>
+                                {{ form.subdomain4.errors }}
+                                {{ form.subdomain4 }}
+                            </td>
+                          <td>
+                                {{ form.subdomain5.errors }}
+                                {{ form.subdomain5 }}
+                            </td>
+                          <td>
+                                {{ form.subdomain6.errors }}
+                                {{ form.subdomain6 }}
+                            </td>
+                          <td>
+                                {{ form.subdomain7.errors }}
+                                {{ form.subdomain7 }}
+                            </td>
+<td>
+                                {{ form.subdomain8.errors }}
+                                {{ form.subdomain8 }}
+                            </td>
+                        </tr>
+
+                    {% endfor %}
+                </table>
+            </div>
+            <hr>
+            {% csrf_token %}
+            <input type="submit" class="button" value="Save">
+
+        </form>
+    </div>
+
+{% endblock content %}

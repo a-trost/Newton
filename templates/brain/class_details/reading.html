@@ -1,0 +1,41 @@
+<div class="callout">
+                        <h4>Reading Stats</h4>
+                        <table>
+                            <tr>
+                                <th width="150">Student</th>
+                                <th width="50">Starting Lexile</th>
+                                <th width="50">Current Lexile</th>
+                                <th width="50">Progress</th>
+                                <th width="50">Goal Lexile</th>
+                                <th width="50">myON Minutes Spent</th>
+                                <th width="50">Starting DRA</th>
+                                <th width="50">Current DRA</th>
+                                <th width="50">Goal DRA</th>
+                            </tr>
+                            {% for item in reading_list %}
+                                <tr>
+                                    <td>
+                                        <a href="{% url 'brain:studentdetail' item.student.student_id %}"> {{ item.student.first_name }} {{ item.student.last_name.0 }}.</a>
+                                    </td>
+                                    <td>{{ item.starting_lexile }}</td>
+                                    <td>{{ item.current_lexile }}</td>
+                                    <td>{{ item.lexile_progress }}</td>
+                                    <td>{{ item.goal_lexile }}</td>
+                                    <td>{{ item.myon_time_spent }}</td>
+                                    <td>{{ item.starting_dra }}</td>
+                                    <td>{{ item.current_dra }}</td>
+                                    <td>{{ item.goal_dra }}</td>
+                                </tr>
+                            {% endfor %}
+                            <tr>
+                                <td><h6>AVERAGE</h6></td>
+                                <td>{{ reading_averages.0 }}</td>
+                                <td>{{ reading_averages.1 }}</td>
+                                <td>{{ reading_averages.2 }}</td>
+                                <td>{{ reading_averages.3 }}</td>
+                                <td>{{ reading_averages.4 }}</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div>

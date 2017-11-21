@@ -1,0 +1,304 @@
+{% extends "brain/portal_layout.html" %}
+{% load brain_extras %}
+{% block extrahead %}
+    {% load static %}
+{% endblock %}
+{% block title %} BTWA Portal {% endblock title %}
+{% block heading %}
+    <div class="grid-container" style="max-width:90%;">
+        <div class="grid-x grid-margin-x">
+            <div class="small-7 cell">
+
+
+                {% if classroom in second_classrooms and current_avatar %}
+                    <img style="margin-top:10px;width:90px;float:left"
+                         src="http://newtonthinks.com/{{ current_avatar.sticker.image }}">
+                {% endif %}
+                <h1 style="position:relative;left: 15px; margin-bottom: -.5rem; margin-top:.3rem;">{{ greeting }}, {{ student.first_name }}!</h1>
+                <div style="padding-top:10px;"><h5><a href="{% url 'brain:portalclass' grade classroom %}"><i class="fa fa-arrow-circle-left"></i> I'm
+                    not {{ student.first_name }}</a></h5></div>
+            <br>
+                {% if classroom in second_classrooms and new_avatar_choice  %}
+                        <a href="{% url 'badges:chooseavatar' student.student_id %}" class="medium button"
+                           style=" background-color:#ff8500;">
+                            <h6 style="margin: 0; font-size: 1.9em;"><i class="fa fa-smile-o" aria-hidden="true"></i>
+                                Change Avatar</h6></a>
+                        {% endif %}
+            </div>
+            <div class="small-5 cell">
+                {% if student.classroom.grade == '2nd' or student.classroom.grade == '4th'  or student.classroom.last_name == "Hickmon"%}
+<div style="text-align:center; align-content: center; color: #8e44ad; font-size: 1.4rem; font-family: 'Asap', 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+<i class="fa fa-clock-o"></i> Time Stars <i class="fa fa-clock-o"></i></div>
+
+<div class="divTable" style="width: 100%; border: 2px solid #8E44AD;">
+<div class="divTableBody">
+<div class="divTableRow">
+<div class="divTableCell">&nbsp;</div>
+
+    {% for day_name in day_names %}
+<div class="divTableCell">{{ day_name }}</div>
+    {% endfor %}
+<div class="divTableCell">
+    <span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false"
+      tabindex="1" title="How many days in a row you've earned stars">Streak</span>
+</div>
+<div class="divTableCell">
+<span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false"
+      tabindex="1" title="The total number of stars you've earned this year">Total <i class="fa fa-star"></i></span>
+
+</div>
+</div>
+<div class="divTableRow">
+<div class="divTableCell">IXL</div>
+<div class="divTableCell">{% if ixl_time_spent.0 >= 600 %}<img class="reward_star" src="{% static 'images/progress_star.svg' %}">{% else %}<img class="reward_star" src="{% static 'images/progress_star_back.svg' %}">{% endif %}
+    <br>{{ ixl_time_spent.0|seconds_to_minutes }} min</div>
+<div class="divTableCell">{% if ixl_time_spent.1 >= 600 %}<img class="reward_star" src="{% static 'images/progress_star.svg' %}">{% else %}<img class="reward_star" src="{% static 'images/progress_star_back.svg' %}">{% endif %}
+    <br>{{ ixl_time_spent.1|seconds_to_minutes }} min</div>
+<div class="divTableCell">{% if ixl_time_spent.2 >= 600 %}<img class="reward_star" src="{% static 'images/progress_star.svg' %}">{% else %}<img class="reward_star" src="{% static 'images/progress_star_back.svg' %}">{% endif %}
+    <br>{{ ixl_time_spent.2|seconds_to_minutes }} min</div>
+<div class="divTableCell">{% if ixl_time_spent.3 >= 600 %}<img class="reward_star" src="{% static 'images/progress_star.svg' %}">{% else %}<img class="reward_star" src="{% static 'images/progress_star_back.svg' %}">{% endif %}
+    <br>{{ ixl_time_spent.3|seconds_to_minutes }} min</div>
+<div class="divTableCell"><div class="ldBar star-bar"
+                               style="width:30px; height:30px; margin-left: auto; margin-right: auto;"
+  data-type="fill"
+data-img="{% static 'images/progress_star.svg' %}"
+     data-fill-dir="ltr"
+     data-value="{{ ixl_time_spent.4|seconds_to_percentage }}"
+></div>
+    {{ ixl_time_spent.4|seconds_to_minutes }} min</div>
+
+<div class="divTableCell">&nbsp;{{ ixl_streak }} Day{{ ixl_streak|pluralize }}{% if ixl_streak >= 2 %}!{% endif %}</div>
+<div class="divTableCell">{{ ixl_star_total }} <i class="fa fa-star"></i></div>
+</div>
+<div class="divTableRow">
+<div class="divTableCell">&nbsp;myON</div>
+<div class="divTableCell">{% if myon_time_spent.0 >= 600 %}<img class="reward_star" src="{% static 'images/progress_star.svg' %}">{% else %}<img class="reward_star" src="{% static 'images/progress_star_back.svg' %}">{% endif %}
+    <br>{{ myon_time_spent.0|seconds_to_minutes }} min</div>
+<div class="divTableCell">{% if myon_time_spent.1 >= 600 %}<img class="reward_star" src="{% static 'images/progress_star.svg' %}">{% else %}<img class="reward_star" src="{% static 'images/progress_star_back.svg' %}">{% endif %}
+    <br>{{ myon_time_spent.1|seconds_to_minutes }} min</div>
+<div class="divTableCell">{% if myon_time_spent.2 >= 600 %}<img class="reward_star" src="{% static 'images/progress_star.svg' %}">{% else %}<img class="reward_star" src="{% static 'images/progress_star_back.svg' %}">{% endif %}
+    <br>{{ myon_time_spent.2|seconds_to_minutes }} min</div>
+<div class="divTableCell">{% if myon_time_spent.3 >= 600 %}<img class="reward_star" src="{% static 'images/progress_star.svg' %}">{% else %}<img class="reward_star" src="{% static 'images/progress_star_back.svg' %}">{% endif %}
+    <br>{{ myon_time_spent.3|seconds_to_minutes }} min</div>
+<div class="divTableCell"><div class="ldBar star-bar"
+                               style="width:30px; height:30px; margin-left: auto; margin-right: auto;"
+  data-type="fill"
+data-img="{% static 'images/progress_star.svg' %}"
+     data-fill-dir="ltr"
+     data-value="{{ myon_time_spent.4|seconds_to_percentage }}"
+></div>
+    {{ myon_time_spent.4|seconds_to_minutes }} min</div>
+<div class="divTableCell">{{ myon_streak }} Day{{ myon_streak|pluralize }}{% if myon_streak >= 2 %}!{% endif %}</div>
+<div class="divTableCell">{{ myon_star_total }} <i class="fa fa-star"></i></div>
+</div>
+</div>
+</div>
+
+
+
+{#           <span style="font-family: 'Asap', 'Helvetica Neue', Helvetica, Arial, sans-serif; color:#5cb860;font-size: 1.3rem;">#}
+{##}
+{#               <i class="fa fa-plus"></i> IXL: {{ ixl_time_spent|seconds_to_minutes_and_hours }}<br>#}
+{#           </span>#}
+{#                               <span style="font-family: 'Asap', 'Helvetica Neue', Helvetica, Arial, sans-serif; color:#3079AB;font-size: 1.3rem;">#}
+{##}
+{#                                   <i class="fa fa-book"></i> myON: {{ myon_time_spent|seconds_to_minutes_and_hours }}#}
+{#                               </span>#}
+
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+{% endblock heading %}
+{% block content %}
+
+
+    <div class="grid-container" style="max-width:90%;">
+
+        {% if student.classroom.grade == '2nd' or student.classroom.grade == '4th' or student.classroom.last_name == "Hickmon" %}
+
+            <ul class="tabs" data-tabs id="subject-tabs">
+                <li class="tabs-title is-active math-nav"><a href="#math-panel" aria-selected="true"><h5
+                        style="line-height: 1em">Math</h5></a></li>
+                <li class="tabs-title reading-nav"><a href="#reading-panel"><h5 style="line-height: 1em;">Reading</h5></a></li>
+                <li class="tabs-title badge-nav"><a href="#badge-panel"><h5 style="line-height: 1em;">Awards</h5></a></li>
+            </ul>
+            <div class="tabs-content" data-tabs-content="subject-tabs">
+
+            {#+++++++++++++++++++++++++++++++++++++MATH TAB+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#}
+
+            <div class="tabs-panel is-active" id="math-panel">
+            {% include "brain/math_tab_second.html" %}
+                </div>
+
+                {#+++++++++++++++++++++++++++++++++++++READING TAB++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#}
+
+
+            <div class="tabs-panel" id="reading-panel">
+            {% include "brain/reading_tab_second.html" %}
+            </div>
+
+            {#+++++++++++++++++++++++++++++++++++++BADGES TAB++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#}
+
+            <div class="tabs-panel" id="badge-panel">
+                {% include "brain/badge_tab_second.html" %}
+            </div>
+            </div>
+
+        {% else %}
+
+            {#====================================REST OF SCHOOL'S PAGE ==========================================================#}
+            <hr>
+            <div class="grid-x grid-margin-x ">
+
+                {#    START OF IXL BOX#}
+
+                <div class="cell small-1 medium-4 large-4">
+                    <a class="expanded button" style="background-color: #5cb860; "
+                       href="https://www.ixl.com/signin/btwa?username={{ accountinfo.ixluser }}" target="_blank"><h3>
+                        <img style="width: 15%; " src="/static/images/ixl.png"> IXL</h3></a>
+                    {% if current_ixl_challenge %}
+
+                        <h5 style="text-align: center; color: #318f30"></i> {{ current_ixl_challenge.title }}</h5>
+
+                        <table class="challenge" style="width:100%">
+                            <tr>
+                                <th><i class="fa fa-check-square-o"></i></th>
+                                <th>Level</th>
+                                <th>ID</th>
+                                <th>Category</th>
+                                <th>Score</th>
+                            </tr>
+                            {% for exercise in challenge_exercise_list %}
+                                {% with exercise.0 as exercise_id %}
+                                    {% with exercise.1 as exercise_description %}
+                                        {% with exercise.2 as exercise_score %}
+
+                                            <tr>
+                                                <td><strong>{% if exercise_score >= 80 %}
+                                                    <i style="color: #318f30; font-size: 1.1em;"
+                                                       class="fa fa-check-square-o"></i>
+                                                {% else %}
+                                                    <i style="font-size: 1.1em;" class="fa fa-square-o"></i>
+                                                {% endif %}
+                                                </strong></td>
+                                                <td>{{ exercise_id.0 }}</td>
+                                                <td><strong
+                                                        style="font-size: 1.1em;">{{ exercise_id |slice:"2:" }}</strong>
+                                                </td>
+                                                <td>{{ exercise_description.category }}</td>
+                                                <td>{{ exercise_score }}</td>
+                                            </tr>
+                                        {% endwith %}
+                                    {% endwith %}
+                                {% endwith %}
+
+
+                            {% endfor %}
+                        </table>
+                    {% endif %}
+                    {% if accountinfo %}
+                        <h5>Username and Password</h5>
+                        <div style="background-color: #c0f0c0; border: 2px solid #5cb860" class="callout secondary">
+                            <p><strong>Username:</strong> {{ accountinfo.ixluser }}<br>
+                                <strong>Password:</strong> {{ accountinfo.ixlpass }}</p>
+                        </div>
+                    {% endif %}
+                    {% if ixlstats %}
+                        <h5>Your Progress</h5>
+                        <div style="background-color: #c0f0c0; border: 2px solid #5cb860" class="callout secondary">
+                            <p>{% if ixlstats.questions_answered %}
+                                <strong style="font-size: 1.5em">Questions Answered:</strong>
+                                <span class="success badge lexile">{{ ixlstats.questions_answered }}</span> <br>
+                            {% endif %}
+                                <strong>Last Practiced: </strong> {{ ixlstats.last_practiced }}<br>
+                                <strong>Time Spent: </strong> {{ ixlstats.time_spent }} minutes</p>
+                        </div>
+                    {% endif %}
+                </div>
+                {#    START OF MYON BOX#}
+                {% if accountinfo.myonuser or myon_display %}
+                    <div class="cell small-1 medium-4 large-4">
+                        <a class="expanded button" style="background-color: #3079AB"
+                           href="https://www.myon.com/login/index.html?username={{ accountinfo.myonuser }}"
+                           target="_blank">
+                            <h3>
+                                <img style="width: 15%;" src="/static/images/myon.png"> myON</h3></a>
+                        {% if accountinfo %}
+                            <h5>Username and Password</h5>
+                            <div style="background-color: #abd9f5;border: 2px solid #3079AB" class="callout secondary">
+
+                                <p><strong>School Name:</strong> Booker T Washington<br>
+                                    <strong>Username:</strong> {{ accountinfo.myonuser }}<br>
+                                    <strong>Password:</strong> {{ accountinfo.myonpass }}</p>
+                            </div>
+                        {% endif %}
+                        {% if readingstats %}
+                            <h5>Your Progress</h5>
+                            <div style="background-color: #abd9f5;border: 2px solid #3079AB" class="callout secondary">
+
+                                <p style="color: #04324f">
+                                    {% if readingstats.goal_lexile %}
+                                        <strong style="font-size: 1.5em">Goal Lexile:</strong>
+                                        <span class="success badge lexile">{{ readingstats.goal_lexile }}</span> <br>
+                                    {% endif %}
+
+                                    {% if readingstats.current_lexile %}
+                                        <strong style="font-size: 1.5em">Current Lexile:</strong>
+                                        <span style="background-color: #008ae6"
+                                              class="success badge lexile">{{ readingstats.current_lexile }}</span> <br>
+                                    {% endif %}
+
+                                    {% if readingstats.myon_books_finished %}
+                                        <strong><i class="fa fa-book fa-lg"></i> Books Finished:</strong>
+                                        <span style="background-color: #006cb9; font-size: 1rem "
+                                              class="success badge lexile">{{ readingstats.myon_books_finished }}</span>
+                                        <br>
+                                    {% endif %}
+                                    {% if readingstats.myon_tests_taken %}
+                                        <strong><i class="fa fa-pencil-square fa-lg"></i> Tests Taken:</strong>
+                                        {{ readingstats.myon_tests_taken }}<br>
+                                    {% endif %}
+                                    {% if readingstats.myon_time_spent %}
+                                        <strong><i class="fa fa-clock-o fa-lg"></i> Time Spent Reading: </strong>
+                                        {{ readingstats.myon_time_spent }} minutes
+                                    {% endif %}</p>
+                            </div>
+                        {% endif %}
+                    </div>
+                {% endif %}
+                {#    START OF KIDS A-Z BOX#}
+            {% if kids_az_display %}
+                <div class="cell small-4 medium-4 large-4">
+                    <a class="expanded button" style="background-color:#e15258 "
+                       href="https://www.kidsa-z.com/main/Login"
+                       target="_blank"><h3>
+                        <img style="width: 15%;" src="/static/images/kidsaz.png"> Kids A-Z</h3></a>
+                    {% if accountinfo %}
+                        {% if accountinfo.kidsazpass %}
+                            <h5>Username and Password</h5>
+                            <div style="background-color: #faafb5; border: 2px solid #e15258" class="callout secondary">
+                                <p><strong>Teacher Username:</strong> {{ accountinfo.kidsazclassroom }}<br>
+                                    <strong>Username:</strong> {{ accountinfo.kidsazuser }}<br>
+                                    <strong>Password:</strong> <img style="width: 50px"
+                                                                    src="/static/images/raz-{{ accountinfo.kidsazpass |lower }}.png">
+                                </p>
+                            </div>
+                        {% endif %}
+                    {% endif %}
+                </div>
+                {% endif %}
+            </div>
+
+        {% endif %}
+        </div>
+
+
+
+{% endblock content %}
+{% block outsidebody %}
+   <script type="application/javascript">
+
+           </script>
+{% endblock outsidebody %}

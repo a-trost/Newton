@@ -1,0 +1,61 @@
+{% extends "brain/layout.html" %}
+
+{% block title %}CGI Data Input | {{ classroom }} {% endblock title %}
+
+{% block heading %}
+<h1>CGI Data Input | {{ classroom }}</h1>
+    {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+{% endblock heading %}
+{% block content %}
+
+    <form method="post" >
+
+    {{ formset }}
+    <table style="width:95%;">
+
+<tr>
+    <th>CGI</th>
+    {% for cgi in cgi_list %}
+<th width="20">{{ cgi.cgi_number }}</th>
+
+    {% endfor %}
+</tr>
+<tr>
+        <td>Unit</td>
+    {% for cgi in cgi_list %}
+<td width="20">{{ cgi.gr2_unit }}</td>
+
+    {% endfor %}
+
+
+</tr>
+<tr>
+    <td>Student Name</td>
+    {% for cgi in cgi_list %}
+<td width="100">{{ cgi.name }}</td>
+
+    {% endfor %}
+</tr>
+
+    {{ formset.student.errors }}
+        <tr>
+        <td>{{ form.student }}</td>
+
+            <td>{{ form.progress.0 }}</td>
+            <td>{{ form.progress.1 }}</td>
+            <td>{{ form.progress.2 }}</td>
+            <td>{{ form.progress.3 }}</td>
+            <td>{{ form.progress.4 }}</td>
+        </tr>
+        </table>
+
+
+
+
+    {% csrf_token %}
+                <input type="submit" class="button" value="Save">
+
+</form>
+
+{% endblock content %}
+

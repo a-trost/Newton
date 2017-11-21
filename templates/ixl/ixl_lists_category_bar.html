@@ -1,0 +1,31 @@
+{#<div class="grid-x">#}
+
+    <div style=" background-color: #235672;vertical-align: middle;" class="grid-x" id="category_bar_container">
+<div class="small-6 cell" style="vertical-align:middle; padding: 10px 0">
+<a href="{% url "ixl:ixl_view_lists" %}">
+    <span style="font-family: 'Asap', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 200; font-size: 2rem; color: white;
+padding:10px 15px 25px 15px; margin:10px 0;" >IXL LISTS</span></a>
+
+</div>
+
+<div class="button-group align-right cell small-6 " style=" color:white; font-weight:bold; margin-top: 1rem; padding-right: 20px;">
+{% if request.resolver_match.url_name == 'ixl_view_lists' %}
+  <a class="success button" href="{% url 'ixl:ixl_list_create' %}"><i class="fa fa-plus"></i> New List</a>
+{#<a class=" button" style="color:white"><i class="fa fa-gear"></i> List Settings</a>#}
+
+        {% elif request.resolver_match.url_name == 'ixl_view_single_list' %}
+
+{% if request.user == list.author %}
+<a class="button" style="color:white"><i class="fa fa-users"></i> Assign to Students</a>
+        <a class="warning button" style="color:white;" href="#"><i class="fa fa-pencil"></i> Edit List</a>
+
+        <a class="alert button" style="color:white"><i class="fa fa-close"></i> Delete List</a>
+            {% else %}
+
+            <a class="primary button" style="color:white"><i class="fa fa-copy"></i> Copy to My Lists</a>
+
+{% endif %}
+
+        {% endif %}</div>
+    </div>
+{#</div>#}

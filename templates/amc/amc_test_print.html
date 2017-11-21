@@ -1,0 +1,96 @@
+{% extends "amc/print_layout.html" %}
+{% load brain_extras %}
+{% load mathfilters %}
+{% block title %}AMC Test Sheets{% endblock title %}
+{% block content %}
+    {% for student in student_and_test_list %}
+        {#        Whole Page Div#}
+        <div class="row" style="width: 750px; ">
+            {% with student.0 as first_name %}
+                {% with student.1 as last_name %}
+                    {% with student.2 as challenge_name %}
+                        {% with student.3 as list_type %}
+                            {% with student.4 as combinations %}
+                                {#                                Signifier means Addition 1 or Subtraction 4 or Fractions#}
+                                {% with student.5 as test_signifier %}
+                                    {#                                    Header Div#}
+                                    <div style="width: 740px; ">
+
+                                        {#                                    Student Name#}
+                                        <div style=" text-align: right"><h5
+                                                style="position: relative; margin: 10px">
+                                            Name: {{ first_name }} {{ last_name.0 }}.</h5></div>
+
+                                        {#                                AMC LOGO#}
+                                        <div style="padding: 10px;height: 110px;
+">
+                                             <div style="width:20%;float:left">
+                                            <img src="/static/images/amc-bnw.png" style="width: 120px;"></div>
+                                        {#                                    Challenge Title#}
+                                           <div style="width:77%;float:right">
+                                            <h2 style=" margin-top: 0px; margin-bottom: 0px; font-size: 3.2em;text-align: right ">
+                                                The {{ challenge_name }} Challenge!</h2></div>
+
+                                    </div>
+                                    <div style="font-family:Helvetica, Roboto, Arial, sans-serif">{{ test_signifier }}</div>
+                                    </div>
+                                    {% for combo in combinations %}
+                                        {% if list_type != "IMAGE" %}
+                                        <div style="padding-left:10px;padding-right: 10px; width: 21%; float: left;font-size: 1.2em; border-style: solid; border-width: 1px; padding-top: 40px;padding-bottom: 15px; height:80px">
+                                           {% else %}
+                                   <div style="padding-left:10px;padding-right: 10px; width: 28%; float: left;font-size: 1.2em; border-style: solid; border-width: 1px; padding-top: 20px;padding-bottom: 40px; height:180px">
+
+                                            {% endif %}
+                                            <span style="vertical-align: middle; ">
+                                            {% with random_list|random as random %}
+
+                                            {% if list_type == "ADD" %}
+                                                 {% if random == 1 %}
+                                                <table style="margin: 0 auto;">
+                                                <tr ><td></td><td style="font-size: 14pt;text-align: right">{{combo.0}}</td></tr>
+                                                <tr class="border_bottom" ><td style="font-size: 14pt; text-align: right">+ </td><td style="font-size: 14pt; text-align: right">{{combo.1}}</td></tr>
+                                                </table>
+                                            {% else %}
+                                                    {{ combo.0 }} + {{ combo.1 }} =
+                                                    {% endif %}
+                                            {% elif list_type == "SUB" %}
+                                                {% if random == 1 %}
+                                                 <table style="margin: 0 auto;">
+                                                <tr ><td></td><td style="font-size: 14pt;text-align: right">{{combo.0}}</td></tr>
+                                                <tr class="border_bottom" ><td style="font-size: 14pt; text-align: right">- </td><td style="font-size: 14pt; text-align: right">{{combo.1}}</td></tr>
+                                                </table>
+                                            {% else %}
+                                                {{ combo.0 }} - {{ combo.1 }} =
+ {% endif %}
+                                            {% elif list_type == "IMAGE" %}
+                                                <table style="margin: 0 auto;">
+                                                <tr><td>
+                                                 <img style="height: 100px; margin:auto; display:block; padding-top: 5px;"  src="/static/images/time/{{ combo.0 }}.png">
+                                                </td>
+                                                </tr>
+                                                    <tr><td> <br></td></tr>
+                                                    <tr><td> <br></td></tr>
+                                                <tr><td>_____________</td></tr>
+                                                </table>
+                                            {% endif %}
+                                        {% endwith %}
+                                           </span>
+                                            </div>
+                                    {% endfor %}
+                                {% endwith %}
+                            {% endwith %}
+                        {% endwith %}
+                    {% endwith %}
+                {% endwith %}
+            {% endwith %}
+        </div>
+
+        <table class="page"></table>
+        <table style="page-break-after: always;"></table>
+
+    {% endfor %}
+    {#    <body onload="window.print()">#}
+{% endblock content %}
+
+
+

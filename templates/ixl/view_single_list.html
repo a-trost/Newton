@@ -1,0 +1,43 @@
+{% extends "brain/layout.html" %}
+{% block title %}{{ list.title }}| IXL Lists{% endblock title %}
+{% block categorybar %}
+{% include 'ixl/ixl_lists_category_bar.html' %}
+{% endblock %}
+{% block heading %}
+<div class="grid-x grid-margin-x">
+    <div class="cell small-12 medium-6">
+
+<h2>{{ list.title|upper }}</h2>
+        <h2><small>Author: {{ list.author }}</small></h2>
+    </div>
+    <div class="cell small-12 medium-6">
+
+</div>
+    </div>
+
+{% endblock heading %}
+{% block content %}
+    {{ list.category }}
+    <ul style="list-style-type: none;">
+    {%   for exercise in list.ixllistexercise_set.all %}
+        <li>
+    {{ exercise.exercise_id }}
+        </li>
+    {% endfor %}
+    </ul>
+{##}
+{#    <h2>Your Lists:</h2>#}
+{#    <div class="grid-x grid-margin-x">#}
+{#    {% for list in my_ixl_lists %}#}
+{#{% include 'ixl/ixl_list_card.html' %}#}
+{#    {% endfor %}#}
+{#    </div>#}
+{#    <hr>#}
+{#    <h2>Lists From Other Teachers:</h2>#}
+{#        <div class="grid-x grid-margin-x">#}
+{#    {% for list in other_ixl_lists %}#}
+{#{% include 'ixl/ixl_list_card.html' %}#}
+{##}
+{#    {% endfor %}#}
+{#        </div>#}
+{% endblock content %}

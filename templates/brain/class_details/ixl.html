@@ -1,0 +1,49 @@
+<div class="callout">
+                        <h4>IXL Challenges</h4>
+                        <table>
+                            <tr>
+                                <th width="150">Student</th>
+                                <th width="50">Date Assigned</th>
+                                <th width="50">Progress</th>
+                            </tr>
+                            {% for challenge, total_complete, total_questions in challenge_list %}
+                                <tr>
+                                {% if total_complete == total_questions %}
+                                    <td style="color: #339900; font-weight: bold;">{{ challenge.student_id.first_name }} {{ challenge.student_id.last_name.0 }}.</td>
+
+                                      {% elif total_complete == 0 %}
+                                    <td style="color: #FF0033; font-weight: bold;">{{ challenge.student_id.first_name }} {{ challenge.student_id.last_name.0 }}.</td>
+                                    {% elif total_complete == 1 %}
+                                    <td style="color: #D61F29; font-weight: bold;">{{ challenge.student_id.first_name }} {{ challenge.student_id.last_name.0 }}.</td>
+
+                                    {% elif total_complete == 2 %}
+                                    <td style="color: #AD3D1F; font-weight: bold;">{{ challenge.student_id.first_name }} {{ challenge.student_id.last_name.0 }}.</td>
+
+                                    {% elif total_complete == 3 %}
+                                    <td style="color: #bf9500; font-weight: bold;">{{ challenge.student_id.first_name }} {{ challenge.student_id.last_name.0 }}.</td>
+
+                                    {% elif total_complete == 4 %}
+                                    <td style="color: #5C7A0A; font-weight: bold;">{{ challenge.student_id.first_name }} {{ challenge.student_id.last_name.0 }}.</td>
+
+
+                                    {% endif %}
+
+                                    <td>{{ challenge.date_assigned }}</td>
+                                {% if total_complete == total_questions %}
+                                    <td style="color: #339900; font-weight: bold;">{{ total_complete }}/{{ total_questions }}</td>
+                                    {% elif total_complete == 0 %}
+                                    <td style="color: #FF0033; font-weight: bold;">{{ total_complete }}/{{ total_questions }}</td>
+                                    {% elif total_complete == 1 %}
+                                    <td style="color: #D61F29; font-weight: bold;">{{ total_complete }}/{{ total_questions }}</td>
+                                    {% elif total_complete == 2 %}
+                                    <td style="color: #AD3D1F; font-weight: bold;">{{ total_complete }}/{{ total_questions }}</td>
+                                    {% elif total_complete == 3 %}
+                                    <td style="color: #bf9500; font-weight: bold;">{{ total_complete }}/{{ total_questions }}</td>
+                                    {% elif total_complete == 4 %}
+                                    <td style="color: #5C7A0A; font-weight: bold;">{{ total_complete }}/{{ total_questions }}</td>
+
+                                    {% endif %}
+                                </tr>
+                            {% endfor %}
+                        </table>
+                    </div>

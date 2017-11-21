@@ -1,0 +1,185 @@
+{% extends "amc/print_layout.html" %}
+{% load brain_extras %}
+{% load mathfilters %}
+{% block title %}Parent Letters{% endblock title %}
+
+
+{% block content %}
+
+{% for student, challenge_exercise_list, bonus_exercise_list, amc_combinations, amc_test_type, amc_test_name in export_list %}
+        <div class="row" style="width: 780px;">
+            <div>
+                <h3 style="position: relative; margin: 0;">Weekly Report for {{ student.first_name }} {{ student.last_name.0 }}.</h3>
+                <p style="margin-top: 0; font-size: 1.3em">Week of {{ mondays_date|date:"n/j" }}</p>
+            </div>
+
+         <h4>This Week</h4>
+
+
+{#        AMERICAN MATH CHALLENGE                                   #}
+        {% if amc_test_name %}
+        <h4>American Math Challenge</h4>
+        <div class="row">
+
+
+        {% if student.gender == "M" %}
+            <a>This week {{ student.first_name }} is working on this list of math facts. On Friday he'll have to do 20 of these problems in 2 minutes. Practice these facts with him until he knows the answers by heart!</a>
+            {% elif student.gender == "F" %}
+                        <a>This week {{ student.first_name }} is working on this list of math facts. On Friday she'll have to do 20 of these problems in 2 minutes. Practice these facts with her until she knows the answers by heart!</a>
+
+        {% endif %}
+
+        </div>
+        {% if amc_test_type != "IMAGE" %}
+            {% for combo in amc_combinations %}
+                <div style=" text-align: center;padding:2px; width: 18%; float: left;padding-top: 10px;padding-bottom:10px;font-size: 1em; border-style: solid; border-width: 1px;">
+                    {% if amc_test_type == "ADD" %}
+                        {% if combo.0 == combo.1 %}
+                            {{ combo.0 }} + {{ combo.1 }} =
+                            {{ combo.0 |add:combo.1 }}
+                        {% else %}
+                            {{ combo.0 }} + {{ combo.1 }} =
+                            {{ combo.0 |add:combo.1 }}
+                            </div>
+                <div style=" text-align: center;padding:2px; width: 18%; float: left;padding-top: 10px;padding-bottom:10px;font-size: 1em; border-style: solid; border-width: 1px;">
+
+                            {{ combo.1 }} + {{ combo.0 }} =
+                            {{ combo.1 |add:combo.0 }}
+                        {% endif %}
+                    {% elif amc_test_type == "SUB" %}
+                        {{ combo.0 }} - {{ combo.1 }} =
+                        {{ combo.0 |sub:combo.1 }}
+
+                    {% elif list_type == "IMAGE" %}
+                    {% endif %}
+                    </div>
+            {% endfor %}
+        {% endif %}
+        {% endif %}
+        <div style="clear: both; float: left; display: block; position: relative;">
+
+
+
+
+{#        IXL CHALLENGE                 #}
+
+{% if challenge_exercise_list %}
+ <h4>IXL Math Practice</h4>
+        {% if student.gender == "M" %}
+            <p>{{ student.first_name }} has these exercises to do on the website IXL.com. These are skills that we've identified as being a good fit for him.
+            </p>
+            {% elif student.gender == "F" %}
+<p>{{ student.first_name }} has these exercises to do on the website IXL.com. These are skills that we've identified as being a good fit for her.
+            </p>
+        {% endif %}
+        </div>
+    <div class="inlineDiv">
+        <p class="tableTitle">Weekly Challenge</p>
+        <table>
+                            <tr>
+                                <th style="width:55px;">Done!</th>
+                                <th style="width:65px;">Level</th>
+                                <th style="width:80px;">ID</th>
+                                <th style="width:100px;">Goal Score</th>
+                            </tr>
+                            {% for exercise in challenge_exercise_list %}
+                                {% with exercise.0 as exercise_id %}
+                                    {% with exercise.1 as required_score %}
+                                            <tr>
+                                            <td><i class="fa fa-square-o" aria-hidden="true"></i></td>
+                                                <td>{{ exercise_id.0 }}</td>
+                                                <td><strong>{{ exercise_id |slice:"2:" }}</strong>
+                                                </td>
+                                                <td>{{ required_score }}</td>
+                                            </tr>
+                                        {% endwith %}
+                                {% endwith %}
+
+
+                            {% endfor %}
+                        </table>
+</div>
+    {% if bonus_exercise_list %}
+    <div class="inlineDiv">
+                <p class="tableTitle">Bonus Exercises</p>
+                <table>
+                            <tr>
+                                <th style="width:55px;">Done!</th>
+                                <th style="width:65px;">Level</th>
+                                <th style="width:80px;">ID</th>
+                                <th style="width:100px;">Goal Score</th>
+                            </tr>
+                            {% for exercise in bonus_exercise_list %}
+                                          {% with exercise.0 as exercise_id %}
+                                    {% with exercise.1 as required_score %}
+                                            <tr>
+                                            <td><i class="fa fa-square-o" aria-hidden="true"></i></td>
+                                                <td>{{ exercise_id.0 }}</td>
+                                                <td><strong>{{ exercise_id |slice:"2:" }}</strong>
+                                                </td>
+                                                <td>{{ required_score }}</td>
+                                            </tr>
+                                        {% endwith %}
+                                {% endwith %}
+
+
+                            {% endfor %}
+                        </table>
+            </div>
+        {% endif %}
+        {% endif %}
+
+        </div>
+            <div class="row" style="width: 780px; display: block">
+                <p>Any Questions? Always feel free to contact me!</p>
+
+            </div>
+        <table class="page"></table>
+        <table style="page-break-after: always;"></table>
+{#        {% endfor %}#}
+{% endfor %}
+{#        <body onload="window.print()">#}
+
+
+
+
+{#STYLE SHEET FOR THIS DOC AT BOTTOM TO OVERRIDE ANYTHING BEFORE IT#}
+
+
+    <style>
+    p{font-family: Asap, Helvetica, Arial, sans-serif;}
+
+    table{font-family:Asap, Helvetica, Arial, sans-serif;
+        border-collapse: collapse;
+
+    }
+
+    .inlineDiv{
+                    display: inline-block;
+        margin: 0 15px 15px 15px;
+
+        }
+
+    th{
+        font-size:1.2em;border: solid black 1px;
+        font-weight: 700;
+    text-align: center; background-color: #dddddd; color:#222222;
+        padding: 5px 0 5px 0;
+    }
+    tr {
+        text-align: center;
+    }
+    td {
+        font-weight: 500;border: solid black 1px;
+        font-size:1.3em;}
+
+    .tableTitle {
+        font-weight: 700;
+        font-size:1.2em;
+        margin:2px;
+    }
+
+
+
+</style>
+{% endblock content %}

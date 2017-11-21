@@ -1,0 +1,4012 @@
+[
+  {
+    "category": "Counting and number patterns",
+    "skill_id": "C-A.1",
+    "skill_description": "Counting review - 0 to 10"
+  },
+  {
+    "category": "Counting and number patterns",
+    "skill_id": "C-A.2",
+    "skill_description": "Count to fill a ten frame"
+  },
+  {
+    "category": "Counting and number patterns",
+    "skill_id": "C-A.3",
+    "skill_description": "Counting review - up to 20"
+  },
+  {
+    "category": "Counting and number patterns",
+    "skill_id": "C-A.4",
+    "skill_description": "Counting tens and ones - up to 20"
+  },
+  {
+    "category": "Counting and number patterns",
+    "skill_id": "C-A.5",
+    "skill_description": "Counting - up to 30"
+  },
+  {
+    "category": "Counting and number patterns",
+    "skill_id": "C-A.6",
+    "skill_description": "Counting - up to 100"
+  },
+  {
+    "category": "Counting and number patterns",
+    "skill_id": "C-A.7",
+    "skill_description": "Counting by tens - up to 100"
+  },
+  {
+    "category": "Counting and number patterns",
+    "skill_id": "C-A.8",
+    "skill_description": "Counting tens and ones - up to 99"
+  },
+  {
+    "category": "Counting and number patterns",
+    "skill_id": "C-A.9",
+    "skill_description": "Counting by twos, fives, and tens with pictures"
+  },
+  {
+    "category": "Counting and number patterns",
+    "skill_id": "C-A.10",
+    "skill_description": "Counting by twos, fives, and tens"
+  },
+  {
+    "category": "Counting and number patterns",
+    "skill_id": "C-A.11",
+    "skill_description": "Counting forward and backward"
+  },
+  {
+    "category": "Counting and number patterns",
+    "skill_id": "C-A.12",
+    "skill_description": "Number lines"
+  },
+  {
+    "category": "Counting and number patterns",
+    "skill_id": "C-A.13",
+    "skill_description": "Counting on the hundred chart"
+  },
+  {
+    "category": "Counting and number patterns",
+    "skill_id": "C-A.14",
+    "skill_description": "Hundred chart"
+  },
+  {
+    "category": "Counting and number patterns",
+    "skill_id": "C-A.15",
+    "skill_description": "Even or odd"
+  },
+  {
+    "category": "Counting and number patterns",
+    "skill_id": "C-A.16",
+    "skill_description": "Identify numbers as even or odd"
+  },
+  {
+    "category": "Counting and number patterns",
+    "skill_id": "C-A.17",
+    "skill_description": "Even or odd numbers on number lines"
+  },
+  {
+    "category": "Counting and number patterns",
+    "skill_id": "C-A.18",
+    "skill_description": "Which even or odd number comes before or after?"
+  },
+  {
+    "category": "Counting and number patterns",
+    "skill_id": "C-A.19",
+    "skill_description": "Skip-counting patterns - with tables"
+  },
+  {
+    "category": "Counting and number patterns",
+    "skill_id": "C-A.20",
+    "skill_description": "Sequences - count up and down by 1, 2, 3, 5, and 10"
+  },
+  {
+    "category": "Counting and number patterns",
+    "skill_id": "C-A.21",
+    "skill_description": "Ordinal numbers"
+  },
+  {
+    "category": "Counting and number patterns",
+    "skill_id": "C-A.22",
+    "skill_description": "Writing numbers in words"
+  },
+  {
+    "category": "Counting and number patterns",
+    "skill_id": "C-A.23",
+    "skill_description": "Roman numerals I, V, X"
+  },
+  {
+    "category": "Addition",
+    "skill_id": "C-B.1",
+    "skill_description": "Addition with pictures - sums to 10"
+  },
+  {
+    "category": "Addition",
+    "skill_id": "C-B.2",
+    "skill_description": "Addition sentences - sums to 10"
+  },
+  {
+    "category": "Addition",
+    "skill_id": "C-B.3",
+    "skill_description": "Addition sentences to 10 using number lines"
+  },
+  {
+    "category": "Addition",
+    "skill_id": "C-B.4",
+    "skill_description": "Addition word problems - sums to 10"
+  },
+  {
+    "category": "Addition",
+    "skill_id": "C-B.5",
+    "skill_description": "Word problems - write the addition sentence"
+  },
+  {
+    "category": "Addition",
+    "skill_id": "C-B.6",
+    "skill_description": "Ways to make a number using addition"
+  },
+  {
+    "category": "Addition",
+    "skill_id": "C-B.7",
+    "skill_description": "Ways to make a number - addition sentences"
+  },
+  {
+    "category": "Addition",
+    "skill_id": "C-B.8",
+    "skill_description": "Adding zero"
+  },
+  {
+    "category": "Addition",
+    "skill_id": "C-B.9",
+    "skill_description": "Adding doubles using models"
+  },
+  {
+    "category": "Addition",
+    "skill_id": "C-B.10",
+    "skill_description": "Adding doubles"
+  },
+  {
+    "category": "Addition",
+    "skill_id": "C-B.11",
+    "skill_description": "Adding doubles - complete the sentence"
+  },
+  {
+    "category": "Addition",
+    "skill_id": "C-B.12",
+    "skill_description": "Addition facts - sums to 10"
+  },
+  {
+    "category": "Addition",
+    "skill_id": "C-B.13",
+    "skill_description": "Addition sentences to 18 using number lines"
+  },
+  {
+    "category": "Addition",
+    "skill_id": "C-B.14",
+    "skill_description": "Addition facts - sums to 18"
+  },
+  {
+    "category": "Addition",
+    "skill_id": "C-B.15",
+    "skill_description": "Addition word problems - sums to 18"
+  },
+  {
+    "category": "Addition",
+    "skill_id": "C-B.16",
+    "skill_description": "Complete the addition sentence"
+  },
+  {
+    "category": "Addition",
+    "skill_id": "C-B.17",
+    "skill_description": "Adding three numbers"
+  },
+  {
+    "category": "Addition",
+    "skill_id": "C-B.18",
+    "skill_description": "Word problems - adding three numbers"
+  },
+  {
+    "category": "Addition",
+    "skill_id": "C-B.19",
+    "skill_description": "Related addition facts"
+  },
+  {
+    "category": "Addition",
+    "skill_id": "C-B.20",
+    "skill_description": "Add using doubles plus 1"
+  },
+  {
+    "category": "Addition",
+    "skill_id": "C-B.21",
+    "skill_description": "Add using doubles minus 1"
+  },
+  {
+    "category": "Addition",
+    "skill_id": "C-B.22",
+    "skill_description": "Addition facts - sums to 20"
+  },
+  {
+    "category": "Addition",
+    "skill_id": "C-B.23",
+    "skill_description": "Addition sentences: true or false?"
+  },
+  {
+    "category": "Addition",
+    "skill_id": "C-B.24",
+    "skill_description": "Add tens I"
+  },
+  {
+    "category": "Addition",
+    "skill_id": "C-B.25",
+    "skill_description": "Add tens II"
+  },
+  {
+    "category": "Addition",
+    "skill_id": "C-B.26",
+    "skill_description": "Add a one-digit number to a two-digit number - without regrouping"
+  },
+  {
+    "category": "Addition",
+    "skill_id": "C-B.27",
+    "skill_description": "Regrouping tens and ones I"
+  },
+  {
+    "category": "Addition",
+    "skill_id": "C-B.28",
+    "skill_description": "Regrouping tens and ones II"
+  },
+  {
+    "category": "Addition",
+    "skill_id": "C-B.29",
+    "skill_description": "Add a one-digit number to a two-digit number - with regrouping"
+  },
+  {
+    "category": "Addition - skill builders",
+    "skill_id": "C-C.1",
+    "skill_description": "Adding 0"
+  },
+  {
+    "category": "Addition - skill builders",
+    "skill_id": "C-C.2",
+    "skill_description": "Adding 1"
+  },
+  {
+    "category": "Addition - skill builders",
+    "skill_id": "C-C.3",
+    "skill_description": "Adding 2"
+  },
+  {
+    "category": "Addition - skill builders",
+    "skill_id": "C-C.4",
+    "skill_description": "Adding 3"
+  },
+  {
+    "category": "Addition - skill builders",
+    "skill_id": "C-C.5",
+    "skill_description": "Adding 4"
+  },
+  {
+    "category": "Addition - skill builders",
+    "skill_id": "C-C.6",
+    "skill_description": "Adding 5"
+  },
+  {
+    "category": "Addition - skill builders",
+    "skill_id": "C-C.7",
+    "skill_description": "Adding 6"
+  },
+  {
+    "category": "Addition - skill builders",
+    "skill_id": "C-C.8",
+    "skill_description": "Adding 7"
+  },
+  {
+    "category": "Addition - skill builders",
+    "skill_id": "C-C.9",
+    "skill_description": "Adding 8"
+  },
+  {
+    "category": "Addition - skill builders",
+    "skill_id": "C-C.10",
+    "skill_description": "Adding 9"
+  },
+  {
+    "category": "Subtraction",
+    "skill_id": "C-D.1",
+    "skill_description": "Subtraction with pictures - numbers up to 10"
+  },
+  {
+    "category": "Subtraction",
+    "skill_id": "C-D.2",
+    "skill_description": "Subtraction sentences - numbers up to 10"
+  },
+  {
+    "category": "Subtraction",
+    "skill_id": "C-D.3",
+    "skill_description": "Subtraction sentences within 10 using number lines"
+  },
+  {
+    "category": "Subtraction",
+    "skill_id": "C-D.4",
+    "skill_description": "Subtraction word problems - one-digit numbers"
+  },
+  {
+    "category": "Subtraction",
+    "skill_id": "C-D.5",
+    "skill_description": "Word problems - write the subtraction sentence"
+  },
+  {
+    "category": "Subtraction",
+    "skill_id": "C-D.6",
+    "skill_description": "Ways to make a number using subtraction"
+  },
+  {
+    "category": "Subtraction",
+    "skill_id": "C-D.7",
+    "skill_description": "Ways to make a number - subtraction sentences"
+  },
+  {
+    "category": "Subtraction",
+    "skill_id": "C-D.8",
+    "skill_description": "Ways to subtract from a number - subtraction sentences"
+  },
+  {
+    "category": "Subtraction",
+    "skill_id": "C-D.9",
+    "skill_description": "Subtracting zero and all"
+  },
+  {
+    "category": "Subtraction",
+    "skill_id": "C-D.10",
+    "skill_description": "Subtracting doubles"
+  },
+  {
+    "category": "Subtraction",
+    "skill_id": "C-D.11",
+    "skill_description": "Subtraction facts - numbers up to 10"
+  },
+  {
+    "category": "Subtraction",
+    "skill_id": "C-D.12",
+    "skill_description": "Subtraction sentences within 18 using number lines"
+  },
+  {
+    "category": "Subtraction",
+    "skill_id": "C-D.13",
+    "skill_description": "Subtraction facts - numbers up to 18"
+  },
+  {
+    "category": "Subtraction",
+    "skill_id": "C-D.14",
+    "skill_description": "Subtraction word problems - numbers up to 18"
+  },
+  {
+    "category": "Subtraction",
+    "skill_id": "C-D.15",
+    "skill_description": "Complete the subtraction sentence"
+  },
+  {
+    "category": "Subtraction",
+    "skill_id": "C-D.16",
+    "skill_description": "Related subtraction facts"
+  },
+  {
+    "category": "Subtraction",
+    "skill_id": "C-D.17",
+    "skill_description": "Subtraction sentences: true or false?"
+  },
+  {
+    "category": "Subtraction",
+    "skill_id": "C-D.18",
+    "skill_description": "Subtract tens I"
+  },
+  {
+    "category": "Subtraction",
+    "skill_id": "C-D.19",
+    "skill_description": "Subtract tens II"
+  },
+  {
+    "category": "Subtraction",
+    "skill_id": "C-D.20",
+    "skill_description": "Subtract one-digit numbers from two-digit numbers"
+  },
+  {
+    "category": "Subtraction - skill builders",
+    "skill_id": "C-E.1",
+    "skill_description": "Subtracting 0"
+  },
+  {
+    "category": "Subtraction - skill builders",
+    "skill_id": "C-E.2",
+    "skill_description": "Subtracting 1"
+  },
+  {
+    "category": "Subtraction - skill builders",
+    "skill_id": "C-E.3",
+    "skill_description": "Subtracting 2"
+  },
+  {
+    "category": "Subtraction - skill builders",
+    "skill_id": "C-E.4",
+    "skill_description": "Subtracting 3"
+  },
+  {
+    "category": "Subtraction - skill builders",
+    "skill_id": "C-E.5",
+    "skill_description": "Subtracting 4"
+  },
+  {
+    "category": "Subtraction - skill builders",
+    "skill_id": "C-E.6",
+    "skill_description": "Subtracting 5"
+  },
+  {
+    "category": "Subtraction - skill builders",
+    "skill_id": "C-E.7",
+    "skill_description": "Subtracting 6"
+  },
+  {
+    "category": "Subtraction - skill builders",
+    "skill_id": "C-E.8",
+    "skill_description": "Subtracting 7"
+  },
+  {
+    "category": "Subtraction - skill builders",
+    "skill_id": "C-E.9",
+    "skill_description": "Subtracting 8"
+  },
+  {
+    "category": "Subtraction - skill builders",
+    "skill_id": "C-E.10",
+    "skill_description": "Subtracting 9"
+  },
+  {
+    "category": "Mixed operations",
+    "skill_id": "C-F.1",
+    "skill_description": "Addition and subtraction - ways to make a number"
+  },
+  {
+    "category": "Mixed operations",
+    "skill_id": "C-F.2",
+    "skill_description": "Which sign makes the number sentence true?"
+  },
+  {
+    "category": "Mixed operations",
+    "skill_id": "C-F.3",
+    "skill_description": "Fact families"
+  },
+  {
+    "category": "Mixed operations",
+    "skill_id": "C-F.4",
+    "skill_description": "Addition and subtraction facts - numbers up to 10"
+  },
+  {
+    "category": "Mixed operations",
+    "skill_id": "C-F.5",
+    "skill_description": "Addition and subtraction facts - numbers up to 18"
+  },
+  {
+    "category": "Mixed operations",
+    "skill_id": "C-F.6",
+    "skill_description": "Addition and subtraction word problems"
+  },
+  {
+    "category": "Mixed operations",
+    "skill_id": "C-F.7",
+    "skill_description": "Addition and subtraction sentences: true or false?"
+  },
+  {
+    "category": "Mixed operations",
+    "skill_id": "C-F.8",
+    "skill_description": "Ten more or less"
+  },
+  {
+    "category": "Mixed operations",
+    "skill_id": "C-F.9",
+    "skill_description": "Add and subtract tens"
+  },
+  {
+    "category": "Mixed operations",
+    "skill_id": "C-F.10",
+    "skill_description": "Addition and subtraction terms"
+  },
+  {
+    "category": "Comparing",
+    "skill_id": "C-G.1",
+    "skill_description": "Comparing - review"
+  },
+  {
+    "category": "Comparing",
+    "skill_id": "C-G.2",
+    "skill_description": "Comparing numbers up to 10"
+  },
+  {
+    "category": "Comparing",
+    "skill_id": "C-G.3",
+    "skill_description": "Comparing numbers up to 100"
+  },
+  {
+    "category": "Comparing",
+    "skill_id": "C-G.4",
+    "skill_description": "Comparison word problems"
+  },
+  {
+    "category": "Estimation",
+    "skill_id": "C-H.1",
+    "skill_description": "Estimate to the nearest ten"
+  },
+  {
+    "category": "Place values",
+    "skill_id": "C-I.1",
+    "skill_description": "Place value models up to 20"
+  },
+  {
+    "category": "Place values",
+    "skill_id": "C-I.2",
+    "skill_description": "Write numbers as tens and ones up to 20"
+  },
+  {
+    "category": "Place values",
+    "skill_id": "C-I.3",
+    "skill_description": "Place value models up to 100"
+  },
+  {
+    "category": "Place values",
+    "skill_id": "C-I.4",
+    "skill_description": "Convert between tens and ones"
+  },
+  {
+    "category": "Place values",
+    "skill_id": "C-I.5",
+    "skill_description": "Write numbers as tens and ones"
+  },
+  {
+    "category": "Fractions",
+    "skill_id": "C-J.1",
+    "skill_description": "Halves, thirds, and fourths"
+  },
+  {
+    "category": "Fractions",
+    "skill_id": "C-J.2",
+    "skill_description": "Equal parts"
+  },
+  {
+    "category": "Fractions",
+    "skill_id": "C-J.3",
+    "skill_description": "Simple fractions: what fraction does the shape show?"
+  },
+  {
+    "category": "Fractions",
+    "skill_id": "C-J.4",
+    "skill_description": "Simple fractions: which shape matches the fraction?"
+  },
+  {
+    "category": "Fractions",
+    "skill_id": "C-J.5",
+    "skill_description": "Simple fractions: parts of a group"
+  },
+  {
+    "category": "Fractions",
+    "skill_id": "C-J.6",
+    "skill_description": "Fractions - word problems"
+  },
+  {
+    "category": "Fractions",
+    "skill_id": "C-J.7",
+    "skill_description": "Compare fractions"
+  },
+  {
+    "category": "Fractions",
+    "skill_id": "C-J.8",
+    "skill_description": "Fraction models equivalent to whole numbers"
+  },
+  {
+    "category": "Fractions",
+    "skill_id": "C-J.9",
+    "skill_description": "Fractions equivalent to whole numbers"
+  },
+  {
+    "category": "Geometry",
+    "skill_id": "C-K.1",
+    "skill_description": "Identify 2-dimensional shapes"
+  },
+  {
+    "category": "Geometry",
+    "skill_id": "C-K.2",
+    "skill_description": "Identify 3-dimensional figures"
+  },
+  {
+    "category": "Geometry",
+    "skill_id": "C-K.3",
+    "skill_description": "Geometry of everyday objects I"
+  },
+  {
+    "category": "Geometry",
+    "skill_id": "C-K.4",
+    "skill_description": "Geometry of everyday objects II"
+  },
+  {
+    "category": "Geometry",
+    "skill_id": "C-K.5",
+    "skill_description": "Relate planar and solid figures"
+  },
+  {
+    "category": "Geometry",
+    "skill_id": "C-K.6",
+    "skill_description": "Count sides and vertices"
+  },
+  {
+    "category": "Geometry",
+    "skill_id": "C-K.7",
+    "skill_description": "Count edges, vertices, and faces"
+  },
+  {
+    "category": "Geometry",
+    "skill_id": "C-K.8",
+    "skill_description": "Compare sides and vertices"
+  },
+  {
+    "category": "Geometry",
+    "skill_id": "C-K.9",
+    "skill_description": "Compare edges, vertices, and faces"
+  },
+  {
+    "category": "Geometry",
+    "skill_id": "C-K.10",
+    "skill_description": "Open and closed shapes"
+  },
+  {
+    "category": "Geometry",
+    "skill_id": "C-K.11",
+    "skill_description": "Flip, turn, and slide"
+  },
+  {
+    "category": "Geometry",
+    "skill_id": "C-K.12",
+    "skill_description": "Symmetry"
+  },
+  {
+    "category": "Geometry",
+    "skill_id": "C-K.13",
+    "skill_description": "Same shape"
+  },
+  {
+    "category": "Spatial sense",
+    "skill_id": "C-L.1",
+    "skill_description": "Above and below"
+  },
+  {
+    "category": "Spatial sense",
+    "skill_id": "C-L.2",
+    "skill_description": "Beside and next to"
+  },
+  {
+    "category": "Spatial sense",
+    "skill_id": "C-L.3",
+    "skill_description": "Left, middle, and right"
+  },
+  {
+    "category": "Spatial sense",
+    "skill_id": "C-L.4",
+    "skill_description": "Top, middle, and bottom"
+  },
+  {
+    "category": "Spatial sense",
+    "skill_id": "C-L.5",
+    "skill_description": "Location in a grid"
+  },
+  {
+    "category": "Data and graphs",
+    "skill_id": "C-M.1",
+    "skill_description": "Record data with tally charts, picture graphs, tables"
+  },
+  {
+    "category": "Data and graphs",
+    "skill_id": "C-M.2",
+    "skill_description": "Interpret data in tally charts, picture graphs, tables"
+  },
+  {
+    "category": "Data and graphs",
+    "skill_id": "C-M.3",
+    "skill_description": "Interpret bar graphs"
+  },
+  {
+    "category": "Data and graphs",
+    "skill_id": "C-M.4",
+    "skill_description": "Which bar graph is correct?"
+  },
+  {
+    "category": "Measurement",
+    "skill_id": "C-N.1",
+    "skill_description": "Read a thermometer"
+  },
+  {
+    "category": "Measurement",
+    "skill_id": "C-N.2",
+    "skill_description": "Compare objects: length and height"
+  },
+  {
+    "category": "Measurement",
+    "skill_id": "C-N.3",
+    "skill_description": "Measure using objects"
+  },
+  {
+    "category": "Measurement",
+    "skill_id": "C-N.4",
+    "skill_description": "Measure using an inch ruler"
+  },
+  {
+    "category": "Measurement",
+    "skill_id": "C-N.5",
+    "skill_description": "Which customary unit of length is appropriate?"
+  },
+  {
+    "category": "Measurement",
+    "skill_id": "C-N.6",
+    "skill_description": "Customary units of length: word problems"
+  },
+  {
+    "category": "Measurement",
+    "skill_id": "C-N.7",
+    "skill_description": "Which customary unit of weight is appropriate?"
+  },
+  {
+    "category": "Measurement",
+    "skill_id": "C-N.8",
+    "skill_description": "Compare and convert cups, pints, and quarts"
+  },
+  {
+    "category": "Measurement",
+    "skill_id": "C-N.9",
+    "skill_description": "Which metric unit of length is appropriate?"
+  },
+  {
+    "category": "Measurement",
+    "skill_id": "C-N.10",
+    "skill_description": "Metric units of length: word problems"
+  },
+  {
+    "category": "Measurement",
+    "skill_id": "C-N.11",
+    "skill_description": "Measure using a centimeter ruler"
+  },
+  {
+    "category": "Measurement",
+    "skill_id": "C-N.12",
+    "skill_description": "Which metric unit of weight is appropriate?"
+  },
+  {
+    "category": "Money",
+    "skill_id": "C-O.1",
+    "skill_description": "Names and values of common coins"
+  },
+  {
+    "category": "Money",
+    "skill_id": "C-O.2",
+    "skill_description": "Names and values of all coins"
+  },
+  {
+    "category": "Money",
+    "skill_id": "C-O.3",
+    "skill_description": "Count pennies, nickels, and dimes"
+  },
+  {
+    "category": "Money",
+    "skill_id": "C-O.4",
+    "skill_description": "Count pennies, nickels, dimes, and quarters"
+  },
+  {
+    "category": "Money",
+    "skill_id": "C-O.5",
+    "skill_description": "Equivalent coins I"
+  },
+  {
+    "category": "Money",
+    "skill_id": "C-O.6",
+    "skill_description": "Equivalent coins II"
+  },
+  {
+    "category": "Money",
+    "skill_id": "C-O.7",
+    "skill_description": "Money - word problems"
+  },
+  {
+    "category": "Money",
+    "skill_id": "C-O.8",
+    "skill_description": "Compare money amounts"
+  },
+  {
+    "category": "Money",
+    "skill_id": "C-O.9",
+    "skill_description": "Least number of coins"
+  },
+  {
+    "category": "Money",
+    "skill_id": "C-O.10",
+    "skill_description": "Purchases: do you have enough money?"
+  },
+  {
+    "category": "Patterns",
+    "skill_id": "C-P.1",
+    "skill_description": "Introduction to patterns"
+  },
+  {
+    "category": "Patterns",
+    "skill_id": "C-P.2",
+    "skill_description": "Find the next shape in a pattern"
+  },
+  {
+    "category": "Patterns",
+    "skill_id": "C-P.3",
+    "skill_description": "Complete a pattern"
+  },
+  {
+    "category": "Patterns",
+    "skill_id": "C-P.4",
+    "skill_description": "Make a pattern"
+  },
+  {
+    "category": "Patterns",
+    "skill_id": "C-P.5",
+    "skill_description": "Growing patterns"
+  },
+  {
+    "category": "Patterns",
+    "skill_id": "C-P.6",
+    "skill_description": "Find the next shape in a growing pattern"
+  },
+  {
+    "category": "Patterns",
+    "skill_id": "C-P.7",
+    "skill_description": "Find the next row in a growing pattern"
+  },
+  {
+    "category": "Probability and statistics",
+    "skill_id": "C-Q.1",
+    "skill_description": "More, less, and equally likely"
+  },
+  {
+    "category": "Probability and statistics",
+    "skill_id": "C-Q.2",
+    "skill_description": "Certain, probable, unlikely, and impossible"
+  },
+  {
+    "category": "Probability and statistics",
+    "skill_id": "C-Q.3",
+    "skill_description": "Mode and range"
+  },
+  {
+    "category": "Sorting, ordering, and classifying",
+    "skill_id": "C-R.1",
+    "skill_description": "Sort shapes into a Venn diagram"
+  },
+  {
+    "category": "Sorting, ordering, and classifying",
+    "skill_id": "C-R.2",
+    "skill_description": "Count shapes in a Venn diagram"
+  },
+  {
+    "category": "Sorting, ordering, and classifying",
+    "skill_id": "C-R.3",
+    "skill_description": "Put numbers in order"
+  },
+  {
+    "category": "Time",
+    "skill_id": "C-S.1",
+    "skill_description": "Match analog clocks and times"
+  },
+  {
+    "category": "Time",
+    "skill_id": "C-S.2",
+    "skill_description": "Match digital clocks and times"
+  },
+  {
+    "category": "Time",
+    "skill_id": "C-S.3",
+    "skill_description": "Match analog and digital clocks"
+  },
+  {
+    "category": "Time",
+    "skill_id": "C-S.4",
+    "skill_description": "Read clocks and write times"
+  },
+  {
+    "category": "Time",
+    "skill_id": "C-S.5",
+    "skill_description": "A.M. or P.M."
+  },
+  {
+    "category": "Time",
+    "skill_id": "C-S.6",
+    "skill_description": "Times of everyday events"
+  },
+  {
+    "category": "Time",
+    "skill_id": "C-S.7",
+    "skill_description": "Compare clocks"
+  },
+  {
+    "category": "Time",
+    "skill_id": "C-S.8",
+    "skill_description": "Time and clocks: word problems"
+  },
+  {
+    "category": "Time",
+    "skill_id": "C-S.9",
+    "skill_description": "Choose the appropriate time units"
+  },
+  {
+    "category": "Time",
+    "skill_id": "C-S.10",
+    "skill_description": "Days of the week"
+  },
+  {
+    "category": "Time",
+    "skill_id": "C-S.11",
+    "skill_description": "Seasons of the year"
+  },
+  {
+    "category": "Time",
+    "skill_id": "C-S.12",
+    "skill_description": "Months of the year"
+  },
+  {
+    "category": "Time",
+    "skill_id": "C-S.13",
+    "skill_description": "Read a calendar"
+  },
+  {
+    "category": "Counting and number patterns",
+    "skill_id": "D-A.1",
+    "skill_description": "Skip-counting"
+  },
+  {
+    "category": "Counting and number patterns",
+    "skill_id": "D-A.2",
+    "skill_description": "Skip-counting sequences"
+  },
+  {
+    "category": "Counting and number patterns",
+    "skill_id": "D-A.3",
+    "skill_description": "Counting patterns - up to 100"
+  },
+  {
+    "category": "Counting and number patterns",
+    "skill_id": "D-A.4",
+    "skill_description": "Number lines - up to 100"
+  },
+  {
+    "category": "Counting and number patterns",
+    "skill_id": "D-A.5",
+    "skill_description": "Hundreds chart"
+  },
+  {
+    "category": "Counting and number patterns",
+    "skill_id": "D-A.6",
+    "skill_description": "Even or odd"
+  },
+  {
+    "category": "Counting and number patterns",
+    "skill_id": "D-A.7",
+    "skill_description": "Identify numbers as even or odd"
+  },
+  {
+    "category": "Counting and number patterns",
+    "skill_id": "D-A.8",
+    "skill_description": "Select even or odd numbers"
+  },
+  {
+    "category": "Counting and number patterns",
+    "skill_id": "D-A.9",
+    "skill_description": "Even or odd numbers on number lines"
+  },
+  {
+    "category": "Counting and number patterns",
+    "skill_id": "D-A.10",
+    "skill_description": "Which even or odd number comes before or after?"
+  },
+  {
+    "category": "Counting and number patterns",
+    "skill_id": "D-A.11",
+    "skill_description": "Skip-counting stories"
+  },
+  {
+    "category": "Counting and number patterns",
+    "skill_id": "D-A.12",
+    "skill_description": "Skip-counting puzzles"
+  },
+  {
+    "category": "Counting and number patterns",
+    "skill_id": "D-A.13",
+    "skill_description": "Number lines - up to 1,000"
+  },
+  {
+    "category": "Counting and number patterns",
+    "skill_id": "D-A.14",
+    "skill_description": "Counting patterns - up to 1,000"
+  },
+  {
+    "category": "Comparing and ordering",
+    "skill_id": "D-B.1",
+    "skill_description": "Comparing numbers up to 100"
+  },
+  {
+    "category": "Comparing and ordering",
+    "skill_id": "D-B.2",
+    "skill_description": "Comparing numbers up to 1,000"
+  },
+  {
+    "category": "Comparing and ordering",
+    "skill_id": "D-B.3",
+    "skill_description": "Put numbers up to 100 in order"
+  },
+  {
+    "category": "Comparing and ordering",
+    "skill_id": "D-B.4",
+    "skill_description": "Put numbers up to 1,000 in order"
+  },
+  {
+    "category": "Comparing and ordering",
+    "skill_id": "D-B.5",
+    "skill_description": "Greatest and least - word problems - up to 100"
+  },
+  {
+    "category": "Comparing and ordering",
+    "skill_id": "D-B.6",
+    "skill_description": "Greatest and least - word problems - up to 1,000"
+  },
+  {
+    "category": "Names of numbers",
+    "skill_id": "D-C.1",
+    "skill_description": "Ordinal numbers up to 10th"
+  },
+  {
+    "category": "Names of numbers",
+    "skill_id": "D-C.2",
+    "skill_description": "Ordinal numbers up to 100th"
+  },
+  {
+    "category": "Names of numbers",
+    "skill_id": "D-C.3",
+    "skill_description": "Writing numbers up to 100 in words"
+  },
+  {
+    "category": "Names of numbers",
+    "skill_id": "D-C.4",
+    "skill_description": "Writing numbers up to 1,000 in words"
+  },
+  {
+    "category": "Names of numbers",
+    "skill_id": "D-C.5",
+    "skill_description": "Distinguishing ordinal and cardinal numbers"
+  },
+  {
+    "category": "Names of numbers",
+    "skill_id": "D-C.6",
+    "skill_description": "Roman numerals I, V, X, L"
+  },
+  {
+    "category": "Patterns",
+    "skill_id": "D-D.1",
+    "skill_description": "Repeating patterns"
+  },
+  {
+    "category": "Patterns",
+    "skill_id": "D-D.2",
+    "skill_description": "Growing patterns"
+  },
+  {
+    "category": "Patterns",
+    "skill_id": "D-D.3",
+    "skill_description": "Find the next shape in a pattern"
+  },
+  {
+    "category": "Patterns",
+    "skill_id": "D-D.4",
+    "skill_description": "Complete a repeating pattern"
+  },
+  {
+    "category": "Patterns",
+    "skill_id": "D-D.5",
+    "skill_description": "Make a repeating pattern"
+  },
+  {
+    "category": "Patterns",
+    "skill_id": "D-D.6",
+    "skill_description": "Find the next row in a growing pattern"
+  },
+  {
+    "category": "Addition - one digit",
+    "skill_id": "D-E.1",
+    "skill_description": "Review - add one-digit numbers - sums to 10"
+  },
+  {
+    "category": "Addition - one digit",
+    "skill_id": "D-E.2",
+    "skill_description": "Review - ways to make a number - sums to 10"
+  },
+  {
+    "category": "Addition - one digit",
+    "skill_id": "D-E.3",
+    "skill_description": "Review - writing addition sentences - sums to 10"
+  },
+  {
+    "category": "Addition - one digit",
+    "skill_id": "D-E.4",
+    "skill_description": "Add one-digit numbers"
+  },
+  {
+    "category": "Addition - one digit",
+    "skill_id": "D-E.5",
+    "skill_description": "Addition with pictures - sums to 20"
+  },
+  {
+    "category": "Addition - one digit",
+    "skill_id": "D-E.6",
+    "skill_description": "Write addition sentences to describe pictures - sums to 20"
+  },
+  {
+    "category": "Addition - one digit",
+    "skill_id": "D-E.7",
+    "skill_description": "Addition input/output tables - sums to 20"
+  },
+  {
+    "category": "Addition - one digit",
+    "skill_id": "D-E.8",
+    "skill_description": "Add zero"
+  },
+  {
+    "category": "Addition - one digit",
+    "skill_id": "D-E.9",
+    "skill_description": "Add doubles using models"
+  },
+  {
+    "category": "Addition - one digit",
+    "skill_id": "D-E.10",
+    "skill_description": "Add doubles"
+  },
+  {
+    "category": "Addition - one digit",
+    "skill_id": "D-E.11",
+    "skill_description": "Add doubles - complete the sentence"
+  },
+  {
+    "category": "Addition - one digit",
+    "skill_id": "D-E.12",
+    "skill_description": "Addition word problems - one digit"
+  },
+  {
+    "category": "Addition - one digit",
+    "skill_id": "D-E.13",
+    "skill_description": "Complete the addition sentence - one digit"
+  },
+  {
+    "category": "Addition - one digit",
+    "skill_id": "D-E.14",
+    "skill_description": "Write the addition sentence - one digit"
+  },
+  {
+    "category": "Addition - one digit",
+    "skill_id": "D-E.15",
+    "skill_description": "Balance addition equations - one digit"
+  },
+  {
+    "category": "Addition - one digit",
+    "skill_id": "D-E.16",
+    "skill_description": "Addition equations: true or false?"
+  },
+  {
+    "category": "Addition - one digit",
+    "skill_id": "D-E.17",
+    "skill_description": "Add three one-digit numbers"
+  },
+  {
+    "category": "Addition - one digit",
+    "skill_id": "D-E.18",
+    "skill_description": "Add three one-digit numbers: word problems"
+  },
+  {
+    "category": "Addition - one digit",
+    "skill_id": "D-E.19",
+    "skill_description": "Add four or more one-digit numbers"
+  },
+  {
+    "category": "Addition - one digit",
+    "skill_id": "D-E.20",
+    "skill_description": "Add four or more one-digit numbers: word problems"
+  },
+  {
+    "category": "Addition - one digit",
+    "skill_id": "D-E.21",
+    "skill_description": "Identify repeated addition in arrays: sums to 10"
+  },
+  {
+    "category": "Addition - one digit",
+    "skill_id": "D-E.22",
+    "skill_description": "Write addition sentences for arrays: sums to 10"
+  },
+  {
+    "category": "Addition - one digit",
+    "skill_id": "D-E.23",
+    "skill_description": "Identify repeated addition in arrays: sums to 25"
+  },
+  {
+    "category": "Addition - one digit",
+    "skill_id": "D-E.24",
+    "skill_description": "Write addition sentences for arrays: sums to 25"
+  },
+  {
+    "category": "Subtraction - one digit",
+    "skill_id": "D-F.1",
+    "skill_description": "Review - subtract one-digit numbers - up to 10"
+  },
+  {
+    "category": "Subtraction - one digit",
+    "skill_id": "D-F.2",
+    "skill_description": "Review - ways to subtract - up to 10"
+  },
+  {
+    "category": "Subtraction - one digit",
+    "skill_id": "D-F.3",
+    "skill_description": "Review - writing subtraction sentences - up to 10"
+  },
+  {
+    "category": "Subtraction - one digit",
+    "skill_id": "D-F.4",
+    "skill_description": "Subtract a one-digit number from a two-digit number up to 18"
+  },
+  {
+    "category": "Subtraction - one digit",
+    "skill_id": "D-F.5",
+    "skill_description": "Subtraction with pictures"
+  },
+  {
+    "category": "Subtraction - one digit",
+    "skill_id": "D-F.6",
+    "skill_description": "Write subtraction sentences to describe pictures - up to 18"
+  },
+  {
+    "category": "Subtraction - one digit",
+    "skill_id": "D-F.7",
+    "skill_description": "Subtraction input/output tables - up to 18"
+  },
+  {
+    "category": "Subtraction - one digit",
+    "skill_id": "D-F.8",
+    "skill_description": "Subtract zero/all"
+  },
+  {
+    "category": "Subtraction - one digit",
+    "skill_id": "D-F.9",
+    "skill_description": "Subtraction word problems - up to 18"
+  },
+  {
+    "category": "Subtraction - one digit",
+    "skill_id": "D-F.10",
+    "skill_description": "Complete the subtraction sentence - up to 18"
+  },
+  {
+    "category": "Subtraction - one digit",
+    "skill_id": "D-F.11",
+    "skill_description": "Write the subtraction sentence - up to 18"
+  },
+  {
+    "category": "Subtraction - one digit",
+    "skill_id": "D-F.12",
+    "skill_description": "Balance subtraction equations - up to 18"
+  },
+  {
+    "category": "Subtraction - one digit",
+    "skill_id": "D-F.13",
+    "skill_description": "Subtraction equations: true or false?"
+  },
+  {
+    "category": "Addition - two digits",
+    "skill_id": "D-G.1",
+    "skill_description": "Add multiples of 10"
+  },
+  {
+    "category": "Addition - two digits",
+    "skill_id": "D-G.2",
+    "skill_description": "Add a two-digit and a one-digit number - without regrouping"
+  },
+  {
+    "category": "Addition - two digits",
+    "skill_id": "D-G.3",
+    "skill_description": "Add a two-digit and a one-digit number - with regrouping"
+  },
+  {
+    "category": "Addition - two digits",
+    "skill_id": "D-G.4",
+    "skill_description": "Add two two-digit numbers - without regrouping"
+  },
+  {
+    "category": "Addition - two digits",
+    "skill_id": "D-G.5",
+    "skill_description": "Add two two-digit numbers - with regrouping"
+  },
+  {
+    "category": "Addition - two digits",
+    "skill_id": "D-G.6",
+    "skill_description": "Write addition sentences to describe pictures"
+  },
+  {
+    "category": "Addition - two digits",
+    "skill_id": "D-G.7",
+    "skill_description": "Addition input/output tables - up to two digits"
+  },
+  {
+    "category": "Addition - two digits",
+    "skill_id": "D-G.8",
+    "skill_description": "Ways to make a number using addition"
+  },
+  {
+    "category": "Addition - two digits",
+    "skill_id": "D-G.9",
+    "skill_description": "Addition word problems - up to two digits"
+  },
+  {
+    "category": "Addition - two digits",
+    "skill_id": "D-G.10",
+    "skill_description": "Complete the addition sentence - up to two digits"
+  },
+  {
+    "category": "Addition - two digits",
+    "skill_id": "D-G.11",
+    "skill_description": "Write the addition sentence - up to two digits"
+  },
+  {
+    "category": "Addition - two digits",
+    "skill_id": "D-G.12",
+    "skill_description": "Balance addition equations - up to two digits"
+  },
+  {
+    "category": "Addition - two digits",
+    "skill_id": "D-G.13",
+    "skill_description": "Add three numbers up to two digits each"
+  },
+  {
+    "category": "Addition - two digits",
+    "skill_id": "D-G.14",
+    "skill_description": "Add three numbers up to two digits each: word problems"
+  },
+  {
+    "category": "Addition - two digits",
+    "skill_id": "D-G.15",
+    "skill_description": "Add four or more numbers up to two digits each"
+  },
+  {
+    "category": "Addition - two digits",
+    "skill_id": "D-G.16",
+    "skill_description": "Add four or more numbers up to two digits each: word problems"
+  },
+  {
+    "category": "Subtraction - two digits",
+    "skill_id": "D-H.1",
+    "skill_description": "Subtract multiples of 10"
+  },
+  {
+    "category": "Subtraction - two digits",
+    "skill_id": "D-H.2",
+    "skill_description": "Subtract a one-digit number from a two-digit number - without regrouping"
+  },
+  {
+    "category": "Subtraction - two digits",
+    "skill_id": "D-H.3",
+    "skill_description": "Subtract a one-digit number from a two-digit number - with regrouping"
+  },
+  {
+    "category": "Subtraction - two digits",
+    "skill_id": "D-H.4",
+    "skill_description": "Subtract two two-digit numbers - without regrouping"
+  },
+  {
+    "category": "Subtraction - two digits",
+    "skill_id": "D-H.5",
+    "skill_description": "Subtract two two-digit numbers - with regrouping"
+  },
+  {
+    "category": "Subtraction - two digits",
+    "skill_id": "D-H.6",
+    "skill_description": "Write subtraction sentences to describe pictures - up to two digits"
+  },
+  {
+    "category": "Subtraction - two digits",
+    "skill_id": "D-H.7",
+    "skill_description": "Subtraction input/output tables - up to two digits"
+  },
+  {
+    "category": "Subtraction - two digits",
+    "skill_id": "D-H.8",
+    "skill_description": "Ways to make a number using subtraction"
+  },
+  {
+    "category": "Subtraction - two digits",
+    "skill_id": "D-H.9",
+    "skill_description": "Subtraction word problems - up to two digits"
+  },
+  {
+    "category": "Subtraction - two digits",
+    "skill_id": "D-H.10",
+    "skill_description": "Complete the subtraction sentence - up to two digits"
+  },
+  {
+    "category": "Subtraction - two digits",
+    "skill_id": "D-H.11",
+    "skill_description": "Write the subtraction sentence - up to two digits"
+  },
+  {
+    "category": "Subtraction - two digits",
+    "skill_id": "D-H.12",
+    "skill_description": "Balance subtraction equations - up to two digits"
+  },
+  {
+    "category": "Addition - three digits",
+    "skill_id": "D-I.1",
+    "skill_description": "Add multiples of 100"
+  },
+  {
+    "category": "Addition - three digits",
+    "skill_id": "D-I.2",
+    "skill_description": "Addition with three-digit numbers"
+  },
+  {
+    "category": "Addition - three digits",
+    "skill_id": "D-I.3",
+    "skill_description": "Addition input/output tables - up to three digits"
+  },
+  {
+    "category": "Addition - three digits",
+    "skill_id": "D-I.4",
+    "skill_description": "Addition word problems - up to three digits"
+  },
+  {
+    "category": "Addition - three digits",
+    "skill_id": "D-I.5",
+    "skill_description": "Complete the addition sentence - up to three digits"
+  },
+  {
+    "category": "Addition - three digits",
+    "skill_id": "D-I.6",
+    "skill_description": "Write the addition sentence - up to three digits"
+  },
+  {
+    "category": "Addition - three digits",
+    "skill_id": "D-I.7",
+    "skill_description": "Balance addition equations - up to three digits"
+  },
+  {
+    "category": "Subtraction - three digits",
+    "skill_id": "D-J.1",
+    "skill_description": "Subtract multiples of 100"
+  },
+  {
+    "category": "Subtraction - three digits",
+    "skill_id": "D-J.2",
+    "skill_description": "Subtract three-digit numbers"
+  },
+  {
+    "category": "Subtraction - three digits",
+    "skill_id": "D-J.3",
+    "skill_description": "Subtraction input/output tables - up to three digits"
+  },
+  {
+    "category": "Subtraction - three digits",
+    "skill_id": "D-J.4",
+    "skill_description": "Subtraction word problems - up to three digits"
+  },
+  {
+    "category": "Subtraction - three digits",
+    "skill_id": "D-J.5",
+    "skill_description": "Complete the subtraction sentence - up to three digits"
+  },
+  {
+    "category": "Subtraction - three digits",
+    "skill_id": "D-J.6",
+    "skill_description": "Write the subtraction sentence - up to three digits"
+  },
+  {
+    "category": "Subtraction - three digits",
+    "skill_id": "D-J.7",
+    "skill_description": "Balance subtraction equations - up to three digits"
+  },
+  {
+    "category": "Properties",
+    "skill_id": "D-K.1",
+    "skill_description": "Related addition facts"
+  },
+  {
+    "category": "Properties",
+    "skill_id": "D-K.2",
+    "skill_description": "Related subtraction facts"
+  },
+  {
+    "category": "Properties",
+    "skill_id": "D-K.3",
+    "skill_description": "Fact families"
+  },
+  {
+    "category": "Properties",
+    "skill_id": "D-K.4",
+    "skill_description": "Addition, subtraction, multiplication, and division terms"
+  },
+  {
+    "category": "Properties",
+    "skill_id": "D-K.5",
+    "skill_description": "Solve inequalities using addition and subtraction shortcuts"
+  },
+  {
+    "category": "Mixed operations",
+    "skill_id": "D-L.1",
+    "skill_description": "Add and subtract numbers up to 20"
+  },
+  {
+    "category": "Mixed operations",
+    "skill_id": "D-L.2",
+    "skill_description": "Addition and subtraction - ways to make a number - up to 20"
+  },
+  {
+    "category": "Mixed operations",
+    "skill_id": "D-L.3",
+    "skill_description": "Addition and subtraction word problems - up to 20"
+  },
+  {
+    "category": "Mixed operations",
+    "skill_id": "D-L.4",
+    "skill_description": "Addition and subtraction - balance equations - up to 20"
+  },
+  {
+    "category": "Mixed operations",
+    "skill_id": "D-L.5",
+    "skill_description": "Addition and subtraction equations up to 20: true or false?"
+  },
+  {
+    "category": "Mixed operations",
+    "skill_id": "D-L.6",
+    "skill_description": "Input/output tables - write the rule - up to 20"
+  },
+  {
+    "category": "Mixed operations",
+    "skill_id": "D-L.7",
+    "skill_description": "Add and subtract numbers up to 100"
+  },
+  {
+    "category": "Mixed operations",
+    "skill_id": "D-L.8",
+    "skill_description": "Addition and subtraction - ways to make a number - up to 100"
+  },
+  {
+    "category": "Mixed operations",
+    "skill_id": "D-L.9",
+    "skill_description": "Addition and subtraction word problems - up to 100"
+  },
+  {
+    "category": "Mixed operations",
+    "skill_id": "D-L.10",
+    "skill_description": "Addition and subtraction - balance equations - up to 100"
+  },
+  {
+    "category": "Mixed operations",
+    "skill_id": "D-L.11",
+    "skill_description": "Input/output tables - write the rule - up to 100"
+  },
+  {
+    "category": "Mixed operations",
+    "skill_id": "D-L.12",
+    "skill_description": "Which sign (+ or -) makes the number sentence true?"
+  },
+  {
+    "category": "Mixed operations",
+    "skill_id": "D-L.13",
+    "skill_description": "Write addition and subtraction sentences"
+  },
+  {
+    "category": "Mixed operations",
+    "skill_id": "D-L.14",
+    "skill_description": "Inequalities with addition and subtraction - up to 100"
+  },
+  {
+    "category": "Place values",
+    "skill_id": "D-M.1",
+    "skill_description": "Place value models - tens and ones"
+  },
+  {
+    "category": "Place values",
+    "skill_id": "D-M.2",
+    "skill_description": "Place value models - up to hundreds"
+  },
+  {
+    "category": "Place values",
+    "skill_id": "D-M.3",
+    "skill_description": "Place value models - up to thousands"
+  },
+  {
+    "category": "Place values",
+    "skill_id": "D-M.4",
+    "skill_description": "Place value - tens and ones"
+  },
+  {
+    "category": "Place values",
+    "skill_id": "D-M.5",
+    "skill_description": "Place value - up to hundreds"
+  },
+  {
+    "category": "Place values",
+    "skill_id": "D-M.6",
+    "skill_description": "Place value - up to thousands"
+  },
+  {
+    "category": "Place values",
+    "skill_id": "D-M.7",
+    "skill_description": "Regrouping tens and ones I"
+  },
+  {
+    "category": "Place values",
+    "skill_id": "D-M.8",
+    "skill_description": "Regrouping tens and ones II"
+  },
+  {
+    "category": "Place values",
+    "skill_id": "D-M.9",
+    "skill_description": "Convert to/from a number - tens and ones"
+  },
+  {
+    "category": "Place values",
+    "skill_id": "D-M.10",
+    "skill_description": "Convert to/from a number - up to hundreds"
+  },
+  {
+    "category": "Place values",
+    "skill_id": "D-M.11",
+    "skill_description": "Convert to/from a number - up to thousands"
+  },
+  {
+    "category": "Place values",
+    "skill_id": "D-M.12",
+    "skill_description": "Convert between place values - up to thousands"
+  },
+  {
+    "category": "Place values",
+    "skill_id": "D-M.13",
+    "skill_description": "Convert from expanded form - up to hundreds"
+  },
+  {
+    "category": "Place values",
+    "skill_id": "D-M.14",
+    "skill_description": "Convert from expanded form - up to thousands"
+  },
+  {
+    "category": "Place values",
+    "skill_id": "D-M.15",
+    "skill_description": "Identify a digit up to the hundreds place"
+  },
+  {
+    "category": "Estimation and rounding",
+    "skill_id": "D-N.1",
+    "skill_description": "Estimate to the nearest ten"
+  },
+  {
+    "category": "Estimation and rounding",
+    "skill_id": "D-N.2",
+    "skill_description": "Round to the nearest ten"
+  },
+  {
+    "category": "Estimation and rounding",
+    "skill_id": "D-N.3",
+    "skill_description": "Round to the nearest ten or hundred"
+  },
+  {
+    "category": "Estimation and rounding",
+    "skill_id": "D-N.4",
+    "skill_description": "Round to the nearest ten, hundred, or thousand"
+  },
+  {
+    "category": "Estimation and rounding",
+    "skill_id": "D-N.5",
+    "skill_description": "Estimate sums"
+  },
+  {
+    "category": "Logical reasoning",
+    "skill_id": "D-O.1",
+    "skill_description": "Guess the number"
+  },
+  {
+    "category": "Money",
+    "skill_id": "D-P.1",
+    "skill_description": "Names and values of common coins"
+  },
+  {
+    "category": "Money",
+    "skill_id": "D-P.2",
+    "skill_description": "Names and values of all coins"
+  },
+  {
+    "category": "Money",
+    "skill_id": "D-P.3",
+    "skill_description": "Count money - pennies, nickels, and dimes only"
+  },
+  {
+    "category": "Money",
+    "skill_id": "D-P.4",
+    "skill_description": "Count money - up to $1"
+  },
+  {
+    "category": "Money",
+    "skill_id": "D-P.5",
+    "skill_description": "Count money - up to $5"
+  },
+  {
+    "category": "Money",
+    "skill_id": "D-P.6",
+    "skill_description": "Equivalent amounts of money - up to $1"
+  },
+  {
+    "category": "Money",
+    "skill_id": "D-P.7",
+    "skill_description": "Equivalent coins I"
+  },
+  {
+    "category": "Money",
+    "skill_id": "D-P.8",
+    "skill_description": "Equivalent coins II"
+  },
+  {
+    "category": "Money",
+    "skill_id": "D-P.9",
+    "skill_description": "Add money - up to $1"
+  },
+  {
+    "category": "Money",
+    "skill_id": "D-P.10",
+    "skill_description": "Add money - up to $1: word problems"
+  },
+  {
+    "category": "Money",
+    "skill_id": "D-P.11",
+    "skill_description": "Subtract money - up to $1"
+  },
+  {
+    "category": "Money",
+    "skill_id": "D-P.12",
+    "skill_description": "Subtract money - up to $1: word problems"
+  },
+  {
+    "category": "Money",
+    "skill_id": "D-P.13",
+    "skill_description": "Add and subtract money - up to $1"
+  },
+  {
+    "category": "Money",
+    "skill_id": "D-P.14",
+    "skill_description": "Add and subtract money - up to $1: word problems"
+  },
+  {
+    "category": "Money",
+    "skill_id": "D-P.15",
+    "skill_description": "Which picture shows more - up to $5"
+  },
+  {
+    "category": "Money",
+    "skill_id": "D-P.16",
+    "skill_description": "Least number of coins"
+  },
+  {
+    "category": "Money",
+    "skill_id": "D-P.17",
+    "skill_description": "Purchases - do you have enough money - up to $1"
+  },
+  {
+    "category": "Money",
+    "skill_id": "D-P.18",
+    "skill_description": "Purchases - do you have enough money - up to $5"
+  },
+  {
+    "category": "Money",
+    "skill_id": "D-P.19",
+    "skill_description": "How much more to make a dollar?"
+  },
+  {
+    "category": "Money",
+    "skill_id": "D-P.20",
+    "skill_description": "Making change"
+  },
+  {
+    "category": "Time",
+    "skill_id": "D-Q.1",
+    "skill_description": "Match analog clocks and times"
+  },
+  {
+    "category": "Time",
+    "skill_id": "D-Q.2",
+    "skill_description": "Match digital clocks and times"
+  },
+  {
+    "category": "Time",
+    "skill_id": "D-Q.3",
+    "skill_description": "Match analog and digital clocks"
+  },
+  {
+    "category": "Time",
+    "skill_id": "D-Q.4",
+    "skill_description": "Read clocks and write times: hour and half hour"
+  },
+  {
+    "category": "Time",
+    "skill_id": "D-Q.5",
+    "skill_description": "Read clocks and write times"
+  },
+  {
+    "category": "Time",
+    "skill_id": "D-Q.6",
+    "skill_description": "Time words:  o'clock, half, quarter"
+  },
+  {
+    "category": "Time",
+    "skill_id": "D-Q.7",
+    "skill_description": "A.M. or P.M."
+  },
+  {
+    "category": "Time",
+    "skill_id": "D-Q.8",
+    "skill_description": "Compare clocks"
+  },
+  {
+    "category": "Time",
+    "skill_id": "D-Q.9",
+    "skill_description": "Elapsed time I"
+  },
+  {
+    "category": "Time",
+    "skill_id": "D-Q.10",
+    "skill_description": "Elapsed time II"
+  },
+  {
+    "category": "Time",
+    "skill_id": "D-Q.11",
+    "skill_description": "Time patterns"
+  },
+  {
+    "category": "Time",
+    "skill_id": "D-Q.12",
+    "skill_description": "Choose the appropriate time units"
+  },
+  {
+    "category": "Time",
+    "skill_id": "D-Q.13",
+    "skill_description": "Days of the week"
+  },
+  {
+    "category": "Time",
+    "skill_id": "D-Q.14",
+    "skill_description": "Months of the year"
+  },
+  {
+    "category": "Time",
+    "skill_id": "D-Q.15",
+    "skill_description": "Seasons"
+  },
+  {
+    "category": "Time",
+    "skill_id": "D-Q.16",
+    "skill_description": "Read a calendar"
+  },
+  {
+    "category": "Time",
+    "skill_id": "D-Q.17",
+    "skill_description": "Number of days in each month"
+  },
+  {
+    "category": "Time",
+    "skill_id": "D-Q.18",
+    "skill_description": "Relate time units"
+  },
+  {
+    "category": "Data and graphs",
+    "skill_id": "D-R.1",
+    "skill_description": "Objects on a coordinate plane"
+  },
+  {
+    "category": "Data and graphs",
+    "skill_id": "D-R.2",
+    "skill_description": "Interpret tally charts and tables"
+  },
+  {
+    "category": "Data and graphs",
+    "skill_id": "D-R.3",
+    "skill_description": "Interpret bar graphs"
+  },
+  {
+    "category": "Data and graphs",
+    "skill_id": "D-R.4",
+    "skill_description": "Which bar graph is correct?"
+  },
+  {
+    "category": "Data and graphs",
+    "skill_id": "D-R.5",
+    "skill_description": "Create bar graphs"
+  },
+  {
+    "category": "Data and graphs",
+    "skill_id": "D-R.6",
+    "skill_description": "Interpret line plots"
+  },
+  {
+    "category": "Data and graphs",
+    "skill_id": "D-R.7",
+    "skill_description": "Create line plots"
+  },
+  {
+    "category": "Data and graphs",
+    "skill_id": "D-R.8",
+    "skill_description": "Interpret pictographs"
+  },
+  {
+    "category": "Data and graphs",
+    "skill_id": "D-R.9",
+    "skill_description": "Create pictographs"
+  },
+  {
+    "category": "Data and graphs",
+    "skill_id": "D-R.10",
+    "skill_description": "Interpret line graphs"
+  },
+  {
+    "category": "Data and graphs",
+    "skill_id": "D-R.11",
+    "skill_description": "Which line graph is correct?"
+  },
+  {
+    "category": "Data and graphs",
+    "skill_id": "D-R.12",
+    "skill_description": "Sort shapes into a Venn diagram"
+  },
+  {
+    "category": "Data and graphs",
+    "skill_id": "D-R.13",
+    "skill_description": "Count shapes in a Venn diagram"
+  },
+  {
+    "category": "Data and graphs",
+    "skill_id": "D-R.14",
+    "skill_description": "Venn diagrams with three circles"
+  },
+  {
+    "category": "Measurement",
+    "skill_id": "D-S.1",
+    "skill_description": "Read a thermometer"
+  },
+  {
+    "category": "Measurement",
+    "skill_id": "D-S.2",
+    "skill_description": "Measure using an inch ruler"
+  },
+  {
+    "category": "Measurement",
+    "skill_id": "D-S.3",
+    "skill_description": "Which customary unit of length is appropriate?"
+  },
+  {
+    "category": "Measurement",
+    "skill_id": "D-S.4",
+    "skill_description": "Customary units of length: word problems"
+  },
+  {
+    "category": "Measurement",
+    "skill_id": "D-S.5",
+    "skill_description": "Which customary unit of weight is appropriate?"
+  },
+  {
+    "category": "Measurement",
+    "skill_id": "D-S.6",
+    "skill_description": "Which customary unit of volume is appropriate?"
+  },
+  {
+    "category": "Measurement",
+    "skill_id": "D-S.7",
+    "skill_description": "Compare and convert customary units of volume"
+  },
+  {
+    "category": "Measurement",
+    "skill_id": "D-S.8",
+    "skill_description": "Measure using a centimeter ruler"
+  },
+  {
+    "category": "Measurement",
+    "skill_id": "D-S.9",
+    "skill_description": "Which metric unit of length is appropriate?"
+  },
+  {
+    "category": "Measurement",
+    "skill_id": "D-S.10",
+    "skill_description": "Metric units of length: word problems"
+  },
+  {
+    "category": "Measurement",
+    "skill_id": "D-S.11",
+    "skill_description": "Which metric unit of weight is appropriate?"
+  },
+  {
+    "category": "Measurement",
+    "skill_id": "D-S.12",
+    "skill_description": "Which metric unit of volume is appropriate?"
+  },
+  {
+    "category": "Measurement",
+    "skill_id": "D-S.13",
+    "skill_description": "Compare and convert metric units of volume"
+  },
+  {
+    "category": "Measurement",
+    "skill_id": "D-S.14",
+    "skill_description": "Compare and convert metric units of weight"
+  },
+  {
+    "category": "Measurement",
+    "skill_id": "D-S.15",
+    "skill_description": "Choose the appropriate measuring tool"
+  },
+  {
+    "category": "Geometry",
+    "skill_id": "D-T.1",
+    "skill_description": "Identify 2-dimensional shapes"
+  },
+  {
+    "category": "Geometry",
+    "skill_id": "D-T.2",
+    "skill_description": "Identify 3-dimensional shapes"
+  },
+  {
+    "category": "Geometry",
+    "skill_id": "D-T.3",
+    "skill_description": "Identify 2-dimensional and 3-dimensional shapes"
+  },
+  {
+    "category": "Geometry",
+    "skill_id": "D-T.4",
+    "skill_description": "Count sides and angles"
+  },
+  {
+    "category": "Geometry",
+    "skill_id": "D-T.5",
+    "skill_description": "Count edges, vertices, and faces"
+  },
+  {
+    "category": "Geometry",
+    "skill_id": "D-T.6",
+    "skill_description": "Compare sides and angles"
+  },
+  {
+    "category": "Geometry",
+    "skill_id": "D-T.7",
+    "skill_description": "Compare edges, vertices, and faces"
+  },
+  {
+    "category": "Geometry",
+    "skill_id": "D-T.8",
+    "skill_description": "Symmetry"
+  },
+  {
+    "category": "Geometry",
+    "skill_id": "D-T.9",
+    "skill_description": "Congruent"
+  },
+  {
+    "category": "Geometry",
+    "skill_id": "D-T.10",
+    "skill_description": "Flip, turn, and slide"
+  },
+  {
+    "category": "Geometry",
+    "skill_id": "D-T.11",
+    "skill_description": "Perimeter"
+  },
+  {
+    "category": "Geometry",
+    "skill_id": "D-T.12",
+    "skill_description": "Perimeter - word problems"
+  },
+  {
+    "category": "Geometry",
+    "skill_id": "D-T.13",
+    "skill_description": "Area"
+  },
+  {
+    "category": "Geometry",
+    "skill_id": "D-T.14",
+    "skill_description": "Create figures with a given area"
+  },
+  {
+    "category": "Fractions",
+    "skill_id": "D-U.1",
+    "skill_description": "Equal parts"
+  },
+  {
+    "category": "Fractions",
+    "skill_id": "D-U.2",
+    "skill_description": "Halves, thirds, and fourths"
+  },
+  {
+    "category": "Fractions",
+    "skill_id": "D-U.3",
+    "skill_description": "Identify the fraction"
+  },
+  {
+    "category": "Fractions",
+    "skill_id": "D-U.4",
+    "skill_description": "Which shape illustrates the fraction?"
+  },
+  {
+    "category": "Fractions",
+    "skill_id": "D-U.5",
+    "skill_description": "Parts of a group"
+  },
+  {
+    "category": "Fractions",
+    "skill_id": "D-U.6",
+    "skill_description": "Fraction word problems"
+  },
+  {
+    "category": "Fractions",
+    "skill_id": "D-U.7",
+    "skill_description": "Compare fractions using models"
+  },
+  {
+    "category": "Fractions",
+    "skill_id": "D-U.8",
+    "skill_description": "Order fractions with like denominators"
+  },
+  {
+    "category": "Fractions",
+    "skill_id": "D-U.9",
+    "skill_description": "Order fractions with like numerators"
+  },
+  {
+    "category": "Fractions",
+    "skill_id": "D-U.10",
+    "skill_description": "Fraction models equivalent to whole numbers"
+  },
+  {
+    "category": "Fractions",
+    "skill_id": "D-U.11",
+    "skill_description": "Fractions equivalent to whole numbers"
+  },
+  {
+    "category": "Probability and statistics",
+    "skill_id": "D-V.1",
+    "skill_description": "More, less, and equally likely"
+  },
+  {
+    "category": "Probability and statistics",
+    "skill_id": "D-V.2",
+    "skill_description": "Certain, probable, unlikely, and impossible"
+  },
+  {
+    "category": "Probability and statistics",
+    "skill_id": "D-V.3",
+    "skill_description": "Median, mode, and range"
+  },
+  {
+    "category": "Probability and statistics",
+    "skill_id": "D-V.4",
+    "skill_description": "Interpret graphs to find median, mode, and range"
+  },
+  {
+    "category": "Multiplication",
+    "skill_id": "D-W.1",
+    "skill_description": "Count equal groups"
+  },
+  {
+    "category": "Multiplication",
+    "skill_id": "D-W.2",
+    "skill_description": "Identify multiplication sentences for equal groups"
+  },
+  {
+    "category": "Multiplication",
+    "skill_id": "D-W.3",
+    "skill_description": "Write multiplication sentences for equal groups"
+  },
+  {
+    "category": "Multiplication",
+    "skill_id": "D-W.4",
+    "skill_description": "Relate addition and multiplication for equal groups"
+  },
+  {
+    "category": "Multiplication",
+    "skill_id": "D-W.5",
+    "skill_description": "Write multiplication sentences for arrays"
+  },
+  {
+    "category": "Multiplication",
+    "skill_id": "D-W.6",
+    "skill_description": "Write multiplication sentences for number lines"
+  },
+  {
+    "category": "Multiplication",
+    "skill_id": "D-W.7",
+    "skill_description": "Multiplication tables for 2, 3, and 4"
+  },
+  {
+    "category": "Multiplication",
+    "skill_id": "D-W.8",
+    "skill_description": "Multiplication tables up to 5"
+  },
+  {
+    "category": "Multiplication",
+    "skill_id": "D-W.9",
+    "skill_description": "Multiplication tables for 2, 3, 4, 5, and 10"
+  },
+  {
+    "category": "Multiplication",
+    "skill_id": "D-W.10",
+    "skill_description": "Multiplication tables for 6, 7, 8, and 9"
+  },
+  {
+    "category": "Multiplication",
+    "skill_id": "D-W.11",
+    "skill_description": "Multiplication tables up to 10"
+  },
+  {
+    "category": "Division",
+    "skill_id": "D-X.1",
+    "skill_description": "Divisors and quotients up to 5"
+  },
+  {
+    "category": "Division",
+    "skill_id": "D-X.2",
+    "skill_description": "Divisors and quotients up to 10"
+  },
+  {
+    "category": "Numbers and comparing",
+    "skill_id": "E-A.1",
+    "skill_description": "Write numbers in words"
+  },
+  {
+    "category": "Numbers and comparing",
+    "skill_id": "E-A.2",
+    "skill_description": "Ordinal numbers to 100th"
+  },
+  {
+    "category": "Numbers and comparing",
+    "skill_id": "E-A.3",
+    "skill_description": "Roman numerals I, V, X, L, C, D, M"
+  },
+  {
+    "category": "Numbers and comparing",
+    "skill_id": "E-A.4",
+    "skill_description": "Even or odd"
+  },
+  {
+    "category": "Numbers and comparing",
+    "skill_id": "E-A.5",
+    "skill_description": "Even or odd: arithmetic rules"
+  },
+  {
+    "category": "Numbers and comparing",
+    "skill_id": "E-A.6",
+    "skill_description": "Skip-counting"
+  },
+  {
+    "category": "Numbers and comparing",
+    "skill_id": "E-A.7",
+    "skill_description": "Skip-counting puzzles"
+  },
+  {
+    "category": "Numbers and comparing",
+    "skill_id": "E-A.8",
+    "skill_description": "Number sequences"
+  },
+  {
+    "category": "Numbers and comparing",
+    "skill_id": "E-A.9",
+    "skill_description": "Compare numbers"
+  },
+  {
+    "category": "Numbers and comparing",
+    "skill_id": "E-A.10",
+    "skill_description": "Which number is greatest/least?"
+  },
+  {
+    "category": "Numbers and comparing",
+    "skill_id": "E-A.11",
+    "skill_description": "Order numbers"
+  },
+  {
+    "category": "Numbers and comparing",
+    "skill_id": "E-A.12",
+    "skill_description": "Comparing - with addition and subtraction"
+  },
+  {
+    "category": "Numbers and comparing",
+    "skill_id": "E-A.13",
+    "skill_description": "Multi-step inequalities"
+  },
+  {
+    "category": "Place values",
+    "skill_id": "E-B.1",
+    "skill_description": "Place value models up to thousands"
+  },
+  {
+    "category": "Place values",
+    "skill_id": "E-B.2",
+    "skill_description": "Place value names up to thousands"
+  },
+  {
+    "category": "Place values",
+    "skill_id": "E-B.3",
+    "skill_description": "Place value names up to hundred thousands"
+  },
+  {
+    "category": "Place values",
+    "skill_id": "E-B.4",
+    "skill_description": "Value of a digit"
+  },
+  {
+    "category": "Place values",
+    "skill_id": "E-B.5",
+    "skill_description": "Convert to/from a number"
+  },
+  {
+    "category": "Place values",
+    "skill_id": "E-B.6",
+    "skill_description": "Convert between place values"
+  },
+  {
+    "category": "Place values",
+    "skill_id": "E-B.7",
+    "skill_description": "Convert from expanded form"
+  },
+  {
+    "category": "Place values",
+    "skill_id": "E-B.8",
+    "skill_description": "Convert between standard and expanded form"
+  },
+  {
+    "category": "Place values",
+    "skill_id": "E-B.9",
+    "skill_description": "Place value word problems"
+  },
+  {
+    "category": "Addition",
+    "skill_id": "E-C.1",
+    "skill_description": "Add two numbers up to three digits"
+  },
+  {
+    "category": "Addition",
+    "skill_id": "E-C.2",
+    "skill_description": "Addition input/output tables - up to three digits"
+  },
+  {
+    "category": "Addition",
+    "skill_id": "E-C.3",
+    "skill_description": "Add two numbers up to three digits - word problems"
+  },
+  {
+    "category": "Addition",
+    "skill_id": "E-C.4",
+    "skill_description": "Complete the addition sentence - up to three digits"
+  },
+  {
+    "category": "Addition",
+    "skill_id": "E-C.5",
+    "skill_description": "Balance addition equations - up to three digits"
+  },
+  {
+    "category": "Addition",
+    "skill_id": "E-C.6",
+    "skill_description": "Add three numbers up to three digits each"
+  },
+  {
+    "category": "Addition",
+    "skill_id": "E-C.7",
+    "skill_description": "Add three numbers up to three digits each: word problems"
+  },
+  {
+    "category": "Addition",
+    "skill_id": "E-C.8",
+    "skill_description": "Addition patterns over increasing place values"
+  },
+  {
+    "category": "Addition",
+    "skill_id": "E-C.9",
+    "skill_description": "Add two numbers with four or more digits"
+  },
+  {
+    "category": "Addition",
+    "skill_id": "E-C.10",
+    "skill_description": "Addition input/output tables - four or more digits"
+  },
+  {
+    "category": "Addition",
+    "skill_id": "E-C.11",
+    "skill_description": "Add two numbers with four or more digits - word problems"
+  },
+  {
+    "category": "Addition",
+    "skill_id": "E-C.12",
+    "skill_description": "Complete the addition sentence - four or more digits"
+  },
+  {
+    "category": "Addition",
+    "skill_id": "E-C.13",
+    "skill_description": "Balance equations - four or more digits"
+  },
+  {
+    "category": "Addition",
+    "skill_id": "E-C.14",
+    "skill_description": "Add three or more numbers with four or more digits"
+  },
+  {
+    "category": "Addition",
+    "skill_id": "E-C.15",
+    "skill_description": "Add three or more numbers with four or more digits - word problems"
+  },
+  {
+    "category": "Addition",
+    "skill_id": "E-C.16",
+    "skill_description": "Addition: fill in the missing digits"
+  },
+  {
+    "category": "Subtraction",
+    "skill_id": "E-D.1",
+    "skill_description": "Subtract numbers up to three digits"
+  },
+  {
+    "category": "Subtraction",
+    "skill_id": "E-D.2",
+    "skill_description": "Subtraction input/output tables - up to three digits"
+  },
+  {
+    "category": "Subtraction",
+    "skill_id": "E-D.3",
+    "skill_description": "Subtract numbers up to three digits - word problems"
+  },
+  {
+    "category": "Subtraction",
+    "skill_id": "E-D.4",
+    "skill_description": "Complete the subtraction sentence - up to three digits"
+  },
+  {
+    "category": "Subtraction",
+    "skill_id": "E-D.5",
+    "skill_description": "Balance subtraction equations - up to three digits"
+  },
+  {
+    "category": "Subtraction",
+    "skill_id": "E-D.6",
+    "skill_description": "Subtraction patterns over increasing place values"
+  },
+  {
+    "category": "Subtraction",
+    "skill_id": "E-D.7",
+    "skill_description": "Subtract numbers with four or more digits"
+  },
+  {
+    "category": "Subtraction",
+    "skill_id": "E-D.8",
+    "skill_description": "Subtraction input/output tables - four or more digits"
+  },
+  {
+    "category": "Subtraction",
+    "skill_id": "E-D.9",
+    "skill_description": "Subtraction: fill in the missing digits"
+  },
+  {
+    "category": "Understand multiplication",
+    "skill_id": "E-E.1",
+    "skill_description": "Count equal groups"
+  },
+  {
+    "category": "Understand multiplication",
+    "skill_id": "E-E.2",
+    "skill_description": "Identify multiplication expressions for equal groups"
+  },
+  {
+    "category": "Understand multiplication",
+    "skill_id": "E-E.3",
+    "skill_description": "Write multiplication sentences for equal groups"
+  },
+  {
+    "category": "Understand multiplication",
+    "skill_id": "E-E.4",
+    "skill_description": "Relate addition and multiplication for equal groups"
+  },
+  {
+    "category": "Understand multiplication",
+    "skill_id": "E-E.5",
+    "skill_description": "Identify multiplication expressions for arrays"
+  },
+  {
+    "category": "Understand multiplication",
+    "skill_id": "E-E.6",
+    "skill_description": "Write multiplication sentences for arrays"
+  },
+  {
+    "category": "Understand multiplication",
+    "skill_id": "E-E.7",
+    "skill_description": "Make arrays to model multiplication"
+  },
+  {
+    "category": "Understand multiplication",
+    "skill_id": "E-E.8",
+    "skill_description": "Write multiplication sentences for number lines"
+  },
+  {
+    "category": "Multiplication skill builders",
+    "skill_id": "E-F.1",
+    "skill_description": "Multiply by 0"
+  },
+  {
+    "category": "Multiplication skill builders",
+    "skill_id": "E-F.2",
+    "skill_description": "Multiply by 1"
+  },
+  {
+    "category": "Multiplication skill builders",
+    "skill_id": "E-F.3",
+    "skill_description": "Multiply by 2"
+  },
+  {
+    "category": "Multiplication skill builders",
+    "skill_id": "E-F.4",
+    "skill_description": "Multiply by 3"
+  },
+  {
+    "category": "Multiplication skill builders",
+    "skill_id": "E-F.5",
+    "skill_description": "Multiply by 4"
+  },
+  {
+    "category": "Multiplication skill builders",
+    "skill_id": "E-F.6",
+    "skill_description": "Multiply by 5"
+  },
+  {
+    "category": "Multiplication skill builders",
+    "skill_id": "E-F.7",
+    "skill_description": "Multiply by 6"
+  },
+  {
+    "category": "Multiplication skill builders",
+    "skill_id": "E-F.8",
+    "skill_description": "Multiply by 7"
+  },
+  {
+    "category": "Multiplication skill builders",
+    "skill_id": "E-F.9",
+    "skill_description": "Multiply by 8"
+  },
+  {
+    "category": "Multiplication skill builders",
+    "skill_id": "E-F.10",
+    "skill_description": "Multiply by 9"
+  },
+  {
+    "category": "Multiplication skill builders",
+    "skill_id": "E-F.11",
+    "skill_description": "Multiply by 10"
+  },
+  {
+    "category": "Multiplication skill builders",
+    "skill_id": "E-F.12",
+    "skill_description": "Multiply by 11"
+  },
+  {
+    "category": "Multiplication skill builders",
+    "skill_id": "E-F.13",
+    "skill_description": "Multiply by 12"
+  },
+  {
+    "category": "Multiplication fluency",
+    "skill_id": "E-G.1",
+    "skill_description": "Multiplication tables for 2, 3, 4, 5, and 10"
+  },
+  {
+    "category": "Multiplication fluency",
+    "skill_id": "E-G.2",
+    "skill_description": "Multiplication facts for 2, 3, 4, 5, and 10: true or false?"
+  },
+  {
+    "category": "Multiplication fluency",
+    "skill_id": "E-G.3",
+    "skill_description": "Multiplication facts for 2, 3, 4, 5, and 10: sorting"
+  },
+  {
+    "category": "Multiplication fluency",
+    "skill_id": "E-G.4",
+    "skill_description": "Multiplication facts for 2, 3, 4, 5, and 10: find the missing factor"
+  },
+  {
+    "category": "Multiplication fluency",
+    "skill_id": "E-G.5",
+    "skill_description": "Multiplication tables for 6, 7, 8, and 9"
+  },
+  {
+    "category": "Multiplication fluency",
+    "skill_id": "E-G.6",
+    "skill_description": "Multiplication facts for 6, 7, 8, and 9: true or false?"
+  },
+  {
+    "category": "Multiplication fluency",
+    "skill_id": "E-G.7",
+    "skill_description": "Multiplication facts for 6, 7, 8, and 9: sorting"
+  },
+  {
+    "category": "Multiplication fluency",
+    "skill_id": "E-G.8",
+    "skill_description": "Multiplication facts for 6, 7, 8, and 9: find the missing factor"
+  },
+  {
+    "category": "Multiplication fluency",
+    "skill_id": "E-G.9",
+    "skill_description": "Multiplication tables up to 10"
+  },
+  {
+    "category": "Multiplication fluency",
+    "skill_id": "E-G.10",
+    "skill_description": "Multiplication facts up to 10: true or false?"
+  },
+  {
+    "category": "Multiplication fluency",
+    "skill_id": "E-G.11",
+    "skill_description": "Multiplication facts up to 10: sorting"
+  },
+  {
+    "category": "Multiplication fluency",
+    "skill_id": "E-G.12",
+    "skill_description": "Multiplication facts up to 10: find the missing factor"
+  },
+  {
+    "category": "Multiplication fluency",
+    "skill_id": "E-G.13",
+    "skill_description": "Multiplication facts up to 10: select the missing factors"
+  },
+  {
+    "category": "Multiplication fluency",
+    "skill_id": "E-G.14",
+    "skill_description": "Multiplication sentences up to 10: true or false?"
+  },
+  {
+    "category": "Multiplication fluency",
+    "skill_id": "E-G.15",
+    "skill_description": "Multiplication tables up to 12"
+  },
+  {
+    "category": "Multiplication fluency",
+    "skill_id": "E-G.16",
+    "skill_description": "Multiplication facts up to 12: true or false?"
+  },
+  {
+    "category": "Multiplication fluency",
+    "skill_id": "E-G.17",
+    "skill_description": "Multiplication facts up to 12: find the missing factor"
+  },
+  {
+    "category": "Multiplication fluency",
+    "skill_id": "E-G.18",
+    "skill_description": "Multiplication facts up to 12: select the missing factors"
+  },
+  {
+    "category": "Multiplication fluency",
+    "skill_id": "E-G.19",
+    "skill_description": "Multiplication sentences up to 12: true or false?"
+  },
+  {
+    "category": "Multiplication fluency",
+    "skill_id": "E-G.20",
+    "skill_description": "Squares up to 10 x 10"
+  },
+  {
+    "category": "Multiplication",
+    "skill_id": "E-H.1",
+    "skill_description": "Multiply by a multiple of ten"
+  },
+  {
+    "category": "Multiplication",
+    "skill_id": "E-H.2",
+    "skill_description": "Multiply numbers ending in zeroes"
+  },
+  {
+    "category": "Multiplication",
+    "skill_id": "E-H.3",
+    "skill_description": "Multiplication patterns over increasing place values"
+  },
+  {
+    "category": "Multiplication",
+    "skill_id": "E-H.4",
+    "skill_description": "Multiplication input/output tables"
+  },
+  {
+    "category": "Multiplication",
+    "skill_id": "E-H.5",
+    "skill_description": "Multiplication input/output tables: find the rule"
+  },
+  {
+    "category": "Multiplication",
+    "skill_id": "E-H.6",
+    "skill_description": "Multiplication word problems"
+  },
+  {
+    "category": "Multiplication",
+    "skill_id": "E-H.7",
+    "skill_description": "Multiplication word problems: find the missing factor"
+  },
+  {
+    "category": "Multiplication",
+    "skill_id": "E-H.8",
+    "skill_description": "Multiply one-digit numbers by two-digit numbers"
+  },
+  {
+    "category": "Multiplication",
+    "skill_id": "E-H.9",
+    "skill_description": "Multiply one-digit numbers by two-digit numbers: word problems"
+  },
+  {
+    "category": "Multiplication",
+    "skill_id": "E-H.10",
+    "skill_description": "Multiply one-digit numbers by three-digit numbers"
+  },
+  {
+    "category": "Multiplication",
+    "skill_id": "E-H.11",
+    "skill_description": "Multiply one-digit numbers by three-digit numbers: word problems"
+  },
+  {
+    "category": "Multiplication",
+    "skill_id": "E-H.12",
+    "skill_description": "Multiply three or more numbers"
+  },
+  {
+    "category": "Multiplication",
+    "skill_id": "E-H.13",
+    "skill_description": "Multiply three or more numbers: word problems"
+  },
+  {
+    "category": "Multiplication",
+    "skill_id": "E-H.14",
+    "skill_description": "Combinations"
+  },
+  {
+    "category": "Multiplication",
+    "skill_id": "E-H.15",
+    "skill_description": "Box multiplication"
+  },
+  {
+    "category": "Multiplication",
+    "skill_id": "E-H.16",
+    "skill_description": "Lattice multiplication"
+  },
+  {
+    "category": "Understand division",
+    "skill_id": "E-I.1",
+    "skill_description": "Divide by counting equal groups"
+  },
+  {
+    "category": "Understand division",
+    "skill_id": "E-I.2",
+    "skill_description": "Write division sentences for groups"
+  },
+  {
+    "category": "Understand division",
+    "skill_id": "E-I.3",
+    "skill_description": "Relate multiplication and division for groups"
+  },
+  {
+    "category": "Understand division",
+    "skill_id": "E-I.4",
+    "skill_description": "Write division sentences for arrays"
+  },
+  {
+    "category": "Understand division",
+    "skill_id": "E-I.5",
+    "skill_description": "Relate multiplication and division for arrays"
+  },
+  {
+    "category": "Division skill builders",
+    "skill_id": "E-J.1",
+    "skill_description": "Divide by 1"
+  },
+  {
+    "category": "Division skill builders",
+    "skill_id": "E-J.2",
+    "skill_description": "Divide by 2"
+  },
+  {
+    "category": "Division skill builders",
+    "skill_id": "E-J.3",
+    "skill_description": "Divide by 3"
+  },
+  {
+    "category": "Division skill builders",
+    "skill_id": "E-J.4",
+    "skill_description": "Divide by 4"
+  },
+  {
+    "category": "Division skill builders",
+    "skill_id": "E-J.5",
+    "skill_description": "Divide by 5"
+  },
+  {
+    "category": "Division skill builders",
+    "skill_id": "E-J.6",
+    "skill_description": "Divide by 6"
+  },
+  {
+    "category": "Division skill builders",
+    "skill_id": "E-J.7",
+    "skill_description": "Divide by 7"
+  },
+  {
+    "category": "Division skill builders",
+    "skill_id": "E-J.8",
+    "skill_description": "Divide by 8"
+  },
+  {
+    "category": "Division skill builders",
+    "skill_id": "E-J.9",
+    "skill_description": "Divide by 9"
+  },
+  {
+    "category": "Division skill builders",
+    "skill_id": "E-J.10",
+    "skill_description": "Divide by 10"
+  },
+  {
+    "category": "Division skill builders",
+    "skill_id": "E-J.11",
+    "skill_description": "Divide by 11"
+  },
+  {
+    "category": "Division skill builders",
+    "skill_id": "E-J.12",
+    "skill_description": "Divide by 12"
+  },
+  {
+    "category": "Division fluency",
+    "skill_id": "E-K.1",
+    "skill_description": "Division facts for 2, 3, 4, 5, and 10"
+  },
+  {
+    "category": "Division fluency",
+    "skill_id": "E-K.2",
+    "skill_description": "Division facts for 2, 3, 4, 5, and 10: true or false?"
+  },
+  {
+    "category": "Division fluency",
+    "skill_id": "E-K.3",
+    "skill_description": "Division facts for 2, 3, 4, 5, and 10: sorting"
+  },
+  {
+    "category": "Division fluency",
+    "skill_id": "E-K.4",
+    "skill_description": "Division facts for 6, 7, 8, and 9"
+  },
+  {
+    "category": "Division fluency",
+    "skill_id": "E-K.5",
+    "skill_description": "Division facts for 6, 7, 8, and 9: true or false?"
+  },
+  {
+    "category": "Division fluency",
+    "skill_id": "E-K.6",
+    "skill_description": "Division facts for 6, 7, 8, and 9: sorting"
+  },
+  {
+    "category": "Division fluency",
+    "skill_id": "E-K.7",
+    "skill_description": "Division facts up to 10"
+  },
+  {
+    "category": "Division fluency",
+    "skill_id": "E-K.8",
+    "skill_description": "Division facts up to 10: true or false?"
+  },
+  {
+    "category": "Division fluency",
+    "skill_id": "E-K.9",
+    "skill_description": "Division facts up to 10: sorting"
+  },
+  {
+    "category": "Division fluency",
+    "skill_id": "E-K.10",
+    "skill_description": "Division facts up to 10: find the missing number"
+  },
+  {
+    "category": "Division fluency",
+    "skill_id": "E-K.11",
+    "skill_description": "Division facts up to 10: select the missing numbers"
+  },
+  {
+    "category": "Division fluency",
+    "skill_id": "E-K.12",
+    "skill_description": "Division sentences up to 10: true or false?"
+  },
+  {
+    "category": "Division fluency",
+    "skill_id": "E-K.13",
+    "skill_description": "Division facts up to 12"
+  },
+  {
+    "category": "Division fluency",
+    "skill_id": "E-K.14",
+    "skill_description": "Division facts up to 12: true or false?"
+  },
+  {
+    "category": "Division fluency",
+    "skill_id": "E-K.15",
+    "skill_description": "Division facts up to 12: find the missing number"
+  },
+  {
+    "category": "Division fluency",
+    "skill_id": "E-K.16",
+    "skill_description": "Division facts up to 12: select the missing numbers"
+  },
+  {
+    "category": "Division fluency",
+    "skill_id": "E-K.17",
+    "skill_description": "Division sentences up to 12: true or false?"
+  },
+  {
+    "category": "Division",
+    "skill_id": "E-L.1",
+    "skill_description": "Complete the division table"
+  },
+  {
+    "category": "Division",
+    "skill_id": "E-L.2",
+    "skill_description": "Divide numbers ending in zeroes"
+  },
+  {
+    "category": "Division",
+    "skill_id": "E-L.3",
+    "skill_description": "Division patterns over increasing place values"
+  },
+  {
+    "category": "Division",
+    "skill_id": "E-L.4",
+    "skill_description": "Division input/output tables"
+  },
+  {
+    "category": "Division",
+    "skill_id": "E-L.5",
+    "skill_description": "Division input/output tables: find the rule"
+  },
+  {
+    "category": "Division",
+    "skill_id": "E-L.6",
+    "skill_description": "Division word problems"
+  },
+  {
+    "category": "Division",
+    "skill_id": "E-L.7",
+    "skill_description": "Divide three-digit numbers"
+  },
+  {
+    "category": "Division",
+    "skill_id": "E-L.8",
+    "skill_description": "Divide three-digit numbers: word problems"
+  },
+  {
+    "category": "Division",
+    "skill_id": "E-L.9",
+    "skill_description": "Divide larger numbers"
+  },
+  {
+    "category": "Division",
+    "skill_id": "E-L.10",
+    "skill_description": "Divide larger numbers: word problems"
+  },
+  {
+    "category": "Division",
+    "skill_id": "E-L.11",
+    "skill_description": "Divisibility rules for 2, 5, and 10"
+  },
+  {
+    "category": "Division",
+    "skill_id": "E-L.12",
+    "skill_description": "Divisibility rules for 3, 6, and 9"
+  },
+  {
+    "category": "Division",
+    "skill_id": "E-L.13",
+    "skill_description": "Divisibility rules for 4 and 8"
+  },
+  {
+    "category": "Mixed operations",
+    "skill_id": "E-M.1",
+    "skill_description": "Addition, subtraction, multiplication, and division facts"
+  },
+  {
+    "category": "Mixed operations",
+    "skill_id": "E-M.2",
+    "skill_description": "Complete the addition, subtraction, multiplication, or division sentence"
+  },
+  {
+    "category": "Mixed operations",
+    "skill_id": "E-M.3",
+    "skill_description": "Multiplication and division facts up to 5: true or false?"
+  },
+  {
+    "category": "Mixed operations",
+    "skill_id": "E-M.4",
+    "skill_description": "Multiplication and division facts up to 10: true or false?"
+  },
+  {
+    "category": "Mixed operations",
+    "skill_id": "E-M.5",
+    "skill_description": "Multiplication and division facts up to 12: true or false?"
+  },
+  {
+    "category": "Mixed operations",
+    "skill_id": "E-M.6",
+    "skill_description": "Multiplication and division sentences up to 12: true or false?"
+  },
+  {
+    "category": "Mixed operations",
+    "skill_id": "E-M.7",
+    "skill_description": "Add, subtract, multiply, and divide"
+  },
+  {
+    "category": "Mixed operations",
+    "skill_id": "E-M.8",
+    "skill_description": "Addition and subtraction word problems"
+  },
+  {
+    "category": "Mixed operations",
+    "skill_id": "E-M.9",
+    "skill_description": "Addition, subtraction, multiplication, and division word problems"
+  },
+  {
+    "category": "Mixed operations",
+    "skill_id": "E-M.10",
+    "skill_description": "Interpret data in tables"
+  },
+  {
+    "category": "Mixed operations",
+    "skill_id": "E-M.11",
+    "skill_description": "Multi-step word problems"
+  },
+  {
+    "category": "Mixed operations",
+    "skill_id": "E-M.12",
+    "skill_description": "Missing operators"
+  },
+  {
+    "category": "Properties",
+    "skill_id": "E-N.1",
+    "skill_description": "Addition, subtraction, multiplication, and division terms"
+  },
+  {
+    "category": "Properties",
+    "skill_id": "E-N.2",
+    "skill_description": "Understanding parentheses"
+  },
+  {
+    "category": "Properties",
+    "skill_id": "E-N.3",
+    "skill_description": "Properties of addition"
+  },
+  {
+    "category": "Properties",
+    "skill_id": "E-N.4",
+    "skill_description": "Solve using properties of addition"
+  },
+  {
+    "category": "Properties",
+    "skill_id": "E-N.5",
+    "skill_description": "Properties of multiplication"
+  },
+  {
+    "category": "Properties",
+    "skill_id": "E-N.6",
+    "skill_description": "Solve using properties of multiplication"
+  },
+  {
+    "category": "Properties",
+    "skill_id": "E-N.7",
+    "skill_description": "Distributive property: find the missing factor"
+  },
+  {
+    "category": "Properties",
+    "skill_id": "E-N.8",
+    "skill_description": "Multiply using the distributive property"
+  },
+  {
+    "category": "Properties",
+    "skill_id": "E-N.9",
+    "skill_description": "Relate addition and multiplication"
+  },
+  {
+    "category": "Properties",
+    "skill_id": "E-N.10",
+    "skill_description": "Relate multiplication and division"
+  },
+  {
+    "category": "Equations and variables",
+    "skill_id": "E-O.1",
+    "skill_description": "Identify equations"
+  },
+  {
+    "category": "Equations and variables",
+    "skill_id": "E-O.2",
+    "skill_description": "Solve for the variable: addition and subtraction"
+  },
+  {
+    "category": "Equations and variables",
+    "skill_id": "E-O.3",
+    "skill_description": "Solve for the variable: multiplication and division"
+  },
+  {
+    "category": "Equations and variables",
+    "skill_id": "E-O.4",
+    "skill_description": "Solve for the variable: addition, subtraction, multiplication, and division"
+  },
+  {
+    "category": "Equations and variables",
+    "skill_id": "E-O.5",
+    "skill_description": "Write variable equations to represent word problems"
+  },
+  {
+    "category": "Estimation and rounding",
+    "skill_id": "E-P.1",
+    "skill_description": "Rounding - nearest ten or hundred only"
+  },
+  {
+    "category": "Estimation and rounding",
+    "skill_id": "E-P.2",
+    "skill_description": "Rounding"
+  },
+  {
+    "category": "Estimation and rounding",
+    "skill_id": "E-P.3",
+    "skill_description": "Rounding money amounts"
+  },
+  {
+    "category": "Estimation and rounding",
+    "skill_id": "E-P.4",
+    "skill_description": "Rounding puzzles"
+  },
+  {
+    "category": "Estimation and rounding",
+    "skill_id": "E-P.5",
+    "skill_description": "Solve inequalities using estimation"
+  },
+  {
+    "category": "Estimation and rounding",
+    "skill_id": "E-P.6",
+    "skill_description": "Estimate sums up to 1,000"
+  },
+  {
+    "category": "Estimation and rounding",
+    "skill_id": "E-P.7",
+    "skill_description": "Estimate sums"
+  },
+  {
+    "category": "Estimation and rounding",
+    "skill_id": "E-P.8",
+    "skill_description": "Estimate differences up to 1,000"
+  },
+  {
+    "category": "Estimation and rounding",
+    "skill_id": "E-P.9",
+    "skill_description": "Estimate differences"
+  },
+  {
+    "category": "Estimation and rounding",
+    "skill_id": "E-P.10",
+    "skill_description": "Estimate products"
+  },
+  {
+    "category": "Estimation and rounding",
+    "skill_id": "E-P.11",
+    "skill_description": "Estimate quotients"
+  },
+  {
+    "category": "Logical reasoning",
+    "skill_id": "E-Q.1",
+    "skill_description": "Guess the number"
+  },
+  {
+    "category": "Logical reasoning",
+    "skill_id": "E-Q.2",
+    "skill_description": "Largest/smallest number possible"
+  },
+  {
+    "category": "Logical reasoning",
+    "skill_id": "E-Q.3",
+    "skill_description": "Find the order"
+  },
+  {
+    "category": "Logical reasoning",
+    "skill_id": "E-Q.4",
+    "skill_description": "Age puzzles"
+  },
+  {
+    "category": "Logical reasoning",
+    "skill_id": "E-Q.5",
+    "skill_description": "Find two numbers based on sum and difference"
+  },
+  {
+    "category": "Logical reasoning",
+    "skill_id": "E-Q.6",
+    "skill_description": "Find two numbers based on sum, difference, product, and quotient"
+  },
+  {
+    "category": "Patterns",
+    "skill_id": "E-R.1",
+    "skill_description": "Repeating patterns"
+  },
+  {
+    "category": "Patterns",
+    "skill_id": "E-R.2",
+    "skill_description": "Growing patterns"
+  },
+  {
+    "category": "Patterns",
+    "skill_id": "E-R.3",
+    "skill_description": "Find the next shape in a pattern"
+  },
+  {
+    "category": "Patterns",
+    "skill_id": "E-R.4",
+    "skill_description": "Complete a repeating pattern"
+  },
+  {
+    "category": "Patterns",
+    "skill_id": "E-R.5",
+    "skill_description": "Make a repeating pattern"
+  },
+  {
+    "category": "Patterns",
+    "skill_id": "E-R.6",
+    "skill_description": "Find the next row in a growing pattern"
+  },
+  {
+    "category": "Money",
+    "skill_id": "E-S.1",
+    "skill_description": "Count coins and bills - up to $5 bill"
+  },
+  {
+    "category": "Money",
+    "skill_id": "E-S.2",
+    "skill_description": "Which picture shows more?"
+  },
+  {
+    "category": "Money",
+    "skill_id": "E-S.3",
+    "skill_description": "Purchases - do you have enough money - up to $10"
+  },
+  {
+    "category": "Money",
+    "skill_id": "E-S.4",
+    "skill_description": "Making change"
+  },
+  {
+    "category": "Money",
+    "skill_id": "E-S.5",
+    "skill_description": "Inequalities with money"
+  },
+  {
+    "category": "Money",
+    "skill_id": "E-S.6",
+    "skill_description": "Put money amounts in order"
+  },
+  {
+    "category": "Money",
+    "skill_id": "E-S.7",
+    "skill_description": "Add and subtract money amounts"
+  },
+  {
+    "category": "Money",
+    "skill_id": "E-S.8",
+    "skill_description": "Add money amounts - word problems"
+  },
+  {
+    "category": "Money",
+    "skill_id": "E-S.9",
+    "skill_description": "Price lists"
+  },
+  {
+    "category": "Money",
+    "skill_id": "E-S.10",
+    "skill_description": "Multiply money amounts"
+  },
+  {
+    "category": "Money",
+    "skill_id": "E-S.11",
+    "skill_description": "Divide money amounts"
+  },
+  {
+    "category": "Time",
+    "skill_id": "E-T.1",
+    "skill_description": "Match clocks and times"
+  },
+  {
+    "category": "Time",
+    "skill_id": "E-T.2",
+    "skill_description": "Match analog and digital clocks"
+  },
+  {
+    "category": "Time",
+    "skill_id": "E-T.3",
+    "skill_description": "Read clocks and write times"
+  },
+  {
+    "category": "Time",
+    "skill_id": "E-T.4",
+    "skill_description": "A.M. or P.M."
+  },
+  {
+    "category": "Time",
+    "skill_id": "E-T.5",
+    "skill_description": "Write times"
+  },
+  {
+    "category": "Time",
+    "skill_id": "E-T.6",
+    "skill_description": "Elapsed time I"
+  },
+  {
+    "category": "Time",
+    "skill_id": "E-T.7",
+    "skill_description": "Elapsed time II"
+  },
+  {
+    "category": "Time",
+    "skill_id": "E-T.8",
+    "skill_description": "Time patterns"
+  },
+  {
+    "category": "Time",
+    "skill_id": "E-T.9",
+    "skill_description": "Convert between hours and fractions of hours"
+  },
+  {
+    "category": "Time",
+    "skill_id": "E-T.10",
+    "skill_description": "Relate time units"
+  },
+  {
+    "category": "Time",
+    "skill_id": "E-T.11",
+    "skill_description": "Read a calendar"
+  },
+  {
+    "category": "Time",
+    "skill_id": "E-T.12",
+    "skill_description": "Reading schedules"
+  },
+  {
+    "category": "Time",
+    "skill_id": "E-T.13",
+    "skill_description": "Timelines"
+  },
+  {
+    "category": "Data and graphs",
+    "skill_id": "E-U.1",
+    "skill_description": "Objects on a coordinate plane"
+  },
+  {
+    "category": "Data and graphs",
+    "skill_id": "E-U.2",
+    "skill_description": "Coordinate planes as maps"
+  },
+  {
+    "category": "Data and graphs",
+    "skill_id": "E-U.3",
+    "skill_description": "Graph points on a coordinate plane"
+  },
+  {
+    "category": "Data and graphs",
+    "skill_id": "E-U.4",
+    "skill_description": "Interpret tally charts and tables"
+  },
+  {
+    "category": "Data and graphs",
+    "skill_id": "E-U.5",
+    "skill_description": "Interpret bar graphs"
+  },
+  {
+    "category": "Data and graphs",
+    "skill_id": "E-U.6",
+    "skill_description": "Create bar graphs"
+  },
+  {
+    "category": "Data and graphs",
+    "skill_id": "E-U.7",
+    "skill_description": "Interpret line plots"
+  },
+  {
+    "category": "Data and graphs",
+    "skill_id": "E-U.8",
+    "skill_description": "Create line plots"
+  },
+  {
+    "category": "Data and graphs",
+    "skill_id": "E-U.9",
+    "skill_description": "Interpret pictographs"
+  },
+  {
+    "category": "Data and graphs",
+    "skill_id": "E-U.10",
+    "skill_description": "Create pictographs"
+  },
+  {
+    "category": "Data and graphs",
+    "skill_id": "E-U.11",
+    "skill_description": "Interpret line graphs"
+  },
+  {
+    "category": "Data and graphs",
+    "skill_id": "E-U.12",
+    "skill_description": "Create line graphs"
+  },
+  {
+    "category": "Data and graphs",
+    "skill_id": "E-U.13",
+    "skill_description": "Sort shapes into a Venn diagram"
+  },
+  {
+    "category": "Data and graphs",
+    "skill_id": "E-U.14",
+    "skill_description": "Count shapes in a Venn diagram"
+  },
+  {
+    "category": "Data and graphs",
+    "skill_id": "E-U.15",
+    "skill_description": "Venn diagrams with three circles"
+  },
+  {
+    "category": "Measurement",
+    "skill_id": "E-V.1",
+    "skill_description": "Read a thermometer"
+  },
+  {
+    "category": "Measurement",
+    "skill_id": "E-V.2",
+    "skill_description": "Reasonable temperature"
+  },
+  {
+    "category": "Measurement",
+    "skill_id": "E-V.3",
+    "skill_description": "Measure using an inch ruler"
+  },
+  {
+    "category": "Measurement",
+    "skill_id": "E-V.4",
+    "skill_description": "Which customary unit of length is appropriate?"
+  },
+  {
+    "category": "Measurement",
+    "skill_id": "E-V.5",
+    "skill_description": "Which customary unit of weight is appropriate?"
+  },
+  {
+    "category": "Measurement",
+    "skill_id": "E-V.6",
+    "skill_description": "Which customary unit of volume is appropriate?"
+  },
+  {
+    "category": "Measurement",
+    "skill_id": "E-V.7",
+    "skill_description": "Which customary unit is appropriate?"
+  },
+  {
+    "category": "Measurement",
+    "skill_id": "E-V.8",
+    "skill_description": "Compare and convert customary units of length"
+  },
+  {
+    "category": "Measurement",
+    "skill_id": "E-V.9",
+    "skill_description": "Compare and convert customary units of weight"
+  },
+  {
+    "category": "Measurement",
+    "skill_id": "E-V.10",
+    "skill_description": "Compare and convert customary units of volume"
+  },
+  {
+    "category": "Measurement",
+    "skill_id": "E-V.11",
+    "skill_description": "Conversion tables - customary units"
+  },
+  {
+    "category": "Measurement",
+    "skill_id": "E-V.12",
+    "skill_description": "Compare customary units by multiplying"
+  },
+  {
+    "category": "Measurement",
+    "skill_id": "E-V.13",
+    "skill_description": "Which metric unit of length is appropriate?"
+  },
+  {
+    "category": "Measurement",
+    "skill_id": "E-V.14",
+    "skill_description": "Which metric unit of weight is appropriate?"
+  },
+  {
+    "category": "Measurement",
+    "skill_id": "E-V.15",
+    "skill_description": "Which metric unit of volume is appropriate?"
+  },
+  {
+    "category": "Measurement",
+    "skill_id": "E-V.16",
+    "skill_description": "Which metric unit is appropriate?"
+  },
+  {
+    "category": "Measurement",
+    "skill_id": "E-V.17",
+    "skill_description": "Compare and convert metric units of length"
+  },
+  {
+    "category": "Measurement",
+    "skill_id": "E-V.18",
+    "skill_description": "Compare and convert metric units of weight"
+  },
+  {
+    "category": "Measurement",
+    "skill_id": "E-V.19",
+    "skill_description": "Compare and convert metric units of volume"
+  },
+  {
+    "category": "Measurement",
+    "skill_id": "E-V.20",
+    "skill_description": "Conversion tables - metric units"
+  },
+  {
+    "category": "Measurement",
+    "skill_id": "E-V.21",
+    "skill_description": "Choose the appropriate measuring tool"
+  },
+  {
+    "category": "Geometry",
+    "skill_id": "E-W.1",
+    "skill_description": "Identify 2-dimensional and 3-dimensional shapes"
+  },
+  {
+    "category": "Geometry",
+    "skill_id": "E-W.2",
+    "skill_description": "Which 2-dimensional shape is being described?"
+  },
+  {
+    "category": "Geometry",
+    "skill_id": "E-W.3",
+    "skill_description": "Count and compare sides and angles"
+  },
+  {
+    "category": "Geometry",
+    "skill_id": "E-W.4",
+    "skill_description": "Count and compare edges, vertices, and faces"
+  },
+  {
+    "category": "Geometry",
+    "skill_id": "E-W.5",
+    "skill_description": "Symmetry"
+  },
+  {
+    "category": "Geometry",
+    "skill_id": "E-W.6",
+    "skill_description": "Similar and congruent"
+  },
+  {
+    "category": "Geometry",
+    "skill_id": "E-W.7",
+    "skill_description": "Reflection, rotation, and translation"
+  },
+  {
+    "category": "Geometry",
+    "skill_id": "E-W.8",
+    "skill_description": "Perimeter"
+  },
+  {
+    "category": "Geometry",
+    "skill_id": "E-W.9",
+    "skill_description": "Perimeter: find the missing side length"
+  },
+  {
+    "category": "Geometry",
+    "skill_id": "E-W.10",
+    "skill_description": "Area of figures made of unit squares"
+  },
+  {
+    "category": "Geometry",
+    "skill_id": "E-W.11",
+    "skill_description": "Create figures with a given area"
+  },
+  {
+    "category": "Geometry",
+    "skill_id": "E-W.12",
+    "skill_description": "Area of rectangles"
+  },
+  {
+    "category": "Geometry",
+    "skill_id": "E-W.13",
+    "skill_description": "Area of squares and rectangles: word problems"
+  },
+  {
+    "category": "Geometry",
+    "skill_id": "E-W.14",
+    "skill_description": "Area of complex figures (with all right angles)"
+  },
+  {
+    "category": "Geometry",
+    "skill_id": "E-W.15",
+    "skill_description": "Area between two rectangles"
+  },
+  {
+    "category": "Geometry",
+    "skill_id": "E-W.16",
+    "skill_description": "Compare area and perimeter of two figures"
+  },
+  {
+    "category": "Geometry",
+    "skill_id": "E-W.17",
+    "skill_description": "Use area and perimeter to determine cost"
+  },
+  {
+    "category": "Geometry",
+    "skill_id": "E-W.18",
+    "skill_description": "Relationship between area and perimeter"
+  },
+  {
+    "category": "Geometry",
+    "skill_id": "E-W.19",
+    "skill_description": "Volume"
+  },
+  {
+    "category": "Geometry",
+    "skill_id": "E-W.20",
+    "skill_description": "Angles: greater than, less than, or equal to a right angle"
+  },
+  {
+    "category": "Geometry",
+    "skill_id": "E-W.21",
+    "skill_description": "Lines, line segments, and rays"
+  },
+  {
+    "category": "Geometry",
+    "skill_id": "E-W.22",
+    "skill_description": "Parallel, perpendicular, intersecting"
+  },
+  {
+    "category": "Geometry",
+    "skill_id": "E-W.23",
+    "skill_description": "Is it a polygon?"
+  },
+  {
+    "category": "Geometry",
+    "skill_id": "E-W.24",
+    "skill_description": "Triangles:  equilateral, isosceles, and scalene"
+  },
+  {
+    "category": "Geometry",
+    "skill_id": "E-W.25",
+    "skill_description": "Triangles:  acute, right, and obtuse"
+  },
+  {
+    "category": "Geometry",
+    "skill_id": "E-W.26",
+    "skill_description": "Classify quadrilaterals"
+  },
+  {
+    "category": "Understand fractions",
+    "skill_id": "E-X.1",
+    "skill_description": "Identify equal parts"
+  },
+  {
+    "category": "Understand fractions",
+    "skill_id": "E-X.2",
+    "skill_description": "Identify halves, thirds, and fourths"
+  },
+  {
+    "category": "Understand fractions",
+    "skill_id": "E-X.3",
+    "skill_description": "Understand fractions: fraction bars"
+  },
+  {
+    "category": "Understand fractions",
+    "skill_id": "E-X.4",
+    "skill_description": "Understand fractions: area models"
+  },
+  {
+    "category": "Understand fractions",
+    "skill_id": "E-X.5",
+    "skill_description": "Match unit fractions to models"
+  },
+  {
+    "category": "Understand fractions",
+    "skill_id": "E-X.6",
+    "skill_description": "Match fractions to models"
+  },
+  {
+    "category": "Understand fractions",
+    "skill_id": "E-X.7",
+    "skill_description": "Show fractions: fraction bars"
+  },
+  {
+    "category": "Understand fractions",
+    "skill_id": "E-X.8",
+    "skill_description": "Show fractions: area models"
+  },
+  {
+    "category": "Understand fractions",
+    "skill_id": "E-X.9",
+    "skill_description": "Fractions of number lines: unit fractions"
+  },
+  {
+    "category": "Understand fractions",
+    "skill_id": "E-X.10",
+    "skill_description": "Fractions of number lines"
+  },
+  {
+    "category": "Understand fractions",
+    "skill_id": "E-X.11",
+    "skill_description": "Identify unit fractions on number lines"
+  },
+  {
+    "category": "Understand fractions",
+    "skill_id": "E-X.12",
+    "skill_description": "Identify fractions on number lines"
+  },
+  {
+    "category": "Understand fractions",
+    "skill_id": "E-X.13",
+    "skill_description": "Graph unit fractions on number lines"
+  },
+  {
+    "category": "Understand fractions",
+    "skill_id": "E-X.14",
+    "skill_description": "Graph fractions on number lines"
+  },
+  {
+    "category": "Understand fractions",
+    "skill_id": "E-X.15",
+    "skill_description": "Graph smaller or larger fractions on a number line"
+  },
+  {
+    "category": "Understand fractions",
+    "skill_id": "E-X.16",
+    "skill_description": "Fractions of a whole: modeling word problems"
+  },
+  {
+    "category": "Understand fractions",
+    "skill_id": "E-X.17",
+    "skill_description": "Unit fractions: word problems"
+  },
+  {
+    "category": "Understand fractions",
+    "skill_id": "E-X.18",
+    "skill_description": "Fractions of a whole: word problems"
+  },
+  {
+    "category": "Understand fractions",
+    "skill_id": "E-X.19",
+    "skill_description": "Fraction review - word problems"
+  },
+  {
+    "category": "Understand fractions",
+    "skill_id": "E-X.20",
+    "skill_description": "Match mixed numbers to models"
+  },
+  {
+    "category": "Understand fractions",
+    "skill_id": "E-X.21",
+    "skill_description": "Word names for mixed numbers"
+  },
+  {
+    "category": "Equivalent fractions",
+    "skill_id": "E-Y.1",
+    "skill_description": "Find equivalent fractions using area models"
+  },
+  {
+    "category": "Equivalent fractions",
+    "skill_id": "E-Y.2",
+    "skill_description": "Identify equivalent fractions on number lines"
+  },
+  {
+    "category": "Equivalent fractions",
+    "skill_id": "E-Y.3",
+    "skill_description": "Find equivalent fractions using number lines"
+  },
+  {
+    "category": "Equivalent fractions",
+    "skill_id": "E-Y.4",
+    "skill_description": "Graph equivalent fractions on number lines"
+  },
+  {
+    "category": "Equivalent fractions",
+    "skill_id": "E-Y.5",
+    "skill_description": "Select equivalent fractions"
+  },
+  {
+    "category": "Equivalent fractions",
+    "skill_id": "E-Y.6",
+    "skill_description": "Find equivalent fractions"
+  },
+  {
+    "category": "Equivalent fractions",
+    "skill_id": "E-Y.7",
+    "skill_description": "Select fractions equivalent to whole numbers using area models"
+  },
+  {
+    "category": "Equivalent fractions",
+    "skill_id": "E-Y.8",
+    "skill_description": "Graph fractions equivalent to 1 on number lines"
+  },
+  {
+    "category": "Equivalent fractions",
+    "skill_id": "E-Y.9",
+    "skill_description": "Find fractions equivalent to whole numbers"
+  },
+  {
+    "category": "Equivalent fractions",
+    "skill_id": "E-Y.10",
+    "skill_description": "Find equivalent fractions with denominators of 10 and 100"
+  },
+  {
+    "category": "Equivalent fractions",
+    "skill_id": "E-Y.11",
+    "skill_description": "Reduce fractions to lowest terms"
+  },
+  {
+    "category": "Compare fractions",
+    "skill_id": "E-Z.1",
+    "skill_description": "Compare fractions using models"
+  },
+  {
+    "category": "Compare fractions",
+    "skill_id": "E-Z.2",
+    "skill_description": "Compare fractions using number lines"
+  },
+  {
+    "category": "Compare fractions",
+    "skill_id": "E-Z.3",
+    "skill_description": "Graph and compare fractions with like denominators on number lines"
+  },
+  {
+    "category": "Compare fractions",
+    "skill_id": "E-Z.4",
+    "skill_description": "Graph and compare fractions with like numerators on number lines"
+  },
+  {
+    "category": "Compare fractions",
+    "skill_id": "E-Z.5",
+    "skill_description": "Graph and compare fractions on number lines"
+  },
+  {
+    "category": "Compare fractions",
+    "skill_id": "E-Z.6",
+    "skill_description": "Compare fractions"
+  },
+  {
+    "category": "Compare fractions",
+    "skill_id": "E-Z.7",
+    "skill_description": "Compare fractions in recipes"
+  },
+  {
+    "category": "Compare fractions",
+    "skill_id": "E-Z.8",
+    "skill_description": "Benchmark fractions"
+  },
+  {
+    "category": "Compare fractions",
+    "skill_id": "E-Z.9",
+    "skill_description": "Graph and order fractions on number lines"
+  },
+  {
+    "category": "Compare fractions",
+    "skill_id": "E-Z.10",
+    "skill_description": "Order fractions with like denominators"
+  },
+  {
+    "category": "Compare fractions",
+    "skill_id": "E-Z.11",
+    "skill_description": "Order fractions with like numerators"
+  },
+  {
+    "category": "Compare fractions",
+    "skill_id": "E-Z.12",
+    "skill_description": "Order fractions"
+  },
+  {
+    "category": "Operations with fractions",
+    "skill_id": "E-AA.1",
+    "skill_description": "Fractions of a number - unit fractions"
+  },
+  {
+    "category": "Operations with fractions",
+    "skill_id": "E-AA.2",
+    "skill_description": "Fractions of a number"
+  },
+  {
+    "category": "Operations with fractions",
+    "skill_id": "E-AA.3",
+    "skill_description": "Fractions of a number - unit fractions: word problems"
+  },
+  {
+    "category": "Operations with fractions",
+    "skill_id": "E-AA.4",
+    "skill_description": "Fractions of a number: word problems"
+  },
+  {
+    "category": "Operations with fractions",
+    "skill_id": "E-AA.5",
+    "skill_description": "Decompose fractions into unit fractions"
+  },
+  {
+    "category": "Operations with fractions",
+    "skill_id": "E-AA.6",
+    "skill_description": "Add fractions with like denominators using number lines"
+  },
+  {
+    "category": "Operations with fractions",
+    "skill_id": "E-AA.7",
+    "skill_description": "Subtract fractions with like denominators using number lines"
+  },
+  {
+    "category": "Operations with fractions",
+    "skill_id": "E-AA.8",
+    "skill_description": "Add and subtract fractions with like denominators"
+  },
+  {
+    "category": "Decimals",
+    "skill_id": "E-BB.1",
+    "skill_description": "What decimal number is illustrated?"
+  },
+  {
+    "category": "Decimals",
+    "skill_id": "E-BB.2",
+    "skill_description": "Convert between decimals and fractions"
+  },
+  {
+    "category": "Decimals",
+    "skill_id": "E-BB.3",
+    "skill_description": "Word names for decimals"
+  },
+  {
+    "category": "Decimals",
+    "skill_id": "E-BB.4",
+    "skill_description": "Number sequences involving decimals"
+  },
+  {
+    "category": "Decimals",
+    "skill_id": "E-BB.5",
+    "skill_description": "Compare decimals"
+  },
+  {
+    "category": "Decimals",
+    "skill_id": "E-BB.6",
+    "skill_description": "Order decimals"
+  },
+  {
+    "category": "Decimals",
+    "skill_id": "E-BB.7",
+    "skill_description": "Add and subtract decimals"
+  },
+  {
+    "category": "Decimals",
+    "skill_id": "E-BB.8",
+    "skill_description": "Add and subtract decimals - word problems"
+  },
+  {
+    "category": "Decimals",
+    "skill_id": "E-BB.9",
+    "skill_description": "Add three or more decimals"
+  },
+  {
+    "category": "Probability and statistics",
+    "skill_id": "E-CC.1",
+    "skill_description": "Certain, probable, unlikely, and impossible"
+  },
+  {
+    "category": "Probability and statistics",
+    "skill_id": "E-CC.2",
+    "skill_description": "Mean, median, mode, and range"
+  },
+  {
+    "category": "Probability and statistics",
+    "skill_id": "E-CC.3",
+    "skill_description": "Interpret charts to find mean, median, mode, and range"
+  }
+]

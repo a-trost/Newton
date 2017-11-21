@@ -1,0 +1,41 @@
+/* DASHBOARD */
+
+.dashboard .module table th {
+    width: 70%;
+}
+
+.dashboard .module table td {
+    white-space: nowrap;
+}
+
+.dashboard .module table td a {
+    display: block;
+    padding-right: .6em;
+}
+
+/* RECENT ACTIONS MODULE */
+
+.module ul.actionlist {
+    margin-left: 0;
+}
+
+ul.actionlist li {
+    list-style-type: none;
+}
+
+ul.actionlist li {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+}
+
+th {
+    font-weight: bold;
+    text-align: left;
+}
+
+caption { font-weight: bold; font-size: 1.3em; text-align: left; padding-top: 10px;
+
+}
+
+caption a{color: #222;}

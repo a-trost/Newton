@@ -1,0 +1,79 @@
+{% extends "brain/portal_layout.html" %}
+{% load brain_extras %}
+{% block extrahead %}
+{% endblock %}
+{% block title %}Attendance | BTWA Portal {% endblock title %}
+{% block heading %}
+    <h1 >{{ classroom.last_name }} Attendance</h1>
+    <a href="{% url 'brain:attendance' %}"><i class="fa fa-arrow-circle-left"></i> Go back to school list</a>
+{% endblock heading %}
+{% block content %}
+    {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+     <div class="grid-x grid-margin-x">
+  <div class="small-12 large-12 cell">
+  <table style="width: 90%;" border="1" cellpadding="1">
+<tbody>
+<tr style="color: white; font-weight: 700; font-family: 'Asap', 'Helvetica Neue', Helvetica, Arial, sans-serif">
+<td style="background:#34495e ;">August</td>
+<td style="background:#39ADD1;">September</td>
+<td style="background:#d35400 ;">October</td>
+<td style="background:#1abc9c ;">November</td>
+<td style="background:#e74c3c ;">December</td>
+<td style="background:#51B46D ;">January</td>
+<td style="background:#f39c12 ;">February</td>
+<td style="background:#9e4d83 ;">March</td>
+<td style="background: #2980b9;">April</td>
+<td style="background:#eb7728 ;">May</td>
+<td style="background:#9b59b6 ;">June</td>
+</tr>
+</tbody>
+</table>
+
+
+  <table style="width: 90%;" border="1" cellpadding="1">
+<tbody>
+<tr style="font-size: 1.5rem">
+<td>Student</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+<td>9</td>
+<td>10</td>
+<td>11</td>
+<td>12</td>
+<td>13</td>
+<td>14</td>
+<td>9</td>
+<td>15</td>
+<td>16</td>
+<td>17</td>
+<td>18</td>
+<td>19</td>
+</tr>
+{% for student in student_export_list %}
+    <tr>
+    <td> <span style="font-size: 1.2rem; font-weight: 700; font-family: 'Asap', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+    data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover='false' tabindex=1 title="Absences:{{ student.2.0 }}  Tardies: {{ student.2.1 }}">{{ student.0.first_name }} {{ student.0.last_name.0 }}.</span> </td>
+    {% for absence in student.1 %}
+{#        <td  >#}
+     <td style="background: {{ absence.0 }}; text-align: center">
+         <span style="color:white; font-weight: 700; font-family: 'Asap', 'Helvetica Neue', Helvetica, Arial, sans-serif" data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover='false' tabindex=1 title="{{ absence.1 }}  {{ absence.2 }}">{{ forloop.counter }}</span>
+          </td>
+              {% endfor %}
+
+    </tr>
+
+      {% endfor %}
+  </tbody>
+</table>
+  </div>
+</div>
+
+
+</form>
+{% endblock %}

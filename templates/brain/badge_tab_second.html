@@ -1,0 +1,27 @@
+<h3 style="color: orange;">Your Stickers</h3>
+                <p>Unlocked {{ earned_sticker_list|length }} out of 77 possible stickers</p>
+                <div class="grid-x">
+                    {% for sticker in sticker_list %}
+                        {% if sticker.0 == 'title' %}
+                            </div>
+                            <div class="grid-x">
+                            <hr>
+                            <div class="cell">
+                                <h4>&nbsp&nbsp{{ sticker.1 }}</h4></div>
+                        {% else %}
+                            <div class="small-2 cell badge-display">
+                                <h6 class="badge-title">{{ sticker.0 }}</h6>
+                                <img style="width: 65%; " alt="{{ sticker.4 }}"
+                                     src="http://newtonthinks.com/{{ sticker.3 }}">
+                                <p class="badge-description">{{ sticker.2 }}</p>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                    </div>
+                <hr>
+
+                {#            <div style="width:100%;">#}
+                {#                <img style="margin-left: auto; display: block;margin-right: auto"#}
+                {#                     src="/static/images/youramcbadges.png"></div>#}
+                {#            <img style="margin-left: auto; display: block;#}
+                {#    margin-right: auto" src="/static/images/amc{{ student|amc_badges_earned }}.png">#}

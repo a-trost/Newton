@@ -1,0 +1,218 @@
+{% extends "brain/portal_layout.html" %}
+{% load brain_extras %}
+{% block title %}{{ classroom.title }} {{ classroom.last_name }} | BTWA Portal {% endblock title %}
+{% block heading %}
+         <div class="grid-container" style="max-width:94%;">
+
+     <div class="grid-x">
+    <div class="small-7 cell">
+    <h1 style="margin-bottom: -0.5rem">{{ classroom.title }} {{ classroom.last_name }}</h1>
+    <h6><a href="{% url 'brain:portalschool' %}"><i class="fa fa-arrow-circle-left"></i>  Choose a different classroom</a></h6>
+    </div>
+    <div class="small-5 cell" >
+                <br>
+                {% if display_dict.ixl or display_dict.myon %}
+<div class="portal-class-time-spent">
+<i class="fa fa-clock-o"></i> Class Time Today<br>
+<span class="portal-class-time-spent ixl"><i class="fa fa-plus"></i> IXL: {{ class_ixl_time_spent|seconds_to_minutes_and_hours }}</span> <br>
+    <span class="portal-class-time-spent myon"><i class="fa fa-book"></i> myON: {{ class_myon_time_spent|seconds_to_minutes_and_hours }}</span>
+
+</div>
+                {% endif %}
+            </div>
+     </div>
+
+{% endblock heading %}
+{% block content %}
+
+        <div class="callout success">
+         <h5 style="text-align: center">Click on your name</h5>
+    </div>
+
+    <br>
+    <div class="grid-x grid-padding-x">
+    {% for student in student_list %}
+
+
+{############################################    SECOND GRADE VERSION   ################################################### #}
+
+
+    {% if student.current_class.grade == '2nd' %}
+
+<div class="portal-button cell small-6 medium-4 large-3" >
+<a href="{% url 'brain:password' grade classroom.last_name student.student_id %}">
+  <img class="button-avatar" src="http://newtonthinks.com/{{ avatar_list|index:forloop.counter0 }}">
+  <div class="inside-button" style="background-color: {{ color_list|index:forloop.counter0 }}">
+    <p class="portal-button-name">{{ student.first_name }} {{ student.last_name |slice:":1" }}.</p>
+    <div class="portal-button-bottom-holder">
+    <div class ="portal-button-bottom  button-bottom-third"
+         {% if ixl_challenge_list_complete|index:forloop.counter0 == ixl_challenge_list_total|index:forloop.counter0 %}
+         style="color:#fdec0b;"
+    {% endif %} >
+            <i class="fa fa-check-square"></i> {{ ixl_challenge_list_complete|index:forloop.counter0 }}/{{ ixl_challenge_list_total|index:forloop.counter0 }}
+    </div>
+        <div class ="portal-button-bottom button-bottom-second"
+             {% if myon_time_spent_list|index:forloop.counter0|seconds_to_minutes >= 10 %}
+         style="color:#fdec0b;"
+    {% endif %} >
+      <i class="fa fa-book"></i> {{ myon_time_spent_list|index:forloop.counter0|seconds_to_minutes }}
+    </div>
+        <div class ="portal-button-bottom button-bottom-first"
+               {% if ixl_time_spent_list|index:forloop.counter0|seconds_to_minutes >= 10 %}
+         style="color:#fdec0b;"
+    {% endif %} >
+            <i class="fa fa-plus"></i> {{ ixl_time_spent_list|index:forloop.counter0|seconds_to_minutes }}
+    </div>
+    </div>
+  </div>
+     </div>
+     </a>
+
+{############################################    FOURTH GRADE VERSION   ################################################### #}
+
+           {% elif student.current_class.grade == '4th' or student.classroom.last_name == 'Hickmon' %}
+
+<div class="portal-button cell small-6 medium-4 large-3" >
+<a href="{% url 'brain:portalstudent' grade classroom.last_name student.student_id %}">
+{#  <img class="button-avatar" src="http://newtonthinks.com/{{ avatar_list|index:forloop.counter0 }}">#}
+  <div class="inside-button" style="background-color: {{ color_list|index:forloop.counter0 }}; ">
+    <p class="portal-button-name"><i class="fa {{ icon_list|index:forloop.counter0 }}"></i> {{ student.first_name }} {{ student.last_name |slice:":1" }}.</p>
+    <div class="portal-button-bottom-holder">
+        <div class ="portal-button-bottom button-bottom-second" style="width: 50%;
+             {% if myon_time_spent_list|index:forloop.counter0|seconds_to_minutes >= 10 %}
+         color:#fdec0b;
+    {% endif %}" >
+      <i class="fa fa-book"></i> {{ myon_time_spent_list|index:forloop.counter0|seconds_to_minutes }}
+    </div>
+        <div class ="portal-button-bottom button-bottom-first" style="width: 50%;
+               {% if ixl_time_spent_list|index:forloop.counter0|seconds_to_minutes >= 10 %}
+         color:#fdec0b;
+    {% endif %} " >
+            <i class="fa fa-plus"></i> {{ ixl_time_spent_list|index:forloop.counter0|seconds_to_minutes }}
+    </div>
+    </div>
+  </div>
+     </div>
+     </a>
+
+
+
+{############################################    Rest of School VERSION   ################################################### #}
+
+           {% elif display_dict.ixl %}
+
+<div class="portal-button cell small-6 medium-4 large-3" >
+<a href="{% url 'brain:portalstudent' grade classroom.last_name student.student_id %}">
+{#  <img class="button-avatar" src="http://newtonthinks.com/{{ avatar_list|index:forloop.counter0 }}">#}
+  <div class="inside-button" style="background-color: {{ color_list|index:forloop.counter0 }}; ">
+    <p class="portal-button-name"><i class="fa {{ icon_list|index:forloop.counter0 }}"></i> {{ student.first_name }} {{ student.last_name |slice:":1" }}.</p>
+    <div class="portal-button-bottom-holder">
+    <div class ="portal-button-bottom button-bottom-second" style="width: 50%;
+             {% if myon_time_spent_list|index:forloop.counter0|seconds_to_minutes >= 10 %}
+         color:#fdec0b;
+    {% endif %}" >
+    {% if myon_time_spent_list|index:forloop.counter0 %}
+
+      <i class="fa fa-book"></i> {{ myon_time_spent_list|index:forloop.counter0|seconds_to_minutes }}
+
+        {% endif %}
+        </div>
+        <div class ="portal-button-bottom button-bottom-first" style="width: 50%;
+               {% if ixl_time_spent_list|index:forloop.counter0|seconds_to_minutes >= 10 %}
+         color:#fdec0b;
+    {% endif %} " >
+            <i class="fa fa-plus"></i> {{ ixl_time_spent_list|index:forloop.counter0|seconds_to_minutes }}
+    </div>
+    </div>
+  </div>
+     </div>
+     </a>
+
+
+
+
+
+
+{############################################    REST OF SCHOOL VERSION   ################################################### #}
+
+
+
+
+
+
+  {% else %}
+          <div class="cell small-6 medium-4 large-3 ">
+    <a class="expanded button" style="background-color: {{ color_list|index:forloop.counter0 }}"
+{#       {% if student.current_class.grade == '2nd' %}#}
+{#       href="{% url 'brain:password' grade classroom.last_name student.student_id %}#}
+{#        {% else %}#}
+               href="{% url 'brain:portalstudent' grade classroom.last_name student.student_id %}
+
+{#        {% endif %}#}
+">
+  {% if student.first_name|length >= 9 %}
+        <h5><i class="fa {{ icon_list|index:forloop.counter0 }}"></i>
+ {{ student.first_name }} {{ student.last_name |slice:":1" }}.</h5>
+{% elif student.first_name|length < 9 %}
+        <h4><i class="fa {{ icon_list|index:forloop.counter0 }}"></i>
+ {{ student.first_name }} {{ student.last_name |slice:":1" }}.</h4>
+    {% elif student.first_name|length < 6 %}
+
+    <h3><i class="fa {{ icon_list|index:forloop.counter0 }}"></i>
+ {{ student.first_name }} {{ student.last_name |slice:":1" }}.</h3>
+        {% endif %}
+           </a>
+  </div>
+  {% endif %}
+
+    {% endfor %}
+</div>
+
+{#    {% if leaderboard_display %}#}
+{#        <hr>#}
+{#    <h3 style="color: #0c4d78;text-align: center"><i class="fa fa-star"></i> Class Leaderboard <i class="fa fa-star"></i></h3>#}
+{#            <div class="grid-x grid-margin-x">#}
+{##}
+{#    <div class=" large-4 cell">#}
+{#    <div class="callout warning">#}
+{#    <h4 style="text-align: center; color: #e15258"><i class="fa fa-clock-o"></i> IXL Time Spent <i class="fa fa-clock-o"></i></h4>#}
+{#    {% for student in class_ixl_time_spent %}#}
+{#    <h5 style="color: {{ color_list|index:forloop.counter0 }}">{{ forloop.counter }}. {{ student.student.first_name }}: {{ student.time_spent }} mins</h5>#}
+{#    {% endfor %}#}
+{#    </div></div>#}
+{#    <div class=" large-4 cell">#}
+{##}
+{#    {% if myon_leaderboard_display %}#}
+{#    <div class="callout warning">#}
+{#    <h4 style="text-align: center; color: #51b72f"><i class="fa fa-clock-o"></i> myON Time Spent <i class="fa fa-clock-o"></i></h4>#}
+{#    {% for student in class_myon_time_spent %}#}
+{#    <h5 style="color: {{ color_list|index:forloop.counter0 }}">{{ forloop.counter }}. {{ student.student.first_name }}: {{ student.myon_time_spent }} mins</h5>#}
+{#    {% endfor %}#}
+{#    </div>#}
+{#        {% endif %}#}
+{#        </div>#}
+{#    <div class=" large-4 cell">#}
+{#    {% if myon_leaderboard_display %}#}
+{#        <div class="callout warning">#}
+{#       <h4 style="text-align: center; color: #2556a1"><i class="fa fa-arrow-circle-up"></i> Lexile Growth <i class="fa fa-arrow-circle-up"></i></h4>#}
+{#    {% for student in class_myon_lexile_progress %}#}
+{#    <h5 style="color: {{ color_list|index:forloop.counter0 }}">{{ forloop.counter }}. {{ student.student.first_name }} {{ student.student.last_name.0 }}.</h5>#}
+{#    {% endfor %}#}
+{#    </div>#}
+{#        {% endif %}#}
+{#    </div>#}
+{##}
+{##}
+{#        </div>#}
+{##}
+{#{% endif %}#}
+
+{#    {% for student1 in class_ixl_time_spent %}#}
+{#        {{ student1 }}#}
+{#    {% endfor %}#}
+    <br>
+    <br>
+    <br>
+
+    </div>
+{% endblock content %}

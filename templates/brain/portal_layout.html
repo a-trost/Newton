@@ -1,0 +1,69 @@
+<!doctype html>
+{% load static from staticfiles %}
+{% load brain_extras %}
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}{% endblock %} | Newton</title>
+        <link rel="stylesheet" href="{% static 'css/foundation.css' %}">
+            <link rel="stylesheet" href="{% static 'css/app.css' %}">
+
+
+        <link href="https://fonts.googleapis.com/css?family=Asap:700" rel="stylesheet">
+    <link rel="shortcut icon" href="{% static 'favicon/favicon.ico' %}">
+
+        {% block css %}{% endblock %}
+{#        <script src="{% static 'js/vendor/modernizr.js' %}"></script>#}
+{#        <meta class="foundation-mq">#}
+    {% block extrahead %} <meta http-equiv="refresh" content="600">{% endblock %}
+            <link rel="stylesheet" href="{% static 'css/newton_portal.css' %}">
+
+    </head>
+    <body>
+<div class="grid-x grid-padding-x">
+        <div class="large-12 cell">
+        {% block breadcrumbs %}{% endblock %}
+            {% block heading %}{% endblock %}
+        {% if messages %}
+<div class="grid-x grid-padding-x">
+                <div class=" small-6 small-centered cell">
+                <h5>MESSAGES</h5>
+                    {% for message in messages %}
+                        <div class="callout alert {{ message.tags }} cell" data-closable>
+                            {{ message }}
+{#                            <button class="close-button" aria-label="Dismiss alert" type="button" data-close>#}
+{#    <span aria-hidden="true">&times;</span>#}
+{#  </button>#}
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endif %}
+        {% block content %}{% endblock %}
+        </div>
+        </div>
+
+     <script src={% static 'js/vendor/jquery.js' %}></script>
+    <script src={% static 'js/vendor/what-input.js' %}></script>
+    <script src="https://use.fontawesome.com/b215f0aabc.js"></script>
+
+    <script src={% static 'js/vendor/foundation.js' %}></script>
+    <script src={% static 'js/app.js' %}></script>
+
+
+        {% block javascript %}{% endblock %}
+        <script>
+    $(document).foundation();
+
+  </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.bundle.min.js"></script>
+
+    </body>
+{% block outsidebody %} {% endblock %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/loading-bar.css' %}"/>
+<script type="text/javascript" src="{% static 'js/vendor/loading-bar.js' %}"></script>
+{#<script src="js/foundation/foundation.alert.js"></script>#}
+
+</html>

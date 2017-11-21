@@ -1,0 +1,129 @@
+{% extends "brain/portal_layout.html" %}
+{% load brain_extras %}
+{% block title %}{{ classroom.title }} {{ classroom.last_name }}'s Toolkit {% endblock title %}
+{% block heading %}
+    <div class="grid-container" style="max-width:90%">
+<h1>{{ classroom.title }} {{ classroom.last_name }}'s Toolkit <i class="fa fa-wrench"></i></h1>
+{% endblock heading %}
+{% block content %}
+
+<div class="grid-x grid-margin-x">
+
+{#<a href="{% url 'brain:morningmessage' grade classroom %}">#}
+<a class="small-6 medium-4 large-3 cell card text-center rounded-corners" style="padding:25px 15px 0px 15px; color: white; background-color: #f1c40f"
+href="{% url 'brain:morningmessage' grade classroom.last_name %}">
+  <i class="fa fa-sun-o fa-4x"></i>
+     <div class="card-section">
+    <h4>Morning Message</h4>
+  </div>
+     </a>
+
+        <a class="small-6 medium-4 large-3 cell card text-center rounded-corners" style="padding:25px 15px 0px 15px; color: white; background-color: #2ecc71"
+        href="{% url 'brain:timer' %}">
+  <i class="fa fa-clock-o fa-4x"></i>
+     <div class="card-section">
+    <h4>Timer</h4>
+  </div>
+     </a>
+
+<a class="small-6 medium-4 large-3 cell card rounded-corners text-center" style="padding:25px 15px 0px 15px; color: white; background-color: #e74c3c"
+   href="{% url 'brain:randomstudent' grade classroom.last_name %}">
+  <i class="fa fa-random fa-4x"></i>
+     <div class="card-section">
+    <h4>Random Student</h4>
+  </div>
+     </a>
+<a class="small-6 medium-4 large-3 cell card text-center rounded-corners" style="padding:25px 15px 0px 15px; color: white; background-color: #9b59b6"
+href="{% url 'brain:music' %}">
+  <i class="fa fa-music fa-4x"></i>
+     <div class="card-section">
+    <h4>Music</h4>
+  </div>
+     </a>
+
+<a class="small-6 medium-4 large-3 cell card text-center rounded-corners" style="padding:25px 15px 0px 15px; color: white; background-color: #3498db"
+   href="{% url 'brain:portalclass' grade classroom.last_name %}">
+  <i class="fa fa-arrow-circle-right fa-4x"></i>
+     <div class="card-section">
+    <h4>Class Portal</h4>
+  </div>
+     </a>
+
+{% if grade == "2nd" %}
+    <a class="small-6 medium-4 large-3 cell card text-center rounded-corners" style="display: block;padding:25px 15px 0px 15px; color: white; background-color: #f39c12"
+      href="{% url 'brain:classlist' grade classroom.last_name %}">
+     <i class="fa fa-bar-chart fa-4x"></i>
+     <div class="card-section">
+    <h4>Teacher Page</h4>
+  </div>
+</a>
+
+<a class="small-6 medium-4 large-3 cell card text-center rounded-corners" style="display: block;padding:25px 15px 0px 15px; color: white; background-color: #16a085"
+      href="https://docs.google.com/spreadsheets/d/1lPZFSWXD5BYEZv03CDFB2wAcFR7rYCU7zyaCqoP4QKw/edit#gid=0">
+     <i class="fa fa-book fa-4x"></i>
+     <div class="card-section">
+    <h4>Reading Data</h4>
+  </div>
+</a>
+{% elif grade == "1st" %}
+    <a class="small-6 medium-4 large-3 cell card text-center rounded-corners" style="display: block;padding:25px 15px 0px 15px; color: white; background-color: #16a085"
+      href="https://docs.google.com/spreadsheets/d/1tkK1QeMbSmgL5jUAa5aJaXMfA1Buk18N1KVlbv7S6qE/edit#gid=0">
+     <i class="fa fa-book fa-4x"></i>
+     <div class="card-section">
+    <h4>Reading Data</h4>
+  </div>
+</a>
+
+    {% elif grade == "K" %}
+    <a class="small-6 medium-4 large-3 cell card text-center rounded-corners" style="display: block;padding:25px 15px 0px 15px; color: white; background-color: #16a085"
+      href="https://docs.google.com/spreadsheets/d/1DSGOgUq33knSYTD1fH_lhpYE_5KzWUvxrfG8rkbxGVY/edit#gid=0">
+     <i class="fa fa-book fa-4x"></i>
+     <div class="card-section">
+    <h4>Reading Data</h4>
+  </div>
+</a>
+
+
+    {% elif grade == "3rd" %}
+    <a class="small-6 medium-4 large-3 cell card text-center rounded-corners" style="display: block;padding:25px 15px 0px 15px; color: white; background-color: #16a085"
+      href="https://docs.google.com/spreadsheets/d/1m6q8rAcZQ3yrPKh6UsMWubgRdPK0EsIh1VxKSvVAfNs/edit#gid=0">
+     <i class="fa fa-book fa-4x"></i>
+     <div class="card-section">
+    <h4>Reading Data</h4>
+  </div>
+</a>
+
+
+
+    {% endif %}
+
+<a class="small-6 medium-4 large-3 cell card text-center rounded-corners" style="display: block;padding:25px 15px 0px 15px; color: white; background-color: #c0392b"
+      href="{% url 'brain:pledge' %}">
+     <i class="fa fa-flag fa-4x"></i>
+     <div class="card-section">
+    <h4>Pledge Scripts</h4>
+  </div>
+</a>
+
+
+<a class="small-6 medium-4 large-3 cell card text-center rounded-corners" style="display: block;padding:25px 15px 0px 15px; color: white; background-color: #34495e"
+      href="https://btwanewhaven.quickschools.com/sms/js/local.html?unifiedAttendanceMgmt&ausername={{ classroom.email }}">
+     <i class="fa fa-check-square-o fa-4x"></i>
+     <div class="card-section">
+    <h4>Attendance</h4>
+  </div>
+</a>
+
+
+</div>
+               </div>
+
+{% endblock content %}
+
+
+https://classdojo.pubnub.com/publish/pub-805cbe07-4cf6-4598-b7a7-99b375929aab/sub-e0704dc5-1c84-11e1-b64a-bde5992449da/0/dojo_mqtt_661f8f6b7fc4f1048d682b85a0e009ab8dca2ab58a6dd6c0c06d1a71fed0ec1c/0/%7B%22sender%22%3A%22display_dojo_realtime_37umsw%22%2C%22topic%22%3A%22SEND_RADIO%22%2C%22payload%22%3A%7B%22synced%22%3Atrue%2C%22channel%22%3A%7B%22title%22%3A%22Focus%22%2C%22icon%22%3A%22%2Fstatic%2F92ac1de6c57b526f1b03ed80519bf291.png%22%2C%22tracks%22%3A%5B%7B%22src%22%3A%22
+
+
+
+https%3A%2F%2Fs3.amazonaws.com%2Ftoolkit-static.classdojo.com%2Fradio%2Fcalm_1.mp3%22%7D%2C%7B%22
+src%22%3A%22https%3A%2F%2Fs3.amazonaws.com%2Ftoolkit-static.classdojo.com%2Fradio%2Fcalm_2.mp3%22%7D%2C%7B%22src%22%3A%22https%3A%2F%2Fs3.amazonaws.com%2Ftoolkit-static.classdojo.com%2Fradio%2Fcalm_3.mp3%22%7D%2C%7B%22src%22%3A%22https%3A%2F%2Fs3.amazonaws.com%2Ftoolkit-static.classdojo.com%2Fradio%2Fcalm_4.mp3%22%7D%2C%7B%22src%22%3A%22https%3A%2F%2Fs3.amazonaws.com%2Ftoolkit-static.classdojo.com%2Fradio%2Fcalm_5.mp3%22%7D%5D%7D%2C%22currentTrackIndex%22%3A3%2C%22playing%22%3Atrue%7D%7D?uuid=pn-da18d059-1656-4429-9cb9-d24e3b644b6c&pnsdk=PubNub-JS-Web%2F4.12.0

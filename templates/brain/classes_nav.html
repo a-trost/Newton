@@ -1,0 +1,12 @@
+<ul class="dropdown menu" data-dropdown-menu>
+{% for classroom in classrooms %}
+    <li class="has-submenu">
+        <a href="#0">{{ classroom.last_name }}</a>
+        <ul class="submenu menu vertical" data-submenu>
+          <li><a href="{% url 'brain:classlist' classroom.grade classroom.last_name %}">Stats</a></li>
+          <li><a href="{% url 'brain:toolkit' classroom.grade classroom.last_name %}">Toolkit</a></li>
+        </ul>
+      </li>
+
+{% endfor %}
+</ul>

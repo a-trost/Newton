@@ -1,0 +1,20 @@
+{% extends "brain/layout.html" %}
+{% block title %}IXL Lists{% endblock title %}
+{% block categorybar %}
+{% include 'ixl/ixl_lists_category_bar.html' %}
+{% endblock %}
+{% block heading %}
+<div class="grid-x grid-margin-x">
+    <div class="cell small-12 medium-6">
+
+<h1>All IXL Lists</h1>
+    </div>
+    <div class="cell small-12 medium-6">
+
+</div>
+    </div>
+
+{% endblock heading %}
+{% block content %}
+{{ classroom.last_name }}
+{% endblock content %}

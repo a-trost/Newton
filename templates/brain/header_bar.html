@@ -1,0 +1,36 @@
+{% load static %}
+{% load brain_extras %}
+
+<div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium" style="background: #5a5a5a;">
+  <button class="menu-icon" type="button" data-toggle></button>
+  <div class="title-bar-title">Newton Menu</div>
+</div>
+<div class="top-bar" id="menu">
+    <div class="top-bar-left" >
+        <ul class="dropdown menu" data-dropdown-menu>
+
+
+                            <li><a href="{% url 'brain:index' %}">
+                    <img style="width: 80%;" src="{% static 'images/newtonlogoblue.png' %}">
+                </a></li>
+
+
+        </ul>
+    </div>
+  <div class="top-bar-right">
+    <ul class="dropdown menu menu-hover-lines" data-dropdown-menu>
+
+      {% if user.is_authenticated %}
+                {% nav_classrooms_list request=request %}
+                    {% if user.is_staff %}
+<li><a href="/admin">Admin</a></li>
+{% endif %}
+
+                    <li><a href="{% url 'logout' %}">Log Out</a></li>
+
+                    {% else %}
+                    <li><a href="{% url 'login' %}?next={{ request.path }}">Login</a></li>
+                    {% endif %}
+    </ul>
+  </div>
+</div>

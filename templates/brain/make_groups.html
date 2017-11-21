@@ -1,0 +1,22 @@
+{% extends "brain/portal_layout.html" %}
+{% load brain_extras %}
+{% block title %}{{ classroom.title }} {{ classroom.last_name }} | BTWA Portal {% endblock title %}
+{% block heading %}
+    <div class="grid-container" style="max-width:95%;">
+<h1>{{ classroom.title }} {{ classroom.last_name }}'s Autogroups!</h1>
+{% endblock heading %}
+{% block content %}
+
+<div class="grid-x grid-margin-x">
+
+    {% for partner in partner_list %}
+<div class=" small-2 medium-2 large-2 cell">    <a class="button" style="background-color: {{ color_list|index:forloop.counter0 }}">
+        <h5> {{ partner }} </h5>
+
+    </a>
+  </div>
+    {% endfor %}
+</div>
+               </div>
+
+{% endblock content %}

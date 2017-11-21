@@ -1,0 +1,17 @@
+{% extends "brain/layout.html" %}
+{% load brain_extras %}
+{% block title %}{{ skill.skill_description }} Details - IXL{% endblock title %}
+
+{% block heading %}<h1>{{ skill.skill_description|title }}</h1>
+<h4>{{ skill.category|title }} : {{ skill.skill_id }}</h4>
+{% endblock heading %}
+
+{% block content %}
+
+<a href="{{ skill.skill_id|get_ixl_url }}">Link to IXL Exercise</a>
+
+
+
+
+{% endblock content %}
+

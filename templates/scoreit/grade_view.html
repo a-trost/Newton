@@ -1,0 +1,45 @@
+{% extends "brain/portal_layout.html" %}
+{% load brain_extras %}
+{% block title %}Score It Grade View | BTWA Portal {% endblock title %}
+{% block heading %}
+
+{% endblock heading %}
+{% block content %}
+<br>
+ <div class="row">
+            <div class="large-4 small-0 columns"> <br></div>
+
+        Scores for date: {{ date }}
+        {% for item in classroom_student_list %}
+        {% with item.0 as classroom %}
+        {% with item.1 as student_list %}
+        <h2>{{ classroom }}</h2>
+<table style="width: 350px">
+{% with item.2 as classes %}
+<tr>
+<th>Student</th>
+{% for class in classes %}
+    <th>{{ class }}</th>
+{% endfor %}
+<th>Total</th>
+</tr>
+
+            {% for student in student_list %}
+                {% with item.2 as classes %}
+<tr>
+    <td>{{ student.first_name }} {{ student.last_name.0 }}.</td>
+    {% for class in classes %}
+    <td>{% add_subject_score student.student_id date class %}</td>
+{% endfor %}
+<td>{% add_total_score student.student_id date %}</td>
+</tr>
+                {% endwith %}
+    {% endfor %}
+            </table>
+    {% endwith %}
+{% endwith %} {% endwith %}
+    {% endfor %}
+ </div>
+
+
+{% endblock content %}

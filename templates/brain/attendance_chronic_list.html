@@ -1,0 +1,57 @@
+{% extends "brain/portal_layout.html" %}
+{% load brain_extras %}
+{% block extrahead %}
+{% endblock %}
+{% block title %}Chronic Student Attendance | BTWA Portal {% endblock title %}
+{% block heading %}
+    <div class="grid-container">
+    <h1 >Chronic Student Attendance</h1>
+    <a href="{% url 'brain:attendance' %}"><i class="fa fa-arrow-circle-left"></i> Go back to school list</a><br>
+{% endblock heading %}
+{% block content %}
+
+    {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+<div class="grid-x grid-margin-x">
+    <div class="cell small-7 callout primary">
+Only identifies students from 2016-2017 who were chronically absent.<br>
+        Students who are currently chronically absent again: {{ chronic_count }}
+    </div>
+</div>
+<hr>
+<div class="grid-x grid-margin-x">
+        <div class="cell small-6">
+            <h4>Not Chronic</h4>
+        </div>
+            <div class="cell small-6">
+            <h4>Chronic</h4>
+        </div>
+    </div>
+
+
+
+{% for classroom in sorted_output_list %}
+    {% with teacher=classroom.0 good_list=classroom.1.0 bad_list=classroom.1.1 %}
+        <div class="grid-x grid-margin-x">
+            <div class="cell"><h6>{{ teacher }} </h6></div>
+        <div class="cell small-6 callout success">
+        {% for student in good_list %}
+        {{ student }}<br>
+        {% endfor %}
+        </div>
+
+                <div class="cell small-6 callout alert">
+        {% for student in bad_list %}
+        {{ student }}<br>
+        {% endfor %}
+        </div>
+        </div>
+    {% endwith %}
+
+
+      {% endfor %}
+    </div>
+{% endblock %}
+
+{#    <div class="cell small-6 medium-4 large-3 ">#}
+{#     <a class="expanded button" href="{% url 'brain:attendanceclass' classroom.last_name %}"><h4> {{ classroom }}</h4></a>#}
+{#    </div>#}

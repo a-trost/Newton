@@ -1,0 +1,24 @@
+{% extends "brain/portal_layout.html" %}
+{% load brain_extras %}
+{% block extrahead %}
+{% endblock %}
+{% block title %}Attendance | BTWA Portal {% endblock title %}
+{% block heading %}
+    <h1 >Classroom Attendance</h1>
+{% endblock heading %}
+{% block content %}
+
+    {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+     <div class="grid-x grid-margin-x">
+
+{% for classroom in classroom_list %}
+    <div class="cell small-6 medium-4 large-3 ">
+     <a class="expanded button" href="{% url 'brain:attendanceclass' classroom.last_name %}"><h4> {{ classroom }}</h4></a>
+    </div>
+      {% endfor %}
+     <div class="cell small-6 medium-4 large-3 ">
+     <a class="alert expanded button" href="{% url 'brain:attendancechronic' %}"><h4>Chronic</h4></a>
+    </div>
+  </div>
+
+{% endblock %}

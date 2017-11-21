@@ -1,0 +1,31 @@
+{% extends "brain/portal_layout.html" %}
+{% load brain_extras %}
+{% block title %}Pick Your Avatar! {% endblock title %}
+{% block heading %}
+{% endblock heading %}
+{% block content %}
+{% if return_link == True %}
+    <h2><a href="    {% url 'brain:portalstudent' student.current_class.grade student.current_class.classroom.last_name student_id %}
+"><i class="fa fa-arrow-circle-left"></i> Return to your page!</a></h2>
+    {% else %}
+<h2>Choose Your Avatar {{ student.first_name }}! </h2>
+    <div class="callout alert">
+    <h6>Remember, you won't be able to change it until next week! Choose wisely!</h6>
+</div>
+
+    <form action="{% url 'badges:chooseavatar'  student.student_id %}" method="post">
+        {% csrf_token %}
+    <table>
+        {% for sticker in earned_sticker_list %}
+        <tr>
+        <td><input type="radio" name="sticker" value="{{ sticker.sticker.id }}">
+            <img style="width:75px" src="http://newtonthinks.com/{{ sticker.sticker.image }}">
+            {{ sticker.sticker.description }}<br></td>
+        </tr>
+
+{% endfor %}
+    </table>
+    <input class="button large" type="submit" value="Submit!">
+</form>
+{% endif %}
+{% endblock content %}

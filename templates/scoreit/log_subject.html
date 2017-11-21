@@ -1,0 +1,72 @@
+{% extends "brain/portal_layout.html" %}
+{% load brain_extras %}
+{% block title %}{{ student.first_name }} 's {{ subject }} Score It! | BTWA Portal {% endblock title %}
+{% block heading %}
+    <style>
+td {border: solid  slategray 1px}
+    table tbody th, table tbody td {padding: 0px; padding-left: 10px;
+        font-size:1.3em;}
+    label{font-size: 1em; color: #343434; font-weight: bold;}
+    li {
+        display: block;}
+    ul {padding-top:3px;
+        margin:0; }
+</style>
+
+
+
+    <h1 style="margin-bottom: -0.5rem; text-align: center">{{ student.first_name }} {{ student.last_name.0 }}'s {{ subject }} Score It!</h1>
+    <h5 style="text-align: center"><a href="{% url 'scoreit:classlist' student_id %}"><i class="fa fa-arrow-circle-left"></i>  Go Back</a></h5>
+
+{% endblock heading %}
+{% block content %}
+<form method="POST" action="">
+
+<div class="row">
+  <div class="large-1 columns"><br></div>
+  <div class="large-10 columns">
+
+
+
+<table>
+
+<tr><td><img src="/static/images/scoreit-hand.png"></td>
+    <td>
+
+
+{{ descriptions.0 }}</td><td>
+{{ form.hand }} </td>
+    </tr><tr><td><img src="/static/images/scoreit-slant.png"></td>
+    <td>
+{{ descriptions.1 }}</td><td>
+{{ form.slant }}</td>
+   </tr><tr><td><img src="/static/images/scoreit-transition.png"></td>
+    <td>
+{{ descriptions.2 }}</td><td>
+{{ form.transition }}</td>
+    </tr><tr><td><img src="/static/images/scoreit-please.png"></td>
+    <td>
+    {{ descriptions.3 }}</td><td>
+{{ form.please }}</td>
+    </tr><tr><td><img src="/static/images/scoreit-instruction.png"></td>
+    <td>
+    {{ descriptions.4 }}</td><td>
+{{ form.instruction }}</td>
+    </tr><tr><td><img src="/static/images/scoreit-material.png"></td>
+    <td>
+    {{ descriptions.5 }}</td><td>
+{{ form.material }}</td>
+    </tr><tr><td><img src="/static/images/scoreit-peer.png"></td>
+    <td>
+    {{ descriptions.6 }}</td><td>
+{{ form.peer }}</td>
+    </tr>
+</table>
+{% csrf_token %}
+      <input style="align-items: center" type="submit" class="large expanded button" value="Score It!" >
+        </div>
+  <div class="large-1 columns"><br></div>
+    </div>
+
+    </form>
+{% endblock content %}

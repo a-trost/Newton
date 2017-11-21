@@ -1,0 +1,30 @@
+<div class="callout">
+                    <a class="button" style="float:right;font-weight: bold "
+                           href="{% url 'amc:cbasheetsclass' grade classroom 'add' %}">Add. Test</a>
+                        <a class="button" style="float:right;font-weight: bold; background-color: #da3116"
+                           href="{% url 'amc:cbasheetsclass' grade classroom 'sub' %}">Sub. Test</a>
+                        <h4>CBA Grid</h4>
+                        <table width="700px" border="1" style="border-color: #1a1a1a">
+                            <tr>
+                                <th  style="font-size: 10pt">Student</th>
+                                {% for item in spring_cba_descriptions %}
+                                <th style="font-size: 8pt; padding:2px;text-align: center;border-color: #1a1a1a">{{ item }}</th>
+                              {% endfor %}
+                            </tr>
+                            {% for row in spring_cba_student_grid %}
+                                <tr>
+                                {% for item in row %}
+                                    {% if item >= 80 %}
+                                    <td style="font-size: 10pt; padding: 2px; text-align: center;border-color: #1a1a1a; background-color: #84eb68">{{ item }}</td>
+                                    {% elif item > 50 %}
+                                    <td style="font-size: 10pt; padding: 2px; text-align: center;border-color: #1a1a1a; background-color: #edec59">{{ item }}</td>
+                                    {% elif item <= 50 %}
+                                    <td style="font-size: 10pt; padding: 2px; text-align: center;border-color: #1a1a1a; background-color: #e27f6a">{{ item }}</td>
+                                   {% else %}
+                                   <td style="font-size: 10pt; padding: 2px; text-align: center;border-color: #1a1a1a;  background-color: white">{{ item }}</td>
+                                    {% endif %}
+                                {% endfor %}
+                                </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
