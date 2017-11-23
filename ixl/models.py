@@ -196,6 +196,52 @@ class IXLTimeSpent(models.Model):
 ############## NEW IXL MODELS #####################
 
 
+class IXLListSkill(models.Model):
+    ixl_format = RegexValidator(r'^\w+\.\d+$', 'Pattern must match IXL format: A.12')
+    grade = models.CharField(max_length=6)
+    id = models.CharField(max_length=6, validators=[ixl_format], blank=False, verbose_name='Skill ID')
+    description = models.CharField(max_length=200, blank=True, verbose_name='Skill Description')
+    category = models.CharField(max_length=100, null=True)
+
+    def __str__(self):
+        return '%s - %s - %s - %s' % (self.grade, self.category, self.id, self.description)
+
+    class Meta:
+        verbose_name = 'IXL List Skill'
+        verbose_name_plural = 'IXL List Skills'
+        ordering = ['id']
+
+
+class IXLListSkillScores(models.Model):  # Intersection of IXLSkill and Student Roster
+    student = models.ForeignKey(StudentRoster, on_delete=models.CASCADE, )
+    skill = models.ForeignKey(IXLListSkill, on_delete=models.CASCADE, verbose_name='IXL List Skill', )
+    date_recorded = models.DateField(default=datetime.date.today, verbose_name='Date Recorded')
+    score = models.IntegerField()
+
+    def passing_score(self):
+        if self.score >= 80:
+            return True
+        elif self.score < 80:
+            return False
+        else:
+            raise ValueError
+
+    def __str__(self):
+        return '%s - %s - %s' % (self.student, self.skill, self.score)
+
+    class Meta:
+        verbose_name = 'IXL Score'
+        verbose_name_plural = 'IXL Scores'
+        unique_together = ("student_id", "skill")
+        ordering = ['student_id', 'skill']
+
+
+
+
+
+
+
+
 CATEGORY_CHOICES = (("Unit", "Unit"), ("Remediation", "Remediation"), ("Enrichment", "Enrichment"), ("Test", "Test"), ("Other", "Other"))
 
 
