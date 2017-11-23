@@ -49,28 +49,10 @@ class IXLListExerciseInline(admin.TabularInline):
     model = IXLListExercise
     extra = 10
 
-class IXLListExerciseAdmin(admin.ModelAdmin):
-    list_display = ['list', 'exercise_id', 'required_score', 'order']
-
 
 class IXLListAdmin(admin.ModelAdmin):
     list_display = ['title', 'author', 'category',]
     inlines = [IXLListExerciseInline]
-
-
-
-
-
-
-class IXLListChallengeAdmin(admin.ModelAdmin):
-    list_display = ['student', 'date',]
-
-class IXLListAssignmentAdmin(admin.ModelAdmin):
-    list_display = ['student', 'ixl_list', 'assigned', 'date_created', 'number_to_assign', ]
-
-
-class IXLListChallengeExerciseAdmin(admin.ModelAdmin):
-    list_display = ['challenge', 'exercise_id', 'required_score', 'bonus', ]
 
 
 
@@ -81,7 +63,7 @@ admin.site.register(Challenge, ChallengeAdmin)
 admin.site.register(ChallengeAssignment, ChallengeAssignmentAdmin)
 admin.site.register(IXLTimeSpent, IXLTimeSpentAdmin)
 admin.site.register(IXLList, IXLListAdmin)
-admin.site.register(IXLListChallenge, IXLListChallengeAdmin)
-admin.site.register(IXLListAssignment, IXLListAssignmentAdmin)
-admin.site.register(IXLListChallengeExercise, IXLListChallengeExerciseAdmin)
-admin.site.register(IXLListExercise, IXLListExerciseAdmin)
+admin.site.register(IXLListChallenge)
+admin.site.register(IXLListAssignment, )
+admin.site.register(IXLListChallengeExercise, )
+admin.site.register(IXLListExercise, )
