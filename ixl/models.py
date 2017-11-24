@@ -268,15 +268,15 @@ class IXLListAssignment(models.Model):
         verbose_name = 'IXL List Assignment'
         verbose_name_plural = 'IXL List Assignments'
 
-    def progress(self):
-        '''returns exercises_completed, exercises_total'''
-        exercises = self.ixl_list.ixllistexercise_set
-        exercises_completed = 0
-        for exercise in exercises:
-            exercise_log = IXLListSkillScores.objects.filter(student=self.student, skill=exercise).first()
-            if exercise_log:
-                if exercise_log.score >= exercise.required_score:
-                    exercises_completed += 1
+        # def progress(self):
+        #     '''returns exercises_completed, exercises_total'''
+        #     exercises = self.ixl_list.ixllistexercise_set
+        #     exercises_completed = 0
+        #     for exercise in exercises:
+        #         exercise_log = IXLListSkillScores.objects.filter(student=self.student, skill=exercise).first()
+        #         if exercise_log:
+        #             if exercise_log.score >= exercise.required_score:
+        #                 exercises_completed += 1
 
 
 
@@ -286,7 +286,7 @@ class IXLListAssignment(models.Model):
 class IXLListExercise(models.Model):
     '''The specific Exercises that the IXLlist contains.'''
     list = models.ForeignKey(IXLList)
-    skill = models.ForeignKey(IXLListSkill)
+    skill = models.ForeignKey(IXLListSkill, null=True)
     required_score = models.IntegerField(default=80, blank=False, null=False)
     # bonus = models.BooleanField(default=False, )
     order = models.IntegerField(default=1,)
@@ -309,31 +309,31 @@ class IXLListChallenge(models.Model):
         verbose_name = 'IXL List Challenge'
         verbose_name_plural = 'IXL List Challenges'
 
-    def progress(self):
-        '''Returns # total challenges and # challenges completed'''
-        challenges_completed = 0
-        for exercise in self.ixllistchallengeexercise_set:
-            if exercise.completed():
-                challenges_completed += 1
-        return self.ixllistchallengeexercise_set.filter(bonus=False).count(), challenges_completed
+        # def progress(self):
+        #     '''Returns # total challenges and # challenges completed'''
+        #     challenges_completed = 0
+        #     for exercise in self.ixllistchallengeexercise_set:
+        #         if exercise.completed():
+        #             challenges_completed += 1
+        #     return self.ixllistchallengeexercise_set.filter(bonus=False).count(), challenges_completed
 
 
 class IXLListChallengeExercise(models.Model):
     '''The exercises that are assigned to a challenge and must be completed by a student'''
-    challenge = models.ForeignKey(IXLListChallenge)
-    exercise = models.ForeignKey(IXLListExercise)
+    list_challenge = models.ForeignKey(IXLListChallenge)
+    list_exercise = models.ForeignKey(IXLListExercise, null=True)
     # required_score = models.IntegerField(default=80, blank=False, null=False)
     bonus = models.BooleanField(default=False, )
 
     def __str__(self):
-        return '%s - %s' % (self.challenge, self.exercise_id)
+        return '%s - %s' % (self.list_challenge, self.list_exercise)
 
     class Meta:
         verbose_name = 'IXL List Challenge Exercise'
         verbose_name_plural = 'IXL List Challenge Exercises'
-        unique_together = (("challenge", "exercise_id"),)
-
-    def completed(self):
-        student, required_score = self.challenge.student, self.exercise.required_score
-        current_score = IXLListSkillScores.objects.filter(student=student, skill=self.exercise.skill)
-        return current_score >= required_score
+        unique_together = (("list_challenge", "list_exercise"),)
+        #
+        # def completed(self):
+        #     student, required_score = self.challenge.student, self.exercise.required_score
+        #     current_score = IXLListSkillScores.objects.filter(student=student, skill=self.exercise.skill)
+        #     return current_score >= required_score

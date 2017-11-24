@@ -13,6 +13,7 @@ from .forms import CreateIXLListForm
 
 
 from ixl.models import IXLSkill, IXLSkillScores, IXLList, IXLListAssignment
+
 from brain.models import StudentRoster, CurrentClass, Classroom, ClassroomAssignment
 from brain.templatetags import brain_extras
 
