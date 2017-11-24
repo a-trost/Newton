@@ -27,9 +27,9 @@
         {% block breadcrumbs %}{% endblock %}
             {% block heading %}{% endblock %}
         {% if messages %}
-<div class="grid-x grid-padding-x">
-                <div class=" small-6 small-centered cell">
-                <h5>MESSAGES</h5>
+            <div class="grid-x" style="max-width:90%; margin:auto">
+                <div class="small-12 cell">
+                    <h6>MESSAGES</h6>
                     {% for message in messages %}
                         <div class="callout alert {{ message.tags }} cell" data-closable>
                             {{ message }}

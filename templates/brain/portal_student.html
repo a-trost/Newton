@@ -19,10 +19,32 @@
                     not {{ student.first_name }}</a></h5></div>
             <br>
                 {% if classroom in second_classrooms and new_avatar_choice  %}
-                        <a href="{% url 'badges:chooseavatar' student.student_id %}" class="medium button"
-                           style=" background-color:#ff8500;">
-                            <h6 style="margin: 0; font-size: 1.9em;"><i class="fa fa-smile-o" aria-hidden="true"></i>
-                                Change Avatar</h6></a>
+                    <div class="large reveal" id="stickerModal" data-reveal>
+                        {% include 'badges/choose_avatar.html' %}
+                        <button class="close-button" data-close aria-label="Close modal" type="button">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <p>
+                        <button class="medium button" data-open="stickerModal" style=" background-color:#ff8500;"><h6
+                                style="margin: 0; font-size: 1.9em;"><i class="fa fa-smile-o" aria-hidden="true"></i>
+                            Change Avatar</h6></button>
+                    </p>
+
+
+
+
+                    {#                        <a href="{% url 'badges:chooseavatar' student.student_id %}" class="medium button"#}
+                    {#                           style=" background-color:#ff8500;">#}
+                    {#                            <h6 style="margin: 0; font-size: 1.9em;"><i class="fa fa-smile-o" aria-hidden="true"></i>#}
+                    {#                                Change Avatar</h6></a>#}
+
+
+
+
+
+
                         {% endif %}
             </div>
             <div class="small-5 cell">

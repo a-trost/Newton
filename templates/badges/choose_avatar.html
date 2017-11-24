@@ -1,31 +1,40 @@
-{% extends "brain/portal_layout.html" %}
-{% load brain_extras %}
-{% block title %}Pick Your Avatar! {% endblock title %}
-{% block heading %}
-{% endblock heading %}
-{% block content %}
+{#{% extends "brain/portal_layout.html" %}#}
+{#{% load brain_extras %}#}
+{#{% block title %}Pick Your Avatar! {% endblock title %}#}
+{#{% block heading %}#}
+{#{% endblock heading %}#}
+{#{% block content %}#}
 {% if return_link == True %}
     <h2><a href="    {% url 'brain:portalstudent' student.current_class.grade student.current_class.classroom.last_name student_id %}
 "><i class="fa fa-arrow-circle-left"></i> Return to your page!</a></h2>
     {% else %}
-<h2>Choose Your Avatar {{ student.first_name }}! </h2>
+    <h1>Choose Your Avatar, {{ student.first_name }}! </h1>
     <div class="callout alert">
-    <h6>Remember, you won't be able to change it until next week! Choose wisely!</h6>
+        <h6>Remember, you won't be able to change your avatar until next week! Choose wisely!</h6>
 </div>
 
     <form action="{% url 'badges:chooseavatar'  student.student_id %}" method="post">
         {% csrf_token %}
-    <table>
-        {% for sticker in earned_sticker_list %}
-        <tr>
-        <td><input type="radio" name="sticker" value="{{ sticker.sticker.id }}">
-            <img style="width:75px" src="http://newtonthinks.com/{{ sticker.sticker.image }}">
-            {{ sticker.sticker.description }}<br></td>
-        </tr>
+        <div class="grid-x grid-margin-x">
+
+            {% for sticker in earned_sticker_list %}
+                <label class="small-6 cell callout label_for_check">
+                    <div class="grid-x">
+                        <div class="small-4 cell">
+                            <input class="check_with_label" type="radio" name="sticker"
+                                   value="{{ sticker.sticker.id }}">
+                            <img style="width:90px" src="http://newtonthinks.com/{{ sticker.sticker.image }}">
+                        </div>
+                        <div class="small-8 cell">
+                            <p style="font-size: 1.4rem; font-family: 'Asap', 'Helvetica Neue', Helvetica, Arial, sans-serif"> {{ sticker.sticker.description }}</p>
+                        </div>
+                    </div>
+                </label>
 
 {% endfor %}
-    </table>
-    <input class="button large" type="submit" value="Submit!">
+        </div>
+        <h2><input class="button expanded large success" type="submit" value="I Choose You!"
+                   style="color:white; font-size: 2rem;"></h2>
 </form>
 {% endif %}
-{% endblock content %}
+{#{% endblock content %}#}

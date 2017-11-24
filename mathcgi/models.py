@@ -36,7 +36,7 @@ class CGIResult(models.Model):
                                 help_text="- : Not Yet Tested, 0 : Zero Streak, 1 : One Streak, 2 : Two Streak, M : Mastered",
                                  )
     #comment = models.CharField(max_length=255, blank=True)
-    date_taken = models.DateField(_("Date"), default=datetime.date.today)
+    date_taken = models.DateField(("Date"), default=datetime.date.today)
 
     def __str__(self):
         if self.progress == "M":

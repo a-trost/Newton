@@ -51,5 +51,4 @@ static/newton/favicon.ico
 
 /brain/scripts/csvdownloads/
 /brain/scripts/webscrape.py
-/brain/management/commands/
 variables.py
