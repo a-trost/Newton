@@ -4,8 +4,7 @@ from django.contrib import admin
 
 from .models import IXLSkill, IXLSkillScores, IXLStats, Challenge, ChallengeAssignment, ChallengeExercise, IXLTimeSpent
 
-
-# from .models import IXLList, IXLListAssignment, IXLListChallenge, IXLListChallengeExercise, IXLListExercise
+from .models import IXLList, IXLListAssignment, IXLListChallenge, IXLListChallengeExercise, IXLListExercise
 
 
 class IXLSkillScoresAdmin(admin.ModelAdmin):
@@ -48,15 +47,14 @@ class IXLTimeSpentAdmin(admin.ModelAdmin):
     list_filter = ['student__classroom', 'date_spent',]
 
 
-#
-# class IXLListExerciseInline(admin.TabularInline):
-#     model = IXLListExercise
-#     extra = 10
-#
-#
-# class IXLListAdmin(admin.ModelAdmin):
-#     list_display = ['title', 'author', 'category',]
-#     inlines = [IXLListExerciseInline]
+class IXLListExerciseInline(admin.TabularInline):
+    model = IXLListExercise
+    extra = 10
+
+
+class IXLListAdmin(admin.ModelAdmin):
+    list_display = ['title', 'author', 'category', ]
+    inlines = [IXLListExerciseInline]
 
 
 
@@ -66,8 +64,8 @@ admin.site.register(IXLStats, IXLStatsAdmin)
 admin.site.register(Challenge, ChallengeAdmin)
 admin.site.register(ChallengeAssignment, ChallengeAssignmentAdmin)
 admin.site.register(IXLTimeSpent, IXLTimeSpentAdmin)
-# admin.site.register(IXLList, IXLListAdmin)
-# admin.site.register(IXLListChallenge)
-# admin.site.register(IXLListAssignment, )
-# admin.site.register(IXLListChallengeExercise, )
-# admin.site.register(IXLListExercise, )
+admin.site.register(IXLList, IXLListAdmin)
+admin.site.register(IXLListChallenge)
+admin.site.register(IXLListAssignment, )
+admin.site.register(IXLListChallengeExercise, )
+admin.site.register(IXLListExercise, )

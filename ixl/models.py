@@ -178,7 +178,8 @@ class IXLTimeSpent(models.Model):
             # get the number for the grade
             grade_number = grade_dict[current_grade]
             # get the time for the current grade, the grade +1 and the grade -1
-            return time_grade_dict[grade_number]
+            return time_grade_dict[grade_number]  # + time_grade_dict[grade_number - 1] + time_grade_dict[
+            # grade_number + 1]
         except:
             return None
 
@@ -194,7 +195,6 @@ class IXLTimeSpent(models.Model):
         return "{}, {}, {} seconds".format(self.student, self.date_spent, self.rewarded_time_total())
 
 ############## NEW IXL MODELS #####################
-
 
 class IXLListSkill(models.Model):
     ixl_format = RegexValidator(r'^\w+\.\d+$', 'Pattern must match IXL format: A.12')
@@ -236,15 +236,14 @@ class IXLListSkillScores(models.Model):  # Intersection of IXLSkill and Student 
         ordering = ['student_id', 'skill']
 
 
-
-CATEGORY_CHOICES = (("Unit", "Unit"), ("Remediation", "Remediation"), ("Enrichment", "Enrichment"), ("Test", "Test"), ("Other", "Other"))
+CATEGORY_CHOICES = (("Unit", "Unit"), ("Remediation", "Remediation"), ("Enrichment", "Enrichment"), ("Other", "Other"))
 
 
 class IXLList(models.Model):
     '''List for IXL Exercises that can be assigned to specific students'''
     title = models.CharField(max_length=255, )
     author = models.ForeignKey(User)
-    # exercises = models.TextField()
+    description = models.CharField(max_length=500, null=True, default="")
     category = models.CharField(choices=CATEGORY_CHOICES, max_length=65)
 
     class Meta:
@@ -254,7 +253,6 @@ class IXLList(models.Model):
 
     def __str__(self):
         return self.title
-
 
 class IXLListAssignment(models.Model):
     '''Assigns the List to specific students'''
@@ -278,27 +276,20 @@ class IXLListAssignment(models.Model):
         #             if exercise_log.score >= exercise.required_score:
         #                 exercises_completed += 1
 
-
-
-
-
-
 class IXLListExercise(models.Model):
     '''The specific Exercises that the IXLlist contains.'''
     list = models.ForeignKey(IXLList)
-    skill = models.ForeignKey(IXLListSkill, null=True)
+    list_skill = models.ForeignKey(IXLListSkill, null=True)
     required_score = models.IntegerField(default=80, blank=False, null=False)
-    # bonus = models.BooleanField(default=False, )
     order = models.IntegerField(default=1,)
 
     def __str__(self):
-        return '%s - %s' % (self.list, self.skill)
+        return '%s - %s' % (self.list, self.list_skill)
 
     class Meta:
-        unique_together = (("list", "skill", 'required_score'),)
+        unique_together = (("list", "list_skill", "required_score"),)
         verbose_name = 'IXL List Exercise'
         verbose_name_plural = 'IXL List Exercises'
-
 
 class IXLListChallenge(models.Model):
     '''Challenges Unique to each student that is assembled from several lists.'''
@@ -320,19 +311,19 @@ class IXLListChallenge(models.Model):
 
 class IXLListChallengeExercise(models.Model):
     '''The exercises that are assigned to a challenge and must be completed by a student'''
-    list_challenge = models.ForeignKey(IXLListChallenge)
+    challenge = models.ForeignKey(IXLListChallenge)
     list_exercise = models.ForeignKey(IXLListExercise, null=True)
-    # required_score = models.IntegerField(default=80, blank=False, null=False)
+    required_score = models.IntegerField(default=80, blank=False, null=False)
     bonus = models.BooleanField(default=False, )
 
     def __str__(self):
-        return '%s - %s' % (self.list_challenge, self.list_exercise)
+        return '%s - %s' % (self.challenge, self.exercise_id)
 
     class Meta:
         verbose_name = 'IXL List Challenge Exercise'
-        verbose_name_plural = 'IXL List Challenge Exercises'
-        unique_together = (("list_challenge", "list_exercise"),)
-        #
+        verbose_name_plural = 'IXL List Challenges Exercises'
+        unique_together = (("challenge", "list_exercise"),)
+
         # def completed(self):
         #     student, required_score = self.challenge.student, self.exercise.required_score
         #     current_score = IXLListSkillScores.objects.filter(student=student, skill=self.exercise.skill)
