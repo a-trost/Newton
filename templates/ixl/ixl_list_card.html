@@ -1,31 +1,31 @@
 {% if list.category == "Remediation" %}
-        <div class="card-info warning small-12 medium-4 large-3 cell">
+    <a href="{% url 'ixl:ixl_view_single_list' list.id %}" class="card-info warning small-12 medium-4 large-3 cell">
   <div class="card-info-label">
     <div class="card-info-label-text">
       REMED
     </div>
         {% elif list.category == "Enrichment" %}
-            <div class="card-info success small-12 medium-4 large-3 cell">
+    <a href="{% url 'ixl:ixl_view_single_list' list.id %}" class="card-info success small-12 medium-4 large-3 cell">
   <div class="card-info-label">
     <div class="card-info-label-text">
       ENRICH
     </div>
             {% elif list.category == "Unit" %}
-<div class="card-info primary small-12 medium-4 large-3 cell">
+    <a href="{% url 'ixl:ixl_view_single_list' list.id %}" class="card-info primary small-12 medium-4 large-3 cell">
   <div class="card-info-label">
     <div class="card-info-label-text">
       UNIT
     </div>
 
                 {% elif list.category == "Test" %}
-<div class="card-info purple small-12 medium-4 large-3 cell">
+    <a href="{% url 'ixl:ixl_view_single_list' list.id %}" class="card-info purple small-12 medium-4 large-3 cell">
   <div class="card-info-label">
     <div class="card-info-label-text">
       TEST
     </div>
 
             {% elif list.category == "Other" %}
-<div class="card-info secondary small-12 medium-4 large-3 cell">
+    <a class="card-info secondary small-12 medium-4 large-3 cell">
   <div class="card-info-label">
     <div class="card-info-label-text">
       OTHER
@@ -37,10 +37,11 @@
 
  </div>
   <div class="card-info-content">
-    <a href="{% url 'ixl:ixl_view_single_list' list.id %}"> <h3 style="line-height: 2.3rem; color:#333;">{{ list.title }}</h3></a>
+      <h3 style="line-height: 2.3rem; color:#333;">{{ list.title }}</h3>
     <p style="color: #666; font-weight:bold; font-size: 1.2rem;line-height: .6rem;">By {{ list.author }}</p>
   <hr style="padding: 0; margin:0;">
-  <p style="font-weight: bold; font-size: 1.3rem; font-family: 'Asap', 'Helvetica Neue', Helvetica, Arial, sans-serif">Exercises: {{ list.ixllistexercise_set.count }}</p>
+      <p style="color:#444; font-weight: bold; font-size: 1.3rem; font-family: 'Asap', 'Helvetica Neue', Helvetica, Arial, sans-serif">
+          Exercises: {{ list.ixllistexercise_set.count }}</p>
 
   <ul style="list-style: none;">
       {% for exercise in list.ixllistexercise_set.all|slice:"4" %}
@@ -54,4 +55,4 @@
 
 
   </div>
-</div>
+</a>

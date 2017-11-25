@@ -7,13 +7,21 @@
 {% block heading %}
 <h1>Create IXL List</h1>
 {% endblock heading %}
-
 {% block content %}
-    <div class="grid-x grid-margin-x"><div class="small-3"></div>
-    <div class="small-6 align-center">
+    <div class="grid-x grid-padding-x">
+        <div class="small-4 cell"></div>
+        <div class="small-4 cell">
 <form action="" method="post">{% csrf_token %}
-    {{ form.as_p}}
+    {{ form.title.label }}
+    {{ form.title }}
+    {{ form.title.error_messages }}
+
+    {{ form.category.label }}
+    {{ form.category }}
+    {{ form.category.error_messages }}
     <input type="submit" value="Save" class="button large expanded success"/>
 </form>
-    </div><div class="small-3"></div></div>
+        </div>
+        <div class="small-4 cell"></div>
+    </div>
 {% endblock content %}

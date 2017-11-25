@@ -4,7 +4,8 @@ from django.contrib import admin
 
 from .models import IXLSkill, IXLSkillScores, IXLStats, Challenge, ChallengeAssignment, ChallengeExercise, IXLTimeSpent
 
-from .models import IXLList, IXLListAssignment, IXLListChallenge, IXLListChallengeExercise, IXLListExercise
+from .models import IXLList, IXLListAssignment, IXLListChallenge, IXLListChallengeExercise, IXLListExercise, \
+    IXLListSkill, IXLListSkillScores
 
 
 class IXLSkillScoresAdmin(admin.ModelAdmin):
@@ -69,3 +70,5 @@ admin.site.register(IXLListChallenge)
 admin.site.register(IXLListAssignment, )
 admin.site.register(IXLListChallengeExercise, )
 admin.site.register(IXLListExercise, )
+admin.site.register(IXLListSkill, )
+admin.site.register(IXLListSkillScores, )

@@ -1,4 +1,6 @@
 from django import forms
+from django.core.validators import RegexValidator
+
 from .models import IXLListAssignment, IXLList
 
 
@@ -13,6 +15,12 @@ class CreateIXLListForm(forms.Form):
     title = forms.CharField()
     category = forms.ChoiceField(choices=(("Unit", "Unit"), ("Remediation", "Remediation"), ("Enrichment", "Enrichment"), ("Test", "Test"), ("Other", "Other")))
 
+
+class CreateIXLListExerciseForm(forms.Form):
+    ixl_format = RegexValidator(r'^\w+\.\d+$', 'Pattern must match IXL format: A.12')
+    grade = forms.CharField(max_length=1, widget=forms.TextInput(attrs={'size': '2'}))
+    id_code = forms.CharField(validators=[ixl_format], max_length=5)
+    required_score = forms.CharField(label="Required Score")
 
 class ListSettings(forms.Form):
     bonus_challenges = forms.IntegerField(initial=15)

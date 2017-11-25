@@ -8,11 +8,11 @@ from django.shortcuts import get_object_or_404
 from django.views import generic
 from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse
+from django.forms import formset_factory
 
-from .forms import CreateIXLListForm
+from .forms import CreateIXLListForm, CreateIXLListExerciseForm
 
-
-from ixl.models import IXLSkill, IXLSkillScores, IXLList, IXLListAssignment
+from ixl.models import IXLSkill, IXLSkillScores, IXLList, IXLListAssignment, IXLListExercise, IXLListSkill
 
 from brain.models import StudentRoster, CurrentClass, Classroom, ClassroomAssignment
 from brain.templatetags import brain_extras
@@ -53,7 +53,6 @@ def ixl_lists(request):
     return render(request, 'ixl/ixl_lists.html', {'classroom':classroom})
 
 def ixl_list_create(request):
-    # if this is a POST request we need to process the form data
     if request.method == 'POST':
         form = CreateIXLListForm(request.POST)
         if form.is_valid():
@@ -62,11 +61,20 @@ def ixl_list_create(request):
             ixl_list.title = form.cleaned_data['title']
             ixl_list.category = form.cleaned_data['category']
             ixl_list.save()
-            return HttpResponseRedirect('/ixl/lists/view/')
+            return HttpResponseRedirect('/ixl/lists/view/')  # Soon this will send us to the assign exercises page
     else:
         form = CreateIXLListForm()
 
     return render(request, 'ixl/ixl_list_create_form.html', {'form': form})
+
+
+def ixl_list_exercise_assign(request, list):
+    pass
+
+
+
+
+
 
 
 def view_lists(request):

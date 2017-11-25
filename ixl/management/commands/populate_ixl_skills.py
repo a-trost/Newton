@@ -2,7 +2,7 @@
 
 from django.core.management.base import BaseCommand, CommandError
 
-from ixl.models import IXLSkillScores, IXLSkill
+from ixl.models import IXLListSkill
 
 class Command(BaseCommand):
     help = 'Creates database entries for all IXL skills'
@@ -12,7 +12,7 @@ class Command(BaseCommand):
         pass
 
     import csv
-    csv_filepathname = "/home/alex/newton/ixl/management/commands/IXLMaster.csv"
+    csv_filepathname = "/home/alex/newton/ixl/management/commands/IXLMaster-GradesBased.csv"
 
     dataReader = csv.reader(open(csv_filepathname), delimiter=',', quotechar='"')
 
@@ -20,10 +20,12 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         for row in self.dataReader:
             if row[0] != 'Category':  # Ignore the header row, import everything else
-                category = row[2]
-                skill_id = row[0]
-                skill_description = row[1]
-                obj, created = IXLSkill.objects.get_or_create(
-                    category=category, skill_id=skill_id, skill_description=skill_description,
+                category = row[0]
+                grade = row[1][0]
+                id_code = row[1][2:]
+                description = row[2]
+                obj, created = IXLListSkill.objects.get_or_create(
+                    category=category, id_code=id_code, description=description, grade=grade,
                 )
-
+                if created:
+                    print("{}-{} was created!".format(grade, id_code))

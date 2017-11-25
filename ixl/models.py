@@ -198,7 +198,7 @@ class IXLTimeSpent(models.Model):
 
 class IXLListSkill(models.Model):
     ixl_format = RegexValidator(r'^\w+\.\d+$', 'Pattern must match IXL format: A.12')
-    grade = models.CharField(max_length=6)
+    grade = models.CharField(max_length=1)
     id_code = models.CharField(max_length=6, validators=[ixl_format], blank=False, verbose_name='Skill ID')
     description = models.CharField(max_length=200, blank=True, verbose_name='Skill Description')
     category = models.CharField(max_length=100, null=True)
@@ -236,14 +236,15 @@ class IXLListSkillScores(models.Model):  # Intersection of IXLSkill and Student 
         ordering = ['student_id', 'skill']
 
 
-CATEGORY_CHOICES = (("Unit", "Unit"), ("Remediation", "Remediation"), ("Enrichment", "Enrichment"), ("Other", "Other"))
+CATEGORY_CHOICES = (
+("Unit", "Unit"), ("Remediation", "Remediation"), ("Enrichment", "Enrichment"), ("Test", "Test"), ("Other", "Other"))
 
 
 class IXLList(models.Model):
     '''List for IXL Exercises that can be assigned to specific students'''
     title = models.CharField(max_length=255, )
     author = models.ForeignKey(User)
-    description = models.CharField(max_length=500, null=True, default="")
+    description = models.CharField(max_length=500, null=True, blank=True)
     category = models.CharField(choices=CATEGORY_CHOICES, max_length=65)
 
     class Meta:
@@ -266,15 +267,15 @@ class IXLListAssignment(models.Model):
         verbose_name = 'IXL List Assignment'
         verbose_name_plural = 'IXL List Assignments'
 
-        # def progress(self):
-        #     '''returns exercises_completed, exercises_total'''
-        #     exercises = self.ixl_list.ixllistexercise_set
-        #     exercises_completed = 0
-        #     for exercise in exercises:
-        #         exercise_log = IXLListSkillScores.objects.filter(student=self.student, skill=exercise).first()
-        #         if exercise_log:
-        #             if exercise_log.score >= exercise.required_score:
-        #                 exercises_completed += 1
+    def progress(self):
+        '''returns exercises_completed, exercises_total'''
+        exercises = self.ixl_list.ixllistexercise_set
+        exercises_completed = 0
+        for exercise in exercises:
+            exercise_log = IXLListSkillScores.objects.filter(student=self.student, skill=exercise).first()
+            if exercise_log:
+                if exercise_log.score >= exercise.required_score:
+                    exercises_completed += 1
 
 class IXLListExercise(models.Model):
     '''The specific Exercises that the IXLlist contains.'''
@@ -295,19 +296,31 @@ class IXLListChallenge(models.Model):
     '''Challenges Unique to each student that is assembled from several lists.'''
     date = models.DateField(default=datetime.date.today, verbose_name='Date Created')
     student = models.ForeignKey(StudentRoster, on_delete=models.CASCADE, )
+    active = models.BooleanField(default=True)
+    achieved = models.BooleanField(default=False)
 
     class Meta:
         verbose_name = 'IXL List Challenge'
         verbose_name_plural = 'IXL List Challenges'
 
-        # def progress(self):
-        #     '''Returns # total challenges and # challenges completed'''
-        #     challenges_completed = 0
-        #     for exercise in self.ixllistchallengeexercise_set:
-        #         if exercise.completed():
-        #             challenges_completed += 1
-        #     return self.ixllistchallengeexercise_set.filter(bonus=False).count(), challenges_completed
+    def progress(self):
+        '''Returns # total challenges and # challenges completed'''
+        challenges_completed = 0
+        for exercise in self.ixllistchallengeexercise_set:
+            if exercise.completed():
+                challenges_completed += 1
+        return self.ixllistchallengeexercise_set.filter(bonus=False).count(), challenges_completed
 
+    def check_if_achieved(self):
+        if self.active:
+            total_challenges, challenges_completed = self.progress()
+            if total_challenges == challenges_completed and total_challenges > 0:
+                self.achieved = True
+
+    def check_if_active(self):
+        latest_challenge = IXLListChallenge.objects.filter(student=self.student).latest('date')
+        if latest_challenge.date != self.date:
+            self.active = False
 
 class IXLListChallengeExercise(models.Model):
     '''The exercises that are assigned to a challenge and must be completed by a student'''
@@ -317,14 +330,14 @@ class IXLListChallengeExercise(models.Model):
     bonus = models.BooleanField(default=False, )
 
     def __str__(self):
-        return '%s - %s' % (self.challenge, self.exercise_id)
+        return '%s - %s' % (self.challenge, self.list_exercise)
 
     class Meta:
         verbose_name = 'IXL List Challenge Exercise'
         verbose_name_plural = 'IXL List Challenges Exercises'
         unique_together = (("challenge", "list_exercise"),)
 
-        # def completed(self):
-        #     student, required_score = self.challenge.student, self.exercise.required_score
-        #     current_score = IXLListSkillScores.objects.filter(student=student, skill=self.exercise.skill)
-        #     return current_score >= required_score
+    def completed(self):
+        student, required_score = self.challenge.student, self.list_exercise.required_score
+        current_score = IXLListSkillScores.objects.filter(student=student, skill=self.list_exercise.list_skill)
+        return current_score >= required_score
