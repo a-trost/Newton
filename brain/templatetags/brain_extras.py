@@ -30,6 +30,12 @@ def gender(value):
 def index(List, i):
     return List[int(i)]
 
+
+@register.filter(name='pk_to_student_name')
+def pk_to_student_name(pk):
+    student = StudentRoster.objects.get(pk=pk)
+    return "{} {}.".format(student.first_name, student.last_name[0])
+
 #=========================================================================================================
 #                                           AMC
 #=========================================================================================================
