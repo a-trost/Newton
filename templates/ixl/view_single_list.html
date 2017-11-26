@@ -6,38 +6,50 @@
 {% block heading %}
 <div class="grid-x grid-margin-x">
     <div class="cell small-12 medium-6">
+        {% include 'ixl/list_title_header.html' %}
 
-<h2>{{ list.title|upper }}</h2>
-        <h2><small>Author: {{ list.author }}</small></h2>
     </div>
     <div class="cell small-12 medium-6">
-
 </div>
     </div>
 
 {% endblock heading %}
 {% block content %}
-    {{ list.category }}
-    <ul style="list-style-type: none;">
-    {%   for exercise in list.ixllistexercise_set.all %}
-        <li>
-    {{ exercise.exercise_id }}
-        </li>
-    {% endfor %}
-    </ul>
-{##}
-{#    <h2>Your Lists:</h2>#}
-{#    <div class="grid-x grid-margin-x">#}
-{#    {% for list in my_ixl_lists %}#}
-{#{% include 'ixl/ixl_list_card.html' %}#}
-{#    {% endfor %}#}
-{#    </div>#}
-{#    <hr>#}
-{#    <h2>Lists From Other Teachers:</h2>#}
-{#        <div class="grid-x grid-margin-x">#}
-{#    {% for list in other_ixl_lists %}#}
-{#{% include 'ixl/ixl_list_card.html' %}#}
-{##}
-{#    {% endfor %}#}
-{#        </div>#}
+    <div class="grid-x grid-margin-x">
+        <div class="cell small-12 medium-6">
+            {% if list_exercises %}
+                <h4>Assigned IXL Exercises</h4>
+                <table class="hover">
+                    <thead>
+                    <tr>
+                        <th width="200">Grade</th>
+                        <th width="150">Code</th>
+                        <th width="200">Category</th>
+                        <th width="250">Name</th>
+                        <th width="150">Required Score</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for exercise in list_exercises %}
+                        <tr>
+                        <td>{{ exercise.list_skill.grade }}</td>
+                        <td>{{ exercise.list_skill.id_code }}</td>
+                        <td>{{ exercise.list_skill.category }}</td>
+                        <td>{{ exercise.list_skill.description }}</td>
+                        <td>{{ exercise.required_score }}</td>
+                    {% endfor %}
+
+                    </tr>
+                    </tbody>
+                </table>
+                <a class="button large" href="{% url 'ixl:ixl_assign_list_exercises' list.pk %}"><i
+                        class="fa fa-pencil"></i> Edit Exercises</a>
+
+            {% else %}
+                <a class="button large" href="{% url 'ixl:ixl_assign_list_exercises' list.pk %}"><i
+                        class="fa fa-pencil"></i> Assign Exercises</a>
+            {% endif %}
+        </div>
+    </div>
+
 {% endblock content %}

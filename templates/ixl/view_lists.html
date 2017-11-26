@@ -17,14 +17,14 @@
 {% endblock heading %}
 {% block content %}
 
-    <h2>Your Lists:</h2>
+    <h2>Your Lists</h2>
     <div class="grid-x grid-margin-x">
     {% for list in my_ixl_lists %}
 {% include 'ixl/ixl_list_card.html' %}
     {% endfor %}
     </div>
     <hr>
-    <h2>Lists From Other Teachers:</h2>
+    <h2>Lists From Other Teachers</h2>
         <div class="grid-x grid-margin-x">
     {% for list in other_ixl_lists %}
 {% include 'ixl/ixl_list_card.html' %}

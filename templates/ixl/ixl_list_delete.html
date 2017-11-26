@@ -1,0 +1,38 @@
+{% extends "brain/layout.html" %}
+
+{% block title %}{{ classroom }} IXL List{% endblock title %}
+{% block categorybar %}
+    {% include 'ixl/ixl_lists_category_bar.html' %}
+{% endblock %}
+{% block heading %}
+    <h1>Delete IXL List</h1>
+    {% include 'ixl/list_title_header.html' %}
+    <p style="color:#444; font-weight: bold; font-size: 1.3rem; font-family: 'Asap', 'Helvetica Neue', Helvetica, Arial, sans-serif">
+        Exercises: {{ list.ixllistexercise_set.count }}</p>
+
+    <ul style="list-style: none;">
+        {% for exercise in list.ixllistexercise_set.all %}
+            <li>{{ exercise.list_skill.id_code }} | {{ exercise.list_skill.description|truncatechars:40 }}</li>
+        {% endfor %}
+
+    </ul>
+{% endblock heading %}
+{% block content %}
+    <div class="grid-x grid-padding-x">
+        <div class="small-4 cell">
+
+
+        </div>
+
+
+        <div class="small-4 cell">
+            <form method="post">
+                {% csrf_token %}
+                <h2><span style="color: #a10000;">WARNING!</span> Deletion cannot be undone. Are you SURE you want to
+                    delete this list?</h2>
+                <input type="submit" value="Delete List" class="button alert expanded"/>
+            </form>
+
+        </div>
+    </div>
+{% endblock content %}

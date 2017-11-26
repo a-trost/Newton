@@ -5,7 +5,11 @@
 {% include 'ixl/ixl_lists_category_bar.html' %}
 {% endblock %}
 {% block heading %}
+    {% if request.resolver_match.url_name == 'ixl_list_create' %}
 <h1>Create IXL List</h1>
+    {% elif request.resolver_match.url_name == 'ixl_edit_list' %}
+        <h1>Edit IXL List</h1>
+    {% endif %}
 {% endblock heading %}
 {% block content %}
     <div class="grid-x grid-padding-x">
@@ -19,6 +23,10 @@
     {{ form.category.label }}
     {{ form.category }}
     {{ form.category.error_messages }}
+
+    {{ form.description.label }}
+    {{ form.description }}
+    {{ form.description.error_messages }}
     <input type="submit" value="Save" class="button large expanded success"/>
 </form>
         </div>

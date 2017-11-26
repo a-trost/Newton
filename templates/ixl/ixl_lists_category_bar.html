@@ -17,9 +17,11 @@ padding:10px 15px 25px 15px; margin:10px 0;" >IXL LISTS</span></a>
 
 {% if request.user == list.author %}
 <a class="button" style="color:white"><i class="fa fa-users"></i> Assign to Students</a>
-        <a class="warning button" style="color:white;" href="#"><i class="fa fa-pencil"></i> Edit List</a>
+    <a class="warning button" style="color:white;" href="{% url 'ixl:ixl_edit_list' list.pk %}"><i
+            class="fa fa-pencil"></i> Edit List</a>
 
-        <a class="alert button" style="color:white"><i class="fa fa-close"></i> Delete List</a>
+    <a href="{% url 'ixl:ixl_delete_list' list.pk %}" class="alert button" style="color:white"><i
+            class="fa fa-close"></i> Delete List</a>
             {% else %}
 
             <a class="primary button" style="color:white"><i class="fa fa-copy"></i> Copy to My Lists</a>

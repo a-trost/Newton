@@ -321,3 +321,40 @@ table.inputtable {
 .button.success{color:white;
   font-weight:bold; }
 .button.success:hover{color:white;}
+
+.simple-article-header {
+    background: #fefefe;
+    padding: 1.3rem 2rem .7rem;
+    /*border: 1px solid #cacaca;*/
+    margin-bottom: 1rem;
+}
+
+.simple-article-header .article-date-read {
+    color: #8a8a8a;
+}
+
+.simple-article-header .article-title {
+    text-transform: uppercase;
+}
+
+.simple-article-header .article-title a {
+    color: #0a0a0a;
+}
+
+.simple-article-header .article-title a:hover, .simple-article-header .article-title a:focus {
+    color: #1779ba;
+}
+
+.simple-article-header .article-author-comments a.article-comments {
+    color: #8a8a8a;
+}
+
+.simple-article-header .article-author-comments a.article-comments:hover, .simple-article-header .article-author-comments a.article-comments:focus {
+    color: #1779ba;
+}
+
+.simple-article-header .article-date-read,
+.simple-article-header .article-title,
+.simple-article-header .article-author-comments {
+    margin-bottom: 0.25rem;
+}

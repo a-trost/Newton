@@ -45,10 +45,11 @@
 
   <ul style="list-style: none;">
       {% for exercise in list.ixllistexercise_set.all|slice:"4" %}
-      <li>{{ exercise.exercise_id }}</li>
+          <li>{{ exercise.list_skill.id_code }} | {{ exercise.list_skill.category|truncatechars:25 }}</li>
   {% endfor %}
   {% if list.ixllistexercise_set.all.count > 4 %}
-      <li><a href="{% url 'ixl:ixl_view_single_list' list.id %}">See more...</a></li>
+
+      <li>See more...</li>
   {% endif %}
   </ul>
 
