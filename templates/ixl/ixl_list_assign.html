@@ -1,0 +1,45 @@
+{% extends "brain/layout.html" %}
+{% load brain_extras %}
+{% block title %}{{ list.title }} | IXL Lists{% endblock title %}
+{% block categorybar %}
+    {% include 'ixl/ixl_lists_category_bar.html' %}
+{% endblock %}
+{% block heading %}
+    <div class="grid-x grid-margin-x">
+        <div class="cell small-12 medium-6">
+            {% include 'ixl/list_title_header.html' %}
+
+        </div>
+        <div class="cell small-12 medium-6">
+        </div>
+    </div>
+
+{% endblock heading %}
+{% block content %}
+
+    <h4>Assigned IXL Exercises</h4>
+    <table class="hover"
+           style="max-width:500px;padding:.1rem; line-height: 8pt; font-family: 'Asap', 'Helvetica Neue', Helvetica, Arial, sans-serif ">
+        <thead>
+        <tr>
+            <th>Assigned</th>
+            <th>Student</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        {% for form in formset %}
+
+            <tr>
+                <td>{{ form.assigned }} </td>
+                <td><label for="{{ form.assigned.auto_id }}"
+                           style="font-size: 1.6rem;padding:.1rem; line-height: 8pt;">{{ form.student.value|pk_to_student_name }}</label>
+                </td>
+
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+{% endblock content %}

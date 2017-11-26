@@ -323,18 +323,23 @@ table.inputtable {
 .button.success:hover{color:white;}
 
 .simple-article-header {
-    background: #fefefe;
-    padding: 1.3rem 2rem .7rem;
+  /*background: #fefefe;*/
+  padding: 1.3rem 2rem 0;
     /*border: 1px solid #cacaca;*/
-    margin-bottom: 1rem;
+  /*margin-bottom: 1rem;*/
 }
 
 .simple-article-header .article-date-read {
-    color: #8a8a8a;
+  color: #254557;
+  font-weight: bold;
 }
 
 .simple-article-header .article-title {
-    text-transform: uppercase;
+  /*text-transform: uppercase;*/
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 2rem;
+
 }
 
 .simple-article-header .article-title a {
@@ -347,6 +352,11 @@ table.inputtable {
 
 .simple-article-header .article-author-comments a.article-comments {
     color: #8a8a8a;
+}
+
+.simple-article-header .article-author-comments {
+  color: #8a8a8a;
+  /*line-height: 5pt;*/
 }
 
 .simple-article-header .article-author-comments a.article-comments:hover, .simple-article-header .article-author-comments a.article-comments:focus {

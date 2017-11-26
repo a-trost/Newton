@@ -259,9 +259,9 @@ class IXLListAssignment(models.Model):
     '''Assigns the List to specific students'''
     student = models.ForeignKey(StudentRoster)
     ixl_list = models.ForeignKey(IXLList)
-    assigned = models.BooleanField(default=True)
+    assigned = models.BooleanField(default=False)
     date_created = models.DateField(default=now)
-    number_to_assign = models.IntegerField()
+    number_to_assign = models.IntegerField(default=2)
 
     class Meta:
         verbose_name = 'IXL List Assignment'
@@ -276,6 +276,10 @@ class IXLListAssignment(models.Model):
             if exercise_log:
                 if exercise_log.score >= exercise.required_score:
                     exercises_completed += 1
+
+    def __str__(self):
+        return "{} - List: {}. Assigned: {}. # to assign: {}".format(self.student, self.ixl_list, self.assigned,
+                                                                     self.number_to_assign)
 
 class IXLListExercise(models.Model):
     '''The specific Exercises that the IXLlist contains.'''

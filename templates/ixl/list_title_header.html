@@ -1,17 +1,15 @@
 <div class="simple-article-header">
-    <!-- Article Published Date & Reading Time -->
-    <p class="article-date-read">Category: {{ list.category }} </p>
-
-    <!-- Article Title -->
     <h2 class="article-title">
         <a href="{% url 'ixl:ixl_view_single_list' list.pk %}">
-            {{ list.title|upper }}
+            {{ list.title| capfirst }}
         </a>
     </h2>
+    <p class="article-date-read">Category: {{ list.category }} | By {{ list.author }}
+        | {{ list.ixllistexercise_set.count }}
+        Exercise{{ list.ixllistexercise_set.count|pluralize }} </p>
 
-    <!-- Article Author Name & Comment Hyperlink -->
-    <p class="article-author-comments">
-        <em>by {{ list.author }}</em> - {{ list.ixllistexercise_set.count }}
-        Exercise{{ list.ixllistexercise_set.count|pluralize }}
-    </p>
+    {% if list.description %}
+        <h5>Description:</h5>
+        <p>{{ list.description }}</p>
+    {% endif %}
 </div>

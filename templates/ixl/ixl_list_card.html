@@ -25,7 +25,7 @@
     </div>
 
             {% elif list.category == "Other" %}
-    <a class="card-info secondary small-12 medium-4 large-3 cell">
+    <a href="{% url 'ixl:ixl_view_single_list' list.id %}" class="card-info secondary small-12 medium-4 large-3 cell">
   <div class="card-info-label">
     <div class="card-info-label-text">
       OTHER
@@ -38,21 +38,25 @@
  </div>
   <div class="card-info-content">
       <h3 style="line-height: 2.3rem; color:#333;">{{ list.title }}</h3>
-    <p style="color: #666; font-weight:bold; font-size: 1.2rem;line-height: .6rem;">By {{ list.author }}</p>
+      <p style="color: #666; font-weight:bold; font-size: 1.1rem;line-height: .6rem;font-family: 'Asap', 'Helvetica Neue', Helvetica, Arial, sans-serif">
+          By {{ list.author }} | {{ list.ixllistexercise_set.count }}
+          Exercise{{ list.ixllistexercise_set.count|pluralize }}</p>
   <hr style="padding: 0; margin:0;">
-      <p style="color:#444; font-weight: bold; font-size: 1.3rem; font-family: 'Asap', 'Helvetica Neue', Helvetica, Arial, sans-serif">
-          Exercises: {{ list.ixllistexercise_set.count }}</p>
 
-  <ul style="list-style: none;">
+      {% if list.description %}
+          <p style="color: #323232; font-size: 1rem; font-family: 'Asap', 'Helvetica Neue', Helvetica, Arial, sans-serif">
+              {{ list.description|truncatewords:15 }}</p>
+      {% endif %}
+      {% if list.ixllistexercise_set %}
+          <ul style="color: #323232;list-style: none;font-size: .9rem;font-family: 'Asap', 'Helvetica Neue', Helvetica, Arial, sans-serif">
       {% for exercise in list.ixllistexercise_set.all|slice:"4" %}
           <li>{{ exercise.list_skill.id_code }} | {{ exercise.list_skill.category|truncatechars:25 }}</li>
   {% endfor %}
   {% if list.ixllistexercise_set.all.count > 4 %}
-
       <li>See more...</li>
   {% endif %}
   </ul>
-
+      {% endif %}
 
 
   </div>

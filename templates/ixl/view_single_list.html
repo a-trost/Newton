@@ -1,5 +1,5 @@
 {% extends "brain/layout.html" %}
-{% block title %}{{ list.title }}| IXL Lists{% endblock title %}
+{% block title %}{{ list.title }} | IXL Lists{% endblock title %}
 {% block categorybar %}
 {% include 'ixl/ixl_lists_category_bar.html' %}
 {% endblock %}
@@ -37,9 +37,10 @@
                         <td>{{ exercise.list_skill.category }}</td>
                         <td>{{ exercise.list_skill.description }}</td>
                         <td>{{ exercise.required_score }}</td>
+                        </tr>
                     {% endfor %}
 
-                    </tr>
+
                     </tbody>
                 </table>
                 <a class="button large" href="{% url 'ixl:ixl_assign_list_exercises' list.pk %}"><i
